@@ -1,0 +1,444 @@
+
+/* --- CSS Reset & Variables --- */
+:root {
+    --color-d: #6a4c93; /* Purple */
+    --color-o: #1982c4; /* Blue */
+    --color-dot: #ff9f1c; /* Orange dot */
+    --color-s: #8ac926; /* Green */
+    --color-c: #ff595e; /* Pink/Red */
+    --color-i: #ffca3a; /* Yellow/Orange */
+
+    --text-dark: #000000;
+    --text-light: #666;
+    --bg-light: #f9f9f9;
+
+    --text-tagline-color: #826006;
+    
+    --bg-white: #fff;
+    --nav-height: 80px;
+    --transition-speed: 0.6s;
+
+    --font-1200-h1-size: 4rem;
+    --font-1200-h1-weight: 500;
+
+    --font-1024-h1-size: 3.5rem;
+    --font-1024-h1-weight: 480;
+
+    --font-768-h1-size: 3rem;
+    --font-768-h1-weight: 450;
+
+    --font-480-h1-size: 2.6rem;
+    --font-480-h1-weight: 420;
+
+
+
+    --font-1200-p-size: 1.1rem;
+    --font-1200-tagline-weight: 500;
+
+    --font-768-p-size: 1rem;
+    --font-768-tagline-weight: 450;
+
+}
+
+/* Custom Scrollbar - WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--color-d), var(--color-o));
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--color-o), var(--color-d));
+    box-shadow: 0 0 10px rgba(106, 76, 147, 0.3);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+ /*rgba(255, 255, 255, 0.95);*/
+/* --- Navigation Bar ---
+header {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height); */
+    /* backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+} */
+
+/* Essential for the absolute positioning of the underline */
+/* nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+    cursor: pointer;
+    
+    position: relative; 
+    display: inline-block;
+} */
+
+/* nav a:hover, nav a.active-link {
+    color: var(--color-d);
+} */
+
+/* The Animated Underline */
+/* nav a::after {
+    content: '';
+    width: 0; 
+    position: absolute;
+    height: 2px; 
+    bottom: -4px; 
+    left: 0;
+    background-color: var(--color-d); 
+    transition: width 0.3s ease-in-out;} */
+
+/* Expand the line on Hover AND when Active */
+/* nav a:hover::after,
+nav a.active-link::after {
+    width: 100%;
+} */
+
+/* Hamburger Menu (Mobile) */
+/* .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+} */
+
+/* .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    transition: 0.3s;
+} */
+
+/* --- Main Content Area --- */
+main {
+    margin-top: var(--nav-height);
+    flex: 1;
+    position: relative;
+}
+
+/* Page Transition Logic */
+/* Every page is removed from document flow */
+.page {
+    display: none !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.page.active {
+    display: block !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#home.page.active {
+    display: block !important;
+}
+
+/* --- Home Page Specifics (Hero Section) --- */
+#home {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+
+    padding:var(--nav-height) 5% 0;
+    align-items: center;
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.65) 50%,
+            rgba(255, 255, 255, 0.0) 100%
+        ),
+        url("../images/Doscience_Echo_Tube_two.jpg");
+
+    background-repeat:no-repeat,no-repeat;
+    background-position:left center,center center;
+    background-size:
+        65% 100%,
+        cover;
+}
+
+
+
+.hero-content {
+    max-width: 600px;
+    padding-right: 20px;
+}
+
+h1 {
+    font-size: var(--font-1200-h1-size);
+    font-weight: var(--font-1200-h1-weight);
+    line-height: 1.2;
+    color: var(--text-dark);
+    text-align: left;
+}
+
+.hero-content h1{
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: var(--font-1200-p-size);
+    line-height: 1.6;
+    color: var(--text-dark);
+    display: flex;
+    text-align: justify;
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.divider {
+    width: 100px;
+    height: 2px;
+    background-color: var(--color-d); /* Purple line */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: var(--font-1200-p-size);
+    letter-spacing: 1.6;
+    font-weight: var(--font-1200-tagline-weight);
+    color: var(--text-tagline-color);
+    text-transform: uppercase;
+}
+
+
+/* --- Mouse Icon Bounce Style --- */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.7;
+    animation: bounce 2s infinite;
+}
+
+.mouse-icon {
+    width: 26px;
+    height: 40px;
+    border: 2px solid var(--text-dark);
+    border-radius: 15px;
+    position: relative;
+}
+
+.mouse-wheel {
+    width: 4px;
+    height: 8px;
+    background: var(--text-dark);
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateX(-50%) translateY(0);}
+    40% {transform: translateX(-50%) translateY(-10px);}
+    60% {transform: translateX(-50%) translateY(-5px);}
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 5%;
+    text-align: center;
+    margin-top: auto; /* Pushes footer to bottom if content is short */
+    position: relative;
+    z-index: 10;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+footer .footer-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--color-s);
+}
+
+
+/* --- Responsive Design --- */
+/* Tablet & Laptop */
+@media (max-width: 1024px) {
+    h1 {    
+        font-size: var(--font-1024-h1-size);
+        font-weight: var(--font-1024-h1-weight);
+    }
+
+
+   /* nav ul { gap: 20px; }
+    nav a { font-size: 0.85rem; }
+*/
+
+    .hamburger {
+        display: flex;
+    }
+    
+    nav ul {
+        position: fixed;
+        top: var(--nav-height);
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - var(--nav-height));
+        background: white;
+        flex-direction: column;
+        /*justify-content: center; /* Vertical Center*/
+        /*align-items: center; /* Horizontal Center*/
+        
+        gap: 24px;
+        transition: right 0.4s ease;
+        box-shadow: 5px 0 10px rgba(0,0,0,0.1);
+        
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+
+    nav ul.open {
+        right: 0;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+    h1 { 
+        font-size: var(--font-768-h1-size);
+        font-weight: var(--font-768-h1-weight);
+    }
+
+    p {
+        font-size: var(--font-786-p-size);
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 0 5px 0 5px;
+    }
+
+    .scroll-indicator {
+        left: 90%;
+    }
+
+    
+    /*.divider { margin: 0 auto 20px auto; }*/
+    
+    .hero-section {
+        /* Adjust gradient for mobile to make text readable over image 
+        background: linear-gradient(to left, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%), 
+                    url('../images/homepage-image.png') no-repeat center center/cover;*/
+        background: linear-gradient(to left, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.7) 100%), 
+                    url('../images/Doscience_Echo_Tube.jpg') no-repeat center center/cover;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    h1 { 
+        font-size: var(--font-480-h1-size);
+        font-weight: var(--font-480-h1-weight);
+    }
+
+    .logo { font-size: 1.5rem; }
+    .tagline {
+        font-size: 1rem; 
+    }
+    .generic-page-content h2 { font-size: 2rem; }
+}
+
+
+

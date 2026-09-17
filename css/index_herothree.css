@@ -1,0 +1,400 @@
+/* =========================================================
+HERO THREE
+THOUGHTFULLY SIMPLE
+========================================================= */
+.hero-three {
+width: 100%;
+margin: 0;
+padding: 0;
+padding-right: 0px;
+background: var(--bg-white);
+color: #111111;
+overflow: hidden;
+}
+/* =========================================================
+TOP INTRODUCTION
+========================================================= */
+.hero-three-intro {
+width: 100%;
+display: grid;
+grid-template-columns:
+40%
+60%;
+align-items: center;
+/* Changed: removed right padding so the image touches the edge */
+padding: 80px 0 70px 4.5%; 
+}
+/* =========================================================
+LEFT TEXT
+========================================================= */
+.hero-three-intro-text {
+width: 100%;
+max-width: 600px;
+padding-right: 40px;
+}
+/* =========================================================
+LABEL
+========================================================= */
+.hero-three-label {
+margin-bottom: 24px;
+color: #396c57;
+font-size: 16px;
+font-weight: 600;
+letter-spacing: 2.5px;
+line-height: 1.2;
+}
+/* =========================================================
+TOP GREEN LINE
+========================================================= */
+.hero-three-line {
+width: 38px;
+height: 2px;
+margin-bottom: 32px;
+background: #396c57;
+}
+/* =========================================================
+MAIN HEADING
+========================================================= */
+.hero-three-intro-text h2 {
+margin: 0;
+color: #101827;
+font-size:
+clamp(
+42px,
+4vw,
+62px
+);
+font-weight: 600;
+line-height: 1.15;
+letter-spacing: -0.045em;
+}
+/* =========================================================
+SMALL DIVIDER
+========================================================= */
+.hero-three-small-line {
+width: 38px;
+height: 2px;
+margin:
+34px
+0
+25px;
+background: #396c57;
+}
+/* =========================================================
+INTRO PARAGRAPH
+========================================================= */
+.hero-three-intro-text p {
+max-width: 430px;
+margin: 0;
+color: #222222;
+font-size: 17px;
+line-height: 1.75;
+}
+/* =========================================================
+TOP IMAGE
+========================================================= */
+.hero-three-intro-image {
+position: relative;
+width: 100%;
+height: 450px;
+overflow: hidden;
+border-radius: 0px;
+justify-self: end;
+}
+.hero-three-intro-image img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+}
+/* =========================================================
+CENTER COPY
+========================================================= */
+.hero-three-copy {
+width: 100%;
+max-width: 720px;
+margin:
+0
+auto;
+padding:
+10px
+40px
+75px;
+}
+.hero-three-copy p {
+margin:
+0
+0
+42px;
+color: #202020;
+font-size: 17px;
+line-height: 1.8;
+letter-spacing: 0.005em;
+}
+.hero-three-copy p:last-child {
+margin-bottom: 0;
+}
+/* =========================================================
+LARGE FULL-WIDTH IMAGE
+========================================================= */
+.hero-three-wide-image {
+position: relative;
+width: 100%;
+height: 470px;
+overflow: hidden;
+}
+.hero-three-wide-image img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+}
+/* =========================================================
+SUBTLE TOP FADE
+========================================================= */
+.hero-three-wide-image::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 10%;
+z-index: 2;
+pointer-events: none;
+background: linear-gradient(
+to bottom,
+#fdfcf9,
+rgba(253,252,249,0)
+);
+}
+/* =========================================================
+SUBTLE BOTTOM FADE
+========================================================= */
+.hero-three-wide-image::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 8%;
+z-index: 2;
+pointer-events: none;
+background: linear-gradient(
+    to top,
+    #fdfcf9,
+    rgba(253,252,249,0)
+);
+}
+/* =========================================================
+LARGE DESKTOP
+========================================================= */
+@media (min-width: 1400px) {
+.hero-three-intro {
+     grid-template-columns:
+         40%
+         60%;
+     /* Changed: removed right padding */
+     padding:
+         80px
+         0
+         70px
+         4.5%;
+ }
+ .hero-three-intro-image {
+     height: 470px;
+     border-radius:0px;
+ }
+
+.hero-three-intro-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+
+    pointer-events: none;
+    background: linear-gradient(
+        to left,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.95),
+        #ffffff
+    );
+}
+
+ .hero-three-copy {
+     max-width: 720px;
+     padding-bottom: 80px;
+ }
+ .hero-three-wide-image {
+     height: 500px;
+ }
+}
+/* =========================================================
+LAPTOP
+========================================================= */
+@media (max-width: 1200px) {
+.hero-three-intro {
+     grid-template-columns:
+         42%
+         58%;
+     /* Changed: removed right padding */
+     padding:
+         65px
+         0
+         60px
+         4%;
+ }
+ .hero-three-intro-text {
+     padding-right: 30px;
+ }
+ .hero-three-intro-text h2 {
+     font-size:
+         clamp(
+             40px,
+             4.5vw,
+             56px
+         );
+ }
+ .hero-three-intro-image {
+     height: 420px;
+ }
+ .hero-three-copy {
+     max-width: 680px;
+ }
+ .hero-three-wide-image {
+     height: 430px;
+ }
+}
+/* =========================================================
+TABLET
+========================================================= */
+@media (max-width: 850px) {
+.hero-three-intro {
+     grid-template-columns: 1fr;
+     gap: 45px;
+     padding:
+         65px
+         7%
+         55px;
+ }
+ .hero-three-intro-text {
+     max-width: 650px;
+     padding-right: 0;
+     justify-self: start;
+ }
+ .hero-three-intro-image {
+     width: 100%;
+     height: 450px;
+     justify-self: stretch;
+ }
+ .hero-three-copy {
+     max-width: 700px;
+     padding:
+         10px
+         7%
+         65px;
+ }
+ .hero-three-wide-image {
+     height: 420px;
+ }
+}
+/* =========================================================
+MOBILE
+========================================================= */
+@media (max-width: 600px) {
+.hero-three-intro {
+     gap: 35px;
+     padding:
+         50px
+         25px
+         45px;
+ }
+ .hero-three-label {
+     margin-bottom: 18px;
+     font-size: 12px;
+     letter-spacing: 2px;
+ }
+ .hero-three-line {
+     margin-bottom: 25px;
+ }
+ .hero-three-intro-text h2 {
+     font-size:
+         clamp(
+             36px,
+             10vw,
+             48px
+         );
+     line-height: 1.08;
+ }
+ .hero-three-small-line {
+     margin:
+         27px
+         0
+         22px;
+ }
+ .hero-three-intro-text p {
+     font-size: 15px;
+     line-height: 1.7;
+ }
+ .hero-three-intro-image {
+     height: 340px;
+     border-radius: 0px;
+ }
+
+ .hero-three-intro-image::before {
+    top: -1px;
+    left: 0;
+
+    width: 100%;
+
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        rgba(255,255,255,0.9) 20%,
+        rgba(255,255,255,0.45) 55%,
+        rgba(255,255,255,0) 100%
+    );
+}
+
+ .hero-three-copy {
+     padding:
+         10px
+         25px
+         55px;
+ }
+ .hero-three-copy p {
+     margin-bottom: 32px;
+     font-size: 15px;
+     line-height: 1.7;
+ }
+ .hero-three-wide-image {
+     height: 320px;
+ }
+
+}
+/* =========================================================
+SMALL MOBILE
+========================================================= */
+@media (max-width: 400px) {
+.hero-three-intro {
+     padding-left: 20px;
+     padding-right: 20px;
+ }
+ .hero-three-intro-text h2 {
+     font-size: 35px;
+ }
+ .hero-three-intro-image {
+     height: 290px;
+ }
+ .hero-three-copy {
+     padding-left: 20px;
+     padding-right: 20px;
+ }
+ .hero-three-wide-image {
+     height: 280px;
+ }
+
+}

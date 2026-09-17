@@ -1,0 +1,597 @@
+/* =========================================================
+   HERO SECOND
+   WHAT YOU'LL EXPERIENCE
+========================================================= */
+
+.hero-second {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-white);
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.hero-second-heading {
+    width: 100%;
+    padding: 0 5%;
+}
+
+/* =========================================================
+   EXPERIENCE ROW
+========================================================= */
+
+.experience-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    margin: 0 0 20px;
+}
+
+
+/* =========================================================
+   IMAGE LEFT
+========================================================= */
+
+.experience-row-image-left {
+    grid-template-columns:
+        60%
+        40%;
+}
+
+
+/* =========================================================
+   IMAGE RIGHT
+========================================================= */
+
+.experience-row-image-right {
+    grid-template-columns:
+        40%
+        60%;
+}
+
+
+/* =========================================================
+   EXPERIENCE IMAGE
+========================================================= */
+
+.experience-image {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+}
+
+.experience-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   IMAGE FADE
+========================================================= */
+
+/*
+   Image on the LEFT:
+   fade from image into white toward the right.
+*/
+
+.experience-row-image-left
+.experience-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 25%;
+    height: 100%;
+
+    pointer-events: none;
+
+    background: linear-gradient(
+        to right,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.95),
+        #ffffff
+    );
+}
+
+
+/*
+   Image on the RIGHT:
+   fade from white into image toward the right.
+*/
+
+.experience-row-image-right
+.experience-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 25%;
+    height: 100%;
+
+    pointer-events: none;
+
+    background: linear-gradient(
+        to left,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.95),
+        #ffffff
+    );
+}
+
+
+/* =========================================================
+   EXPERIENCE CONTENT
+========================================================= */
+
+.experience-content {
+
+    max-width: 600px;
+
+    padding:
+        40px
+        7%;
+}
+
+
+/* =========================================================
+   IMAGE LEFT CONTENT
+========================================================= */
+
+.experience-row-image-left
+.experience-content {
+
+    padding-left: 10%;
+}
+
+
+/* =========================================================
+   IMAGE RIGHT CONTENT
+========================================================= */
+
+.experience-row-image-right
+.experience-content {
+
+    padding-left: 12%;
+    padding-right: 8%;
+}
+
+
+/* =========================================================
+   EXPERIENCE TITLE
+========================================================= */
+
+.experience-content h3 {
+
+    margin: 0 0 25px;
+
+    color: #111111;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   EXPERIENCE DESCRIPTION
+========================================================= */
+
+.experience-content p {
+
+    margin: 0 0 30px;
+
+    color: #333333;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   EXPERIENCE LINK
+========================================================= */
+
+.experience-content a {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 7px;
+
+    color: #333333;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #999999;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.experience-content a span {
+
+    font-size: 20px;
+
+    line-height: 0;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.experience-content a:hover {
+
+    color: var(--color-d);
+
+    border-color: var(--color-d);
+}
+
+.experience-content a:hover span {
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   LARGE FULL-WIDTH IMAGE
+========================================================= */
+
+.experience-wide-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 470px;
+
+    margin: 0;
+
+    overflow: hidden;
+}
+
+.experience-wide-image img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* =========================================================
+   FULL IMAGE SOFT EDGES
+========================================================= */
+
+.experience-wide-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 18%;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        rgba(255,255,255,0)
+    );
+}
+
+.experience-wide-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 12%;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background: linear-gradient(
+        to top,
+        #ffffff,
+        rgba(255,255,255,0)
+    );
+}
+
+
+/* =========================================================
+   FINAL CENTER CONTENT
+========================================================= */
+
+.experience-final {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding:
+        65px
+        30px
+        100px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FINAL TITLE
+========================================================= */
+
+.experience-final h3 {
+
+    margin: 0 0 18px;
+
+    color: #111111;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   FINAL DESCRIPTION
+========================================================= */
+
+.experience-final p {
+
+    margin: 0;
+
+    color: #444444;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-second-heading {
+        padding:
+            55px
+            5%
+            35px;
+    }
+
+
+    .experience-row,
+    .experience-row-image-left,
+    .experience-row-image-right {
+
+        grid-template-columns: 1fr;
+
+        margin-bottom: 60px;
+    }
+
+
+    .experience-image {
+
+        height: 400px;
+
+        order: 1;
+    }
+
+
+    .experience-content {
+
+        order: 2;
+
+        max-width: 600px;
+
+        padding:
+            45px
+            8%;
+    }
+
+
+    .experience-row-image-left
+    .experience-content {
+
+        padding-left: 8%;
+    }
+
+
+    .experience-row-image-right
+    .experience-content {
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+
+    /*
+        Mobile/tablet image fade
+        moves vertically.
+    */
+
+    .experience-row-image-left
+    .experience-image::after,
+    .experience-row-image-right
+    .experience-image::after {
+
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: auto;
+
+        width: 100%;
+        height: 30%;
+
+        background: linear-gradient(
+            to bottom,
+            rgba(255,255,255,0),
+            rgba(255,255,255,0.9),
+            #ffffff
+        );
+    }
+
+
+    .experience-wide-image {
+
+        height: 400px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-second-heading {
+
+        padding:
+            45px
+            25px
+            30px;
+    }
+
+
+    .hero-second-heading h2 {
+
+        font-size: 24px;
+    }
+
+
+    .experience-row {
+
+        margin-bottom: 45px;
+    }
+
+
+    .experience-image {
+
+        height: 300px;
+    }
+
+
+    .experience-content {
+
+        padding:
+            35px
+            25px;
+    }
+
+
+    .experience-row-image-left
+    .experience-content,
+    .experience-row-image-right
+    .experience-content {
+
+        padding:
+            35px
+            25px;
+    }
+
+
+    .experience-content h3 {
+
+        margin-bottom: 18px;
+
+        font-size: 24px;
+    }
+
+
+    .experience-content p {
+
+        margin-bottom: 25px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    .experience-content a {
+
+        font-size: 13px;
+    }
+
+
+    .experience-wide-image {
+
+        height: 300px;
+    }
+
+
+    .experience-final {
+
+        padding:
+            50px
+            25px
+            75px;
+    }
+
+
+    .experience-final h3 {
+
+        font-size: 24px;
+    }
+
+
+    .experience-final p {
+
+        font-size: 14px;
+    }
+}

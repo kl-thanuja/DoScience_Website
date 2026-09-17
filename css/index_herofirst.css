@@ -1,0 +1,365 @@
+.hero-first {
+    position: relative;
+    /*padding: 0 5%;*/
+    padding-left: 5%;
+    width: 100%;
+    margin: 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN CONTENT WRAPPER
+========================================================= */
+
+.hero-first-content {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 46% 54%;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   LEFT TEXT
+========================================================= */
+
+.hero-first-text {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+}
+
+
+
+
+/* =========================================================
+   BODY COPY
+========================================================= */
+
+.hero-first-copy {
+    max-width: 520px;
+}
+
+.hero-first-copy p {
+    margin:0 0 24px;
+    font-size: var(--font-1200-p-size);
+    line-height: 1.6;
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.hero-first-copy p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   RIGHT IMAGE
+========================================================= */
+
+.hero-first-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 820px;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.hero-first-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+}
+
+
+/* =========================================================
+   IMAGE FADE INTO WHITE
+========================================================= */
+
+.hero-first-image::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -1px;
+
+    width: 38%;
+
+    height: 100%;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background: linear-gradient(
+        to right,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.96) 15%,
+        rgba(255, 255, 255, 0.75) 35%,
+        rgba(255, 255, 255, 0.35) 65%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+
+/* =========================================================
+   SUBTLE OVERALL IMAGE FADE
+========================================================= */
+
+.hero-first-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.05),
+            rgba(255,255,255,0)
+        );
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .hero-first {
+        min-height: 820px;
+    }
+
+    .hero-first-content {
+        min-height: 820px;
+
+        grid-template-columns:
+            45%
+            55%;
+    }
+
+    .hero-first-text {
+        padding-right: 50px;
+    }
+
+    .hero-first-copy {
+        max-width: 540px;
+    }
+
+    .hero-first-copy p {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .hero-first {
+        min-height: 720px;
+    }
+
+    .hero-first-content {
+        min-height: 720px;
+
+        grid-template-columns:
+            48%
+            52%;
+    }
+
+    .hero-first-text {
+        padding:
+            60px
+            35px
+            60px
+            6%;
+    }
+
+    .hero-first-text h2 {
+        font-size: clamp(
+            44px,
+            5vw,
+            62px
+        );
+    }
+
+    .hero-first-copy p {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+    .hero-first-image {
+        min-height: 720px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-first {
+        min-height: auto;
+        
+    padding-left: 0%;
+    }
+
+    .hero-first-content {
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+    }
+
+    .hero-first-text {
+        padding:
+            80px
+            8%;
+    }
+
+    .hero-first-image {
+        min-height: 550px;
+
+        height: 550px;
+    }
+
+    /*
+        Move the fade to the top of the image
+        when sections become vertical.
+    */
+
+    .hero-first-image::before {
+        top: -1px;
+        left: 0;
+
+        width: 100%;
+        height: 35%;
+
+        background: linear-gradient(
+            to bottom,
+            #ffffff 0%,
+            rgba(255,255,255,0.9) 20%,
+            rgba(255,255,255,0.45) 55%,
+            rgba(255,255,255,0) 100%
+        );
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-first-text {
+        padding:
+            65px
+            25px
+            55px;
+        
+    }
+
+    .hero-first-label {
+        margin-bottom: 18px;
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-first-text h2 {
+        font-size:
+            clamp(
+                40px,
+                12vw,
+                52px
+            );
+
+        line-height: 1;
+    }
+
+    .hero-first-divider {
+        width: 55px;
+
+        margin:
+            25px
+            0;
+    }
+
+    .hero-first-divider::after {
+        left: 55px;
+    }
+
+    .hero-first-copy p {
+        margin-bottom: 20px;
+
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .hero-first-image {
+        height: 420px;
+        min-height: 420px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero-first-text {
+        padding:
+            55px
+            20px
+            45px;
+    }
+
+    .hero-first-text h2 {
+        font-size: 38px;
+    }
+
+    .hero-first-copy p {
+        font-size: 14px;
+    }
+
+    .hero-first-image {
+        height: 360px;
+
+        min-height: 360px;
+    }
+}

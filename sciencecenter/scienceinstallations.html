@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DO SCI - Hands-on Science</title>
+  <!-- Google Fonts for crisp typography (Montserrat / sans-serif feel) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       RESET & GLOBAL STYLES
+       ========================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #FCFCFA;
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+
+    /* ==========================================
+       HERO SECTION
+       ========================================== */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background-color: #f7f6f2;
+      margin-top: 80px;
+    }
+
+    .hero-image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+    }
+
+    .hero-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Gradient overlay for smooth transition into text on left */
+    .hero-image-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45%;
+      height: 100%;
+      background: linear-gradient(to right, #f7f6f2 0%, rgba(247, 246, 242, 0) 100%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 45%;
+      padding-left: 5%;
+      padding-right: 2rem;
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 0.5rem;
+    }
+
+    .accent-line {
+      width: 28px;
+      height: 3px;
+      background-color: #008779;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-content p {
+      font-size: 1.05rem;
+      color: #333;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    /* ==========================================
+       INSTALLATIONS LIST SECTION
+       ========================================== */
+    .installations-section {
+      padding: 4rem 5% 2rem 5%;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 2.5rem;
+    }
+
+    .category-row {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #e0dfd9;
+    }
+
+    .category-row:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 1rem;
+    }
+
+    .category-image {
+      width: 100%;
+      height: 250px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .category-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .category-info h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 0.4rem;
+    }
+
+    .category-info .description {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Multi-column bullet lists */
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem 1.5rem;
+      list-style-type: disc;
+      padding-left: 1.2rem;
+    }
+
+    .items-grid li {
+      font-size: 0.85rem;
+      color: #222;
+      font-weight: 500;
+    }
+
+    /* ==========================================
+       FOOTER CALLOUT
+       ========================================== */
+    footer {
+      border-top: 1px solid #e0dfd9;
+      padding: 2.5rem 5%;
+      text-align: left;
+    }
+
+    footer p {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    /* ==========================================
+       RESPONSIVE DESIGN (MEDIA QUERIES)
+       ========================================== */
+    @media (max-width: 992px) {
+      .category-row {
+        grid-template-columns: 300px 1fr;
+        gap: 1.5rem;
+      }
+
+      .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-content {
+        width: 55%;
+      }
+
+      .hero-image-container {
+        width: 55%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-section {
+        flex-direction: column-reverse;
+        min-height: auto;
+      }
+
+      .hero-image-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+      }
+
+      .hero-image-container::before {
+        display: none;
+      }
+
+      .hero-content {
+        width: 100%;
+        padding: 2rem 5%;
+      }
+
+      .category-row {
+        grid-template-columns: 1fr;
+      }
+
+      .category-image {
+        height: 220px;
+      }
+
+      .items-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../components/navbar.css">
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Hands-on Science</h1>
+      <div class="accent-line"></div>
+      <p>Explore more than fifty interactive installations that make ideas in physics and mathematics tangible through
+        observation, experimentation and play.</p>
+    </div>
+    <div class="hero-image-container">
+      <img src="assets/Doscience_Hands_On_Science.png" alt="Hands-on science exhibit" />
+    </div>
+  </section>
+
+  <!-- MORE THAN 50 INTERACTIVE INSTALLATIONS SECTION -->
+  <section class="installations-section">
+    <h2 class="section-title">More than 50 Interactive Installations</h2>
+    <div class="accent-line"></div>
+    <p class="section-subtitle">Grouped broadly into Mechanics, Sound, Light and Mathematics, each installation explores
+      a scientific idea through direct experience.</p>
+
+    <!-- Category 1: Mechanics -->
+    <div class="category-row">
+      <div class="category-image">
+        <img src="assets/DoScience_section-3-1-2-mechanics.png" alt="Mechanics Installations" />
+      </div>
+      <div class="category-info">
+        <h3>Mechanics</h3>
+        <p class="description">Explore forces, motion and energy through interactive mechanical installations.</p>
+        <ul class="items-grid">
+          <li>Newton's Cradle</li>
+          <li>Pulley Drive</li>
+          <li>Lift Yourself</li>
+          <li>Chair of Nails</li>
+          <li>Gyro Chair</li>
+          <li>Snake Pendulum</li>
+          <li>Giant Lever</li>
+          <li>Reverse Cycle</li>
+          <li>Trampoline</li>
+          <li>Double-Ended Cone</li>
+          <li>Pulleys</li>
+          <li>Yo-Yo</li>
+          <li>Black Hole</li>
+          <li>Race the Rollers</li>
+          <li>...and many more</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Category 2: Sound -->
+    <div class="category-row">
+      <div class="category-image">
+        <img src="assets/DoScience_section-3-1-3-sound-will be reworked a bit_.png" alt="Sound Installations" />
+      </div>
+      <div class="category-info">
+        <h3>Sound</h3>
+        <p class="description">Discover how sound is produced, travels and interacts through vibration and resonance.
+        </p>
+        <ul class="items-grid">
+          <li>Echo Tube</li>
+          <li>Delayed Sound</li>
+          <li>Metal Gongs</li>
+          <li>Percussion Drums</li>
+          <li>Hexagonal Chimes</li>
+          <li>Resonance Pipes</li>
+          <li>Hollow Pipes</li>
+          <li>...and many more</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Category 3: Light -->
+    <div class="category-row">
+      <div class="category-image">
+        <img src="assets/DoScience_section-3-1-4-light.png" alt="Light Installations" />
+      </div>
+      <div class="category-info">
+        <h3>Light</h3>
+        <p class="description">Investigate reflection, perception and optical phenomena with simple, surprising models.
+        </p>
+        <ul class="items-grid">
+          <li>3D Funnel Illusion</li>
+          <li>Illusion Disc</li>
+          <li>Invisible Batman</li>
+          <li>Antigravity Mirrors</li>
+          <li>Periscope</li>
+          <li>Multiple Reflections</li>
+          <li>Giant Magic Mirror</li>
+          <li>Planck's Constant</li>
+          <li>...and many more</li>
+          <li>Infinity Well</li>
+          <li>Striped Mirrors</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Category 4: Mathematics -->
+    <div class="category-row">
+      <div class="category-image">
+        <img src="assets/DoScience_section-3-1-4-maths.png" alt="Mathematics Installations" />
+      </div>
+      <div class="category-info">
+        <h3>Mathematics</h3>
+        <p class="description">See patterns, relationships and logical thinking come to life through hands-on
+          activities.</p>
+        <ul class="items-grid">
+          <li>Plinko Board</li>
+          <li>Mobius Strip</li>
+          <li>Chess</li>
+          <li>40 Year Calendar</li>
+          <li>Pythagoras Theorem</li>
+          <li>Double-Ended Cone</li>
+          <li>American Abacus</li>
+          <li>Value of Pi</li>
+          <li>...and many more</li>
+          <li>Japanese Abacus</li>
+          <li>Cycloidal Path</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Every installation invites you to experiment, observe and ask questions.<br>Explore at your own pace and discover
+      what captures your curiosity.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Smooth scroll for internal navigation links
+      const links = document.querySelectorAll('nav ul li a');
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const targetId = link.getAttribute('href');
+          if (targetId.startsWith('#') && targetId.length > 1) {
+            e.preventDefault();
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+      });
+    });
+  </script>
+  <script src="../components/navbar.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

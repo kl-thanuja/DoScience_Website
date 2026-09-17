@@ -1,0 +1,280 @@
+/* --- Visit DoScience Section --- */
+.visit-doscience {
+    padding: 80px 5%;
+    max-width: 100%;
+}
+
+.visit-doscience > .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 50px;
+}
+
+/* Info Row */
+.info-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 60px;
+}
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.info-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--text-dark);
+    fill: none;
+    stroke-width: 1.5;
+}
+
+.info-text h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.info-text p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.info-text a {
+    color: var(--text-dark);
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+
+.info-text a:hover {
+    color: var(--color-d);
+}
+
+/* Two Column Info */
+.two-col-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 60px;
+}
+
+.info-col h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.info-col > p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+.info-col ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.info-col ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.info-col h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    margin-top: 35px;
+}
+
+/* Fees Table */
+.fees-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.fees-table thead th {
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    border-bottom: 2px solid #ddd;
+}
+
+.fees-table thead th span {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+.fees-table tbody td {
+    padding: 14px 15px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    border-bottom: 1px solid #eee;
+}
+
+.fees-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Help Planning Section */
+.help-planning {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+.help-planning h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.help-planning > p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.contact-info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.contact-info-row .info-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.contact-info-row .info-line strong {
+    min-width: 70px;
+    font-weight: 600;
+}
+
+.contact-info-row .info-line a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.contact-info-row .info-line a:hover {
+    color: var(--color-d);
+}
+
+.download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-dark);
+    text-decoration: underline;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.download-link:hover {
+    color: var(--color-d);
+}
+
+.download-link svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+
+.visit-footer-note {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    
+    .contact-main,
+    .two-col-info {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .find-us-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-details-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .visit-doscience > .section-title {
+        font-size: 2.2rem;
+    }
+
+    .info-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .info-item {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .visit-doscience {
+        padding: 50px 5%;
+    }
+
+    .visit-doscience > .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .fees-table thead th,
+    .fees-table tbody td {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+}
