@@ -1,31 +1,31 @@
-/* ==========================================
-   DoScience Exact PDF & Design System Styles
-   ========================================== */
+
 
 :root {
-  /* Color Tokens */
   --bg-color: #FCFCFA;
   --text-primary: #1F2937;
   --text-secondary: #4B5563;
   --divider-color: #E5E7EB;
   --doscience-green: #0E6245;
 
-  /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Layout Tokens */
   --max-width: 1440px;
   --max-read-width: 700px;
   --desktop-gutter: 64px;
+  --tablet-gutter: 32px;
+  --mobile-gutter: 20px;
   --column-gap: 48px;
   --base-unit: 8px;
 }
 
-/* Reset & Base Setup */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {
@@ -36,20 +36,27 @@ body {
   line-height: 1.5;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding-left: var(--desktop-gutter);
   padding-right: var(--desktop-gutter);
+  width: 100%;
 }
 
 .text-center {
   text-align: center;
 }
 
-/* Typography Hierarchy (Exact Specs from Specification) */
+/* Typography Hierarchy */
 h1, .hero-title {
-  font-size: 68px;
+  font-size: clamp(2.5rem, 5vw + 1rem, 4.25rem); /* ~40px to 68px */
   font-weight: 700;
   line-height: 1.1;
   color: var(--text-primary);
@@ -57,7 +64,7 @@ h1, .hero-title {
 }
 
 h2, .section-title, .cta-heading {
-  font-size: 40px;
+  font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem); /* ~28px to 40px */
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-primary);
@@ -65,14 +72,14 @@ h2, .section-title, .cta-heading {
 }
 
 .body-lead, p {
-  font-size: 19px;
+  font-size: clamp(1rem, 0.5vw + 0.9rem, 1.1875rem); /* ~16px to 19px */
   font-weight: 400;
   color: var(--text-primary);
   line-height: 1.6;
 }
 
 .section-label {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--text-primary);
   letter-spacing: 0.08em;
@@ -80,7 +87,7 @@ h2, .section-title, .cta-heading {
   display: block;
 }
 
-/* Accent Line Rules (40-56px) */
+/* Accent Line Rules */
 .accent-line {
   width: 48px;
   height: 2px;
@@ -103,8 +110,8 @@ h2, .section-title, .cta-heading {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 52px;
-  padding: 0 28px;
+  min-height: 52px;
+  padding: 12px 28px;
   font-size: 18px;
   font-weight: 600;
   border-radius: 6px;
@@ -112,6 +119,7 @@ h2, .section-title, .cta-heading {
   transition: all 0.2s ease;
   cursor: pointer;
   box-shadow: none; /* Explicit Rule: No Shadows */
+  text-align: center;
 }
 
 .btn-outline {
@@ -127,6 +135,7 @@ h2, .section-title, .cta-heading {
 
 .btn-icon {
   margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .btn-icon.right {
@@ -217,7 +226,7 @@ h2, .section-title, .cta-heading {
 .hero-image {
   width: 100%;
   height: auto;
-  border-radius: 24px; /* Matches section 1 layout styling */
+  border-radius: 24px;
   display: block;
 }
 
@@ -233,7 +242,7 @@ h2, .section-title, .cta-heading {
 }
 
 .section-subtitle {
-  font-size: 19px;
+  font-size: clamp(1rem, 0.5vw + 0.9rem, 1.1875rem);
   color: var(--text-secondary);
   margin-top: 16px;
 }
@@ -267,7 +276,7 @@ h2, .section-title, .cta-heading {
 }
 
 .category-title {
-  font-size: 28px;
+  font-size: clamp(1.35rem, 1vw + 1.1rem, 1.75rem); /* ~22px to 28px */
   font-weight: 600;
   color: var(--doscience-green);
   margin-bottom: 12px;
@@ -327,7 +336,7 @@ h2, .section-title, .cta-heading {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 32px 40px;
   margin-top: 40px;
 }
 
@@ -337,7 +346,8 @@ h2, .section-title, .cta-heading {
   letter-spacing: 0.05em;
   color: #374151;
   text-transform: uppercase;
-  max-width: 160px;
+  max-width: 180px;
+  text-align: center;
 }
 
 /* Contact Details */
@@ -364,9 +374,122 @@ h2, .section-title, .cta-heading {
   font-size: 18px;
   color: var(--text-secondary);
   margin-top: 2px;
+  word-break: break-word;
 }
 
 .contact-value.link {
   color: var(--text-primary);
   text-decoration: none;
+}
+
+/* ==========================================
+   RESPONSIVE BREAKPOINTS (MEDIA QUERIES)
+   ========================================== */
+
+/* Laptop / Small Desktop (<= 1200px) */
+@media (max-width: 1200px) {
+  :root {
+    --column-gap: 32px;
+  }
+}
+
+/* Tablet Layout (<= 992px) */
+@media (max-width: 992px) {
+  .container {
+    padding-left: var(--tablet-gutter);
+    padding-right: var(--tablet-gutter);
+  }
+
+  .hero-section,
+  .categories-section,
+  .catalogue-contact-section {
+    padding: 64px 0;
+  }
+
+  .grid-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .category-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 36px 0;
+  }
+
+  .category-desc {
+    max-width: 100%;
+  }
+
+  .section-header-block {
+    margin-bottom: 40px;
+  }
+
+  .section-divider {
+    margin: 56px 0;
+  }
+}
+
+/* Mobile Devices (<= 640px) */
+@media (max-width: 640px) {
+  .container {
+    padding-left: var(--mobile-gutter);
+    padding-right: var(--mobile-gutter);
+  }
+
+  .hero-section,
+  .categories-section,
+  .catalogue-contact-section {
+    padding: 48px 0;
+  }
+
+  .hero-content h1 {
+    margin-bottom: 20px;
+  }
+
+  .accent-line {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .accent-line.short {
+    margin: 16px 0;
+  }
+
+  .hero-image {
+    border-radius: 16px;
+  }
+
+  .banner-box {
+    padding: 20px 24px;
+    margin-top: 36px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+
+  .clients-grid {
+    gap: 24px;
+    margin-top: 28px;
+  }
+
+  .client-logo {
+    font-size: 13px;
+    max-width: 140px;
+  }
+
+  .contact-details {
+    margin-top: 36px;
+  }
+
+  .contact-value {
+    font-size: 16px;
+  }
 }
