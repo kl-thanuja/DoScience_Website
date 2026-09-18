@@ -49,7 +49,7 @@ body::-webkit-scrollbar {
     width: 65px;
     height: 3px;
 
-    background-color: var(--color-d);
+    background-color: #343837;
 
     margin: 14px 0;
 }
@@ -195,10 +195,10 @@ body::-webkit-scrollbar {
     width: 34px;
     height: 34px;
 
-    border: 1.5px solid #396c57;
+    border: 1.5px solid #343837;
     border-radius: 50%;
 
-    color: #396c57;
+    color:#343837;
 
     text-decoration: none;
 
@@ -213,7 +213,7 @@ body::-webkit-scrollbar {
 }
 
 .category-arrow:hover {
-    background: #396c57;
+    background:#343837;
 
     color: #ffffff;
 
