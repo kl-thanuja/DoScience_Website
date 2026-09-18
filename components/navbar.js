@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     const navbarContainer = document.getElementById("navbar-container");
 
     if (!navbarContainer) return;
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
             <nav class="ds-navbar-menu">
-                <ul class="ds-navbar-list">
+                <ul class="ds-navbar-list" id="nav-list">
 
                     <li>
                         <a href="javascript:void(0)"
