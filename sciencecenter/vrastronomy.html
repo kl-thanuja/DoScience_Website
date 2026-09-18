@@ -5,11 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DO SCI - VR Astronomy</title>
-  <!-- Google Fonts for crisp typography (Montserrat / sans-serif feel) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================
@@ -27,27 +26,34 @@
       color: #1a1a1a;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
     /* ==========================================
        HERO SECTION
        ========================================== */
     .hero-section {
+      margin-top: 70px;
       position: relative;
       width: 100%;
       min-height: 480px;
       display: flex;
       align-items: center;
-      overflow: hidden;
       background-color: #f7f6f2;
+      overflow: hidden;
     }
 
     .hero-image-container {
       position: absolute;
       top: 0;
       right: 0;
-      width: 65%;
+      width: 60%;
       height: 100%;
     }
 
@@ -73,13 +79,12 @@
     .hero-content {
       position: relative;
       z-index: 3;
-      width: 45%;
-      padding-left: 5%;
-      padding-right: 2rem;
+      width: 50%;
+      padding: 3rem 2rem 3rem 5%;
     }
 
     .hero-content h1 {
-      font-size: 2.8rem;
+      font-size: clamp(2rem, 4vw, 2.8rem);
       font-weight: 800;
       color: #111;
       margin-bottom: 0.5rem;
@@ -93,7 +98,7 @@
     }
 
     .hero-content h3 {
-      font-size: 1.15rem;
+      font-size: clamp(1rem, 2vw, 1.15rem);
       font-weight: 700;
       color: #1a1a1a;
       line-height: 1.45;
@@ -101,7 +106,7 @@
     }
 
     .hero-content p {
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       color: #444;
       line-height: 1.6;
     }
@@ -114,7 +119,7 @@
     }
 
     .section-title {
-      font-size: 1.8rem;
+      font-size: clamp(1.5rem, 3vw, 1.8rem);
       font-weight: 700;
       color: #111;
       margin-bottom: 0.4rem;
@@ -128,7 +133,7 @@
 
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.8rem;
     }
 
@@ -220,13 +225,13 @@
 
     .feature-img-container img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
+      object-fit: cover;
       border-radius: 12px;
     }
 
     .feature-content h2 {
-      font-size: 1.8rem;
+      font-size: clamp(1.4rem, 3vw, 1.8rem);
       font-weight: 700;
       color: #111;
       margin-bottom: 0.4rem;
@@ -239,7 +244,7 @@
     }
 
     /* ==========================================
-       FOOTER CALLOUT
+       FOOTER
        ========================================== */
     footer {
       border-top: 1px solid #e0dfd9;
@@ -256,35 +261,17 @@
     /* ==========================================
        RESPONSIVE DESIGN (MEDIA QUERIES)
        ========================================== */
-    @media (max-width: 992px) {
-      nav ul {
-        gap: 1rem;
-      }
-
-      .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
+    @media (max-width: 1024px) {
       .hero-content {
         width: 55%;
       }
 
       .hero-image-container {
-        width: 55%;
+        width: 50%;
       }
     }
 
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
       .hero-section {
         flex-direction: column-reverse;
         min-height: auto;
@@ -293,7 +280,7 @@
       .hero-image-container {
         position: relative;
         width: 100%;
-        height: 300px;
+        height: 260px;
       }
 
       .hero-image-container::before {
@@ -302,15 +289,26 @@
 
       .hero-content {
         width: 100%;
-        padding: 2rem 5%;
-      }
-
-      .cards-grid {
-        grid-template-columns: 1fr;
+        padding: 2.5rem 5%;
       }
 
       .feature-section {
         grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .shows-section {
+        padding: 3rem 5% 2rem 5%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-image-container {
+        height: 200px;
+      }
+
+      .card-body {
+        padding: 1.25rem;
       }
     }
   </style>
@@ -319,14 +317,14 @@
 
 <body>
   <div id="navbar-container"></div>
+
   <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="hero-content">
       <h1>VR Astronomy</h1>
-      <h3>Travel through the Solar System, explore distant planets and experience the Universe in ways that are
-        impossible from the ground.</h3>
-      <p>Step into immersive virtual reality and discover space like never before. From our neighbouring planets to
-        distant galaxies, our shows spark curiosity and bring the Universe a little closer.</p>
+      <div class="accent-line"></div>
+      <h3>Travel through the Solar System, explore distant planets and experience the Universe in ways that are impossible from the ground.</h3>
+      <p>Step into immersive virtual reality and discover space like never before. From our neighbouring planets to distant galaxies, our shows spark curiosity and bring the Universe a little closer.</p>
     </div>
     <div class="hero-image-container">
       <img src="assets/Doscience_VR_Astronomy.jpg" alt="Students exploring space with VR Headsets" />
@@ -336,8 +334,7 @@
   <!-- EXPLORE SHOWS SECTION -->
   <section class="shows-section">
     <h2 class="section-title">Explore Our Shows</h2>
-    <p class="section-subtitle">Three immersive astronomy shows designed to take you on incredible journeys across
-      space.</p>
+    <p class="section-subtitle">Three immersive astronomy shows designed to take you on incredible journeys across space.</p>
 
     <div class="cards-grid">
       <!-- Card 1 -->
@@ -348,11 +345,9 @@
         <div class="card-body">
           <h3>The Solar System</h3>
           <div class="accent-line"></div>
-          <p>An introduction to our planetary neighbourhood. Discover the planets, their moons and the Sun that makes
-            life possible.</p>
+          <p>An introduction to our planetary neighbourhood. Discover the planets, their moons and the Sun that makes life possible.</p>
           <div class="card-footer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
@@ -369,11 +364,9 @@
         <div class="card-body">
           <h3>Mars</h3>
           <div class="accent-line"></div>
-          <p>A closer look at the Red Planet. Explore its landscapes, ongoing missions and the search for signs of life.
-          </p>
+          <p>A closer look at the Red Planet. Explore its landscapes, ongoing missions and the search for signs of life.</p>
           <div class="card-footer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
@@ -385,17 +378,14 @@
       <!-- Card 3 -->
       <article class="card">
         <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80"
-            alt="Hot & Energetic Universe" />
+          <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80" alt="Hot & Energetic Universe" />
         </div>
         <div class="card-body">
           <h3>Hot & Energetic Universe</h3>
           <div class="accent-line"></div>
-          <p>Journey through powerful cosmic events like black holes, supernovae and other high-energy phenomena that
-            shape our Universe.</p>
+          <p>Journey through powerful cosmic events like black holes, supernovae and other high-energy phenomena that shape our Universe.</p>
           <div class="card-footer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
@@ -414,8 +404,7 @@
     <div class="feature-content">
       <h2>A Universe Waiting to be Explored</h2>
       <div class="accent-line"></div>
-      <p>Whether you're seeing Saturn's rings for the first time, travelling through the Solar System or exploring
-        distant galaxies, VR Astronomy invites visitors of all ages to experience space with curiosity and wonder.</p>
+      <p>Whether you're seeing Saturn's rings for the first time, travelling through the Solar System or exploring distant galaxies, VR Astronomy invites visitors of all ages to experience space with curiosity and wonder.</p>
     </div>
   </section>
 
@@ -425,12 +414,11 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // Smooth scroll for internal navigation links
       const links = document.querySelectorAll('nav ul li a');
       links.forEach(link => {
         link.addEventListener('click', (e) => {
           const targetId = link.getAttribute('href');
-          if (targetId.startsWith('#') && targetId.length > 1) {
+          if (targetId && targetId.startsWith('#') && targetId.length > 1) {
             e.preventDefault();
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
@@ -444,8 +432,6 @@
   <script src="../components/navbar.js"></script>
   <script src="../js/navigation.js"></script>
   <script src="script.js"></script>
-  
-
 </body>
 
 </html>
