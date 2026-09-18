@@ -1,0 +1,372 @@
+/* ==========================================
+   DoScience Exact PDF & Design System Styles
+   ========================================== */
+
+:root {
+  /* Color Tokens */
+  --bg-color: #FCFCFA;
+  --text-primary: #1F2937;
+  --text-secondary: #4B5563;
+  --divider-color: #E5E7EB;
+  --doscience-green: #0E6245;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout Tokens */
+  --max-width: 1440px;
+  --max-read-width: 700px;
+  --desktop-gutter: 64px;
+  --column-gap: 48px;
+  --base-unit: 8px;
+}
+
+/* Reset & Base Setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--desktop-gutter);
+  padding-right: var(--desktop-gutter);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Typography Hierarchy (Exact Specs from Specification) */
+h1, .hero-title {
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+h2, .section-title, .cta-heading {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.body-lead, p {
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.section-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+}
+
+/* Accent Line Rules (40-56px) */
+.accent-line {
+  width: 48px;
+  height: 2px;
+  background-color: var(--text-primary);
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.accent-line.short {
+  margin: 24px 0;
+}
+
+.accent-line.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Global Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 28px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: none; /* Explicit Rule: No Shadows */
+}
+
+.btn-outline {
+  border: 1.5px solid var(--doscience-green);
+  color: var(--doscience-green);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--doscience-green);
+  color: #FFFFFF;
+}
+
+.btn-icon {
+  margin-right: 10px;
+}
+
+.btn-icon.right {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* Header & Site Nav */
+.site-header {
+  padding: 32px var(--desktop-gutter);
+  background-color: var(--bg-color);
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.logo-do { color: #0088FF; }
+.logo-dot { color: #FF4400; margin: 0 2px; }
+.logo-sci { color: #FFB700; }
+
+.main-nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.main-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--doscience-green);
+}
+
+/* Section 1: Hero */
+.hero-section {
+  padding: 96px 0;
+}
+
+.grid-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--column-gap);
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 580px;
+}
+
+.hero-content h1 {
+  margin-bottom: 32px;
+}
+
+.body-text-group p {
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+.target-locations {
+  margin-top: 32px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.hero-media {
+  width: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 24px; /* Matches section 1 layout styling */
+  display: block;
+}
+
+/* Section 2: Categories */
+.categories-section {
+  padding: 96px 0;
+  background-color: var(--bg-color);
+}
+
+.section-header-block {
+  margin-bottom: 64px;
+  max-width: 700px;
+}
+
+.section-subtitle {
+  font-size: 19px;
+  color: var(--text-secondary);
+  margin-top: 16px;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--column-gap);
+  align-items: center;
+  padding: 48px 0;
+  border-top: 1px solid var(--divider-color);
+}
+
+.category-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #EFEFEF;
+}
+
+.cat-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--doscience-green);
+  margin-bottom: 12px;
+}
+
+.category-desc {
+  color: var(--text-secondary);
+  max-width: 440px;
+}
+
+.banner-box {
+  margin-top: 48px;
+  padding: 24px 32px;
+  background-color: #F3F4F1;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.banner-box h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.banner-box p {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+/* Section 3: Catalogue & Contact */
+.catalogue-contact-section {
+  padding: 96px 0;
+}
+
+.catalogue-block, .contact-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.max-600 {
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.section-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--divider-color);
+  margin: 80px 0;
+  width: 100%;
+}
+
+/* Clients Grid */
+.clients-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.client-logo {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #374151;
+  text-transform: uppercase;
+  max-width: 160px;
+}
+
+/* Contact Details */
+.contact-details {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-label {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.contact-value {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.contact-value.link {
+  color: var(--text-primary);
+  text-decoration: none;
+}
