@@ -21,8 +21,8 @@ html {
 
 body {
     font-family: "Inter", sans-serif;
-    background: #fafafa;
-    color: #1F2937;
+    background: white;
+    color: black;
     overflow-x: hidden;
 }
 
@@ -30,34 +30,6 @@ body::-webkit-scrollbar {
     width: 0px;
 }
 
-/* =========================================
-   VARIABLES
-========================================= */
-
-:root {
-    --sb-green: ##1F2937 ;
-    --sb-green-light: ##1F2937 ;
-    --sb-border: #E5E7EB;
-    --sb-cream: #FCFCFA;
-    --sb-soft: #f4f0e6;
-}
-
-/* =========================================
-   HEADER
-========================================= */
-
-.header {
-    height: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
-    border-bottom: 1px solid #E5E7EB;
-    background: #FCFCFA;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
 
 /* BRAND */
 
@@ -254,11 +226,12 @@ body::-webkit-scrollbar {
 }
 
 .section-heading h2 {
-    font-size: 55px;
-    line-height: 1.08;
+    font-size: 40px;
+    line-height: 1.1;
     letter-spacing: -2.5px;
-    font-weight: 700;
-    margin-bottom: 22px;
+    font-weight: 550;
+    margin-bottom: 40px;
+    margin-top: 5px;
 }
 
 /* PRODUCT CARDS */
@@ -490,12 +463,16 @@ body::-webkit-scrollbar {
 }
 
 .sb-heading-3 {
-    font-size: 55px;
-    margin: 30px 0 22px;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -2.5px;
+    font-weight: 550;
+    margin-bottom: 40px;
+    margin-top: 5px;
 }
 
 .sb-use-section > .sb-inner > .sb-green-line {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 .sb-intro-3 {
@@ -582,8 +559,13 @@ body::-webkit-scrollbar {
 }
 
 .sb-heading-4 {
-    font-size: 44px;
-    margin: 27px 0 20px;
+    
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -2.5px;
+    font-weight: 550;
+    margin-bottom: 40px;
+    margin-top: 5px;
 }
 
 .sb-own-section > .sb-inner > .sb-green-line {
@@ -769,13 +751,13 @@ body::-webkit-scrollbar {
 }
 
 .sb-heading-5 {
-    font-size: 55px;
-    margin: 28px 0 25px;
-}
-
-.sb-beyond-copy > .sb-green-line {
-    margin-bottom: 30px;
-    margin-top: 50px;
+    
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -2.5px;
+    font-weight: 550;
+    margin-bottom: 40px;
+    margin-top: 5px;
 }
 
 .sb-intro-5 {
@@ -786,7 +768,7 @@ body::-webkit-scrollbar {
 .sb-content-fit {
     display: grid;
     grid-template-columns: 90px 1fr;
-    gap: 25px;
+    gap: 20px;
     align-items: start;
 }
 
@@ -887,9 +869,14 @@ body::-webkit-scrollbar {
 }
 
 .sb-heading-6 {
-    color: #1F2937 ;
-    font-size: 90px;
+    color: black;
     margin: 30px 0 30px;
+    font-size: clamp(45px, 5vw, 82px);
+    line-height: 0.99;
+    letter-spacing: -4px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    margin-top: 10px;
 }
 
 .sb-green-line-center {
@@ -897,25 +884,24 @@ body::-webkit-scrollbar {
 }
 
 .sb-talk-description {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.65;
-    color: #4B5563;
-    margin-bottom: 48px;
+    margin-bottom: 30px;
 }
 
 .sb-talk-button {
-    width: 410px;
-    min-height: 105px;
+    width: 350px;
+    min-height: 90px;
     border-radius: 18px;
-    background:#1F2937;
+    background:black;
     color: white;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 28px;
-    font-size: 32px;
-    font-weight: 600;
+    gap: 20px;
+    font-size: 28px;
+    font-weight: 500;
     transition: transform .2s ease, opacity .2s ease;
 }
 
