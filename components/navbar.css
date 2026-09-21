@@ -10,8 +10,8 @@
     width: 100%;
     height: 80px;
 
-    background: transparent;
-    backdrop-filter: blur(10px);
+    background: white;
+    /* backdrop-filter: blur(10px); */
 
     display: flex;
     justify-content: space-between;
@@ -83,7 +83,7 @@
 
     font-weight: 500;
 
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     transition: color 0.3s;
 
@@ -96,21 +96,15 @@
     white-space: nowrap;
 }
 
-/* =========================================================
-   HOVER / ACTIVE
-========================================================= */
 
-.ds-navbar-list a:hover,
+/* .ds-navbar-list a:hover,
 .ds-navbar-list a.active-link {
     color: #6a4c93;
-}
+} */
 
 
-/* =========================================================
-   UNDERLINE
-========================================================= */
 
-.ds-navbar-list a::after {
+/* .ds-navbar-list a::after {
     content: '';
 
     position: absolute;
@@ -124,12 +118,12 @@
     background-color: #6a4c93;
 
     transition: width 0.3s ease-in-out;
-}
+} */
 
-.ds-navbar-list a:hover::after,
+/* .ds-navbar-list a:hover::after,
 .ds-navbar-list a.active-link::after {
     width: 100%;
-}
+} */
 
 
 /* =========================================================
@@ -203,7 +197,7 @@
     }
 
     .ds-navbar-list a {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
 
         width: 90%;
     }

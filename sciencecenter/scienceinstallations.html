@@ -8,281 +8,292 @@
   <!-- Google Fonts for crisp typography (Montserrat / sans-serif feel) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
   <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    html,
+    body,
+    button,
+    input,
+    textarea,
+    select {
+      font-family: "Inter", sans-serif;
+    }
 
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #FCFCFA;
-  color: #1a1a1a;
-  line-height: 1.6;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+    body {
+      background-color:white;
+      color: #1a1a1a;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
 
-/* ==========================================
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ==========================================
    HERO SECTION
    ========================================== */
-.hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 480px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background-color: #f7f6f2;
-  margin-top: 80px;
-}
+    /* ==========================================
+   HERO SECTION (UPDATED)
+   ========================================== */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 5%;
+      background-color: #FCFCFA;
+      /* Matches body background */
+      margin-top: 80px;
+      gap: 3rem;
+    }
 
-.hero-image-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 65%;
-  height: 100%;
-}
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 45%;
+      padding: 0;
+      /* Cleared absolute padding */
+    }
 
-.hero-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
+    .hero-image-container {
+      position: relative;
+      /* Changed from absolute to contained inline block */
+      width: 50%;
+      height: 400px;
+      border-radius: 12px;
+      /* Added rounded corners like the reference image */
+      overflow: hidden;
+    }
 
-/* Gradient overlay for smooth transition into text on left */
-.hero-image-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 45%;
-  height: 100%;
-  background: linear-gradient(to right, #f7f6f2 0%, rgba(247, 246, 242, 0) 100%);
-  z-index: 2;
-}
+    .hero-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
 
-.hero-content {
-  position: relative;
-  z-index: 3;
-  width: 45%;
-  padding-left: 5%;
-  padding-right: 2rem;
-}
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 45%;
+      padding-left: 5%;
+      padding-right: 2rem;
+    }
 
-.hero-content h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #111;
-  margin-bottom: 0.5rem;
-}
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 0.5rem;
+    }
 
-.accent-line {
-  width: 28px;
-  height: 3px;
-  background-color: #008779;
-  margin-bottom: 1.5rem;
-}
+    .accent-line {
+      width: 28px;
+      height: 3px;
+      background-color:black;
+      margin-bottom: 1.5rem;
+    }
 
-.hero-content p {
-  font-size: 1.05rem;
-  color: #333;
-  line-height: 1.55;
-  font-weight: 500;
-}
+    .hero-content p {
+      font-size: 1.05rem;
+      color: #333;
+      line-height: 1.55;
+      font-weight: 500;
+    }
 
-/* ==========================================
+    /* ==========================================
    INSTALLATIONS LIST SECTION
    ========================================== */
-.installations-section {
-  padding: 4rem 5% 2rem 5%;
-}
+    .installations-section {
+      padding: 4rem 5% 2rem 5%;
+    }
 
-.section-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 0.4rem;
-}
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 0.4rem;
+    }
 
-.section-subtitle {
-  font-size: 0.9rem;
-  color: #444;
-  margin-bottom: 2.5rem;
-}
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 2.5rem;
+    }
 
-.category-row {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 2.5rem;
-  align-items: start;
-  padding-bottom: 3rem;
-  margin-bottom: 3rem;
-  border-bottom: 1px solid #e0dfd9;
-}
+    .category-row {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+      border-bottom: none;
+    }
 
-.category-row:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 1rem;
-}
+    .category-row:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 1rem;
+    }
 
-.category-image {
-  width: 100%;
-  height: 250px;
-  border-radius: 8px;
-  overflow: hidden;
-}
+    .category-image {
+      width: 100%;
+      height: 250px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
 
-.category-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .category-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.category-info h3 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 0.4rem;
-}
+    .category-info h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 0.4rem;
+    }
 
-.category-info .description {
-  font-size: 0.9rem;
-  color: #444;
-  margin-bottom: 1.5rem;
-}
+    .category-info .description {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
 
-/* Multi-column bullet lists */
-.items-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem 1.5rem;
-  list-style-type: disc;
-  padding-left: 1.2rem;
-}
+    /* Multi-column bullet lists */
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem 1.5rem;
+      list-style-type: disc;
+      padding-left: 1.2rem;
+    }
 
-.items-grid li {
-  font-size: 0.85rem;
-  color: #222;
-  font-weight: 500;
-}
+    .items-grid li {
+      font-size: 0.85rem;
+      color: #222;
+      font-weight: 500;
+    }
 
-/* ==========================================
+    /* ==========================================
    FOOTER CALLOUT
    ========================================== */
-footer {
-  border-top: 1px solid #e0dfd9;
-  padding: 2.5rem 5%;
-  text-align: left;
-}
+    footer {
+      border-top: 1px solid #e0dfd9;
+      padding: 2.5rem 5%;
+      text-align: left;
+    }
 
-footer p {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #222;
-  line-height: 1.5;
-}
+    footer p {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #222;
+      line-height: 1.5;
+    }
 
-/* Laptops & Tablets (max-width: 1024px) */
-@media screen and (max-width: 1024px) {
-  .category-row {
-    grid-template-columns: 300px 1fr;
-    gap: 1.8rem;
-  }
+    /* Laptops & Tablets (max-width: 1024px) */
+    @media screen and (max-width: 1024px) {
+      .category-row {
+        grid-template-columns: 300px 1fr;
+        gap: 1.8rem;
+      }
 
-  .items-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+      .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-}
+      .hero-content h1 {
+        font-size: 2.4rem;
+      }
+    }
 
-/* Medium Tablets (max-width: 768px) */
-@media screen and (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    min-height: auto;
-    padding-bottom: 2rem;
-  }
+    /* Medium Tablets (max-width: 768px) */
+    @media screen and (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        min-height: auto;
+        padding-bottom: 2rem;
+      }
 
-  .hero-image-container {
-    position: relative;
-    width: 100%;
-    height: 280px;
-  }
+      .hero-image-container {
+        position: relative;
+        width: 100%;
+        height: 280px;
+      }
 
-  .hero-image-container::before {
-    width: 100%;
-    height: 40%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to bottom, #f7f6f2 0%, rgba(247, 246, 242, 0) 100%);
-  }
+      .hero-image-container::before {
+        width: 100%;
+        height: 40%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to bottom, #f7f6f2 0%, rgba(247, 246, 242, 0) 100%);
+      }
 
-  .hero-content {
-    width: 100%;
-    padding: 2.5rem 5% 1rem 5%;
-  }
+      .hero-content {
+        width: 100%;
+        padding: 2.5rem 5% 1rem 5%;
+      }
 
-  .category-row {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding-bottom: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
+      .category-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
 
-  .category-image {
-    height: 220px;
-  }
+      .category-image {
+        height: 220px;
+      }
 
-  .installations-section {
-    padding: 3rem 5% 1rem 5%;
-  }
-}
+      .installations-section {
+        padding: 3rem 5% 1rem 5%;
+      }
+    }
 
-/* Mobile Devices (max-width: 480px) */
-@media screen and (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
+    /* Mobile Devices (max-width: 480px) */
+    @media screen and (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
 
-  .section-title {
-    font-size: 1.5rem;
-  }
+      .section-title {
+        font-size: 1.5rem;
+      }
 
-  .category-info h3 {
-    font-size: 1.4rem;
-  }
+      .category-info h3 {
+        font-size: 1.4rem;
+      }
 
-  .items-grid {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
+      .items-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
 
-  footer p {
-    font-size: 0.95rem;
-  }
-}
+      footer p {
+        font-size: 0.95rem;
+      }
+    }
   </style>
   <link rel="stylesheet" href="../components/navbar.css">
 </head>
@@ -306,14 +317,13 @@ footer p {
   <!-- MORE THAN 50 INTERACTIVE INSTALLATIONS SECTION -->
   <section class="installations-section">
     <h2 class="section-title">More than 50 Interactive Installations</h2>
-    <div class="accent-line"></div>
     <p class="section-subtitle">Grouped broadly into Mechanics, Sound, Light and Mathematics, each installation explores
       a scientific idea through direct experience.</p>
 
     <!-- Category 1: Mechanics -->
     <div class="category-row">
       <div class="category-image">
-        <img src="assets/DoScience_section-3-1-2-mechanics.png" alt="Mechanics Installations" />
+        <img src="assets/DoScience _ Mechanics .jpg" alt="Mechanics Installations" />
       </div>
       <div class="category-info">
         <h3>Mechanics</h3>
@@ -341,7 +351,7 @@ footer p {
     <!-- Category 2: Sound -->
     <div class="category-row">
       <div class="category-image">
-        <img src="assets/DoScience_section-3-1-3-sound-will be reworked a bit_.png" alt="Sound Installations" />
+        <img src="assets/DoScience - Sound.png" alt="Sound Installations" />
       </div>
       <div class="category-info">
         <h3>Sound</h3>
@@ -363,7 +373,7 @@ footer p {
     <!-- Category 3: Light -->
     <div class="category-row">
       <div class="category-image">
-        <img src="assets/DoScience_section-3-1-4-light.png" alt="Light Installations" />
+        <img src="assets/DoScience_light.png" alt="Light Installations" />
       </div>
       <div class="category-info">
         <h3>Light</h3>
@@ -388,7 +398,7 @@ footer p {
     <!-- Category 4: Mathematics -->
     <div class="category-row">
       <div class="category-image">
-        <img src="assets/DoScience_section-3-1-4-maths.png" alt="Mathematics Installations" />
+        <img src="assets/DoScience _ Maths.png" alt="Mathematics Installations" />
       </div>
       <div class="category-info">
         <h3>Mathematics</h3>

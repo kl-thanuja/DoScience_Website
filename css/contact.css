@@ -1,5 +1,12 @@
 /* --- Contact Page Styles --- */
-
+html,
+body,
+button,
+input,
+textarea,
+select {
+    font-family: "Inter", sans-serif;
+}
 :root {
     --color-d: #6a4c93; /* Purple */
     --color-o: #1982c4; /* Blue */
@@ -39,8 +46,9 @@
 .contact-intro .divider {
     width: 100px;
     height: 3px;
-    background-color: var(--green-primary);
+    background-color: black;
     margin-bottom: 30px;
+
 }
 
 .contact-intro p {
@@ -157,8 +165,8 @@ body {
 }
 
 .submit-btn {
-    background-color: var(--green-dark);
-    color: white;
+    background-color: white;
+    color: black;
     padding: 14px 32px;
     border: none;
     border-radius: 6px;
@@ -203,7 +211,7 @@ body {
 .find-us-info .divider {
     width: 100px;
     height: 2px;
-    background-color: var(--green-primary);
+    background-color: black;
     margin-bottom: 20px;
 }
 

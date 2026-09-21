@@ -1,4 +1,3 @@
-
 /*
 Global Navigation
 
@@ -23,12 +22,12 @@ const NAVIGATION_CONFIG = {
 
     "science-center": {
         path: "sciencecenter/index.html",
-        logo: "images/logo-science-centre.png"
+        logo: "images/Logo-transparent.png"
     },
 
     "story-box": {
         path: "story-box/index.html",
-        logo: "images/logo-science-centre.png"
+        logo: "images/Logo-transparent.png"
     },
 
     "installations": {

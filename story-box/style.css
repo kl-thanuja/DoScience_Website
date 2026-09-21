@@ -1,7 +1,14 @@
 /* =========================================
    RESET
 ========================================= */
-
+html,
+body,
+button,
+input,
+textarea,
+select {
+    font-family: "Inter", sans-serif;
+}
 * {
     margin: 0;
     padding: 0;

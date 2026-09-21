@@ -1,3 +1,12 @@
+html,
+body,
+button,
+input,
+textarea,
+select {
+    font-family: "Inter", sans-serif;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,8 +19,6 @@ html {
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #FAFAFA;
     color: #222222;
     line-height: 1.6;
     overflow-x: hidden;
@@ -80,12 +87,8 @@ section {
     margin-bottom: 1rem;
 }
 
-.eyebrow-purple {
-    color: #6C429C;
-}
-
-.eyebrow-green {
-    color: #2A9D8F;
+.eyebrow-black {
+    color: black;
 }
 
 .heading-primary {
@@ -109,12 +112,8 @@ section {
 .accent-line {
     width: 60px;
     height: 2px;
-    background-color: #6C429C;
+    background-color: black;
     margin-bottom: 2rem;
-}
-
-.accent-line-green {
-    background-color: #2A9D8F;
 }
 
 .link-arrow {
@@ -150,32 +149,36 @@ section {
    SECTION 1: HERO
    ========================================================================== */
 #section-1 {
-    background-color: #F7F7F7;
+    background-color: white;
     padding: 0;
 }
 
 .hero-wrapper {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     position: relative;
-    margin-top: 80px;
+    padding-top: 80px;
 }
 
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-40%);
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
     z-index: 2;
-    max-width: 480px;
+    flex: 1;
+    padding: 3.5rem 1.3rem 2.8rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #4A4A4A;
-    margin-bottom: 2.5rem;
-    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
 }
 
 .hero-tagline {
@@ -187,42 +190,22 @@ section {
 }
 
 .hero-bg-container {
-    width: 100%;
-    height: 100%;
     position: relative;
-}
-
-.hero-image-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg,
-            #F7F7F7 0%,
-            #f7f7f7a7 20%,
-            #f7f7f781 25%,
-            #f7f7f781 35%,
-            rgba(247, 247, 247, 0) 65%);
-    z-index: 1;
+    min-height: 100%;
+    flex: 1.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .hero-bg-image {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center right;
-    margin-left: 20px;
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0.7;
-    animation: bounce 2s infinite;
+    height: 80%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 @keyframes bounce {
@@ -241,7 +224,7 @@ section {
    SECTION 2: WHY DISCOVERY MATTERS
    ========================================================================== */
 #section-2 {
-    background-color: #FAFAFA;
+    background-color: white;
 }
 
 .specific-section {
@@ -301,7 +284,7 @@ section {
    SECTION 3: WHAT YOU'LL EXPERIENCE
    ========================================================================== */
 #section-3 {
-    background-color: #F5F5F3;
+    background-color: white;
     flex-direction: column;
     justify-content: center;
     padding: 60px;
@@ -370,13 +353,11 @@ section {
 .fade-right {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, transparent 60%, #F5F5F3 100%);
 }
 
 .fade-left {
     position: absolute;
     inset: 0;
-    background: linear-gradient(270deg, transparent 60%, #F5F5F3 100%);
 }
 
 /* ==========================================================================
@@ -438,11 +419,11 @@ section {
 }
 
 /* ==========================================================================
-   SECTION 5: VISIT DOSCIENCE
+   SECTION 5: VISIT DOSCIENCE & TABLES
    ========================================================================== */
 #section-5 {
     flex-direction: column;
-    padding: 60px;
+    padding: 60px 5%;
 }
 
 .visit-header {
@@ -497,87 +478,137 @@ section {
     color: #222;
 }
 
+/* Two-column Layout Cards for Public Visitors vs School Visits */
 .visit-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    display: flex;
+    gap: 2.5rem;
+    align-items: stretch;
     padding-bottom: 4rem;
     border-bottom: 1px solid #E5E5E5;
     margin-bottom: 4rem;
 }
 
+.visit-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2.25rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
 .visit-col h3 {
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
     color: #111;
 }
 
 .visit-col p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #555;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     line-height: 1.6;
 }
 
 .visit-list {
     list-style: none;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
 }
 
 .visit-list li {
     position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.8rem;
-    font-size: 0.95rem;
+    padding-left: 1.25rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.925rem;
     color: #444;
+    line-height: 1.5;
 }
 
 .visit-list li::before {
     content: "•";
     position: absolute;
     left: 0;
-    color: #333;
+    color:black;
     font-size: 1.2rem;
     line-height: 1;
 }
 
+.pricing-container {
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
 .fees-table-title {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color:black;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid: black;
+    display: inline-block;
 }
 
 .fees-table {
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1rem;
-}
-
-.fees-table th,
-.fees-table td {
-    text-align: left;
-    padding: 12px 0;
-    border-bottom: 1px solid #E0E0E0;
-    font-size: 0.95rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0.5rem 0 0.75rem 0;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
 }
 
 .fees-table th {
+    background-color: white;
+    color: black;
     font-weight: 600;
-    color: #111;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 10px 12px;
+    text-align: right;
+    border-bottom: 1px solid white;
+}
+
+.fees-table th:first-child {
+    text-align: left;
 }
 
 .fees-table td {
-    color: #555;
+    padding: 11px 12px;
+    font-size: 0.9rem;
+    color: black;
+    border-bottom: 1px solid white;
+    text-align: right;
+    vertical-align: middle;
 }
 
+.fees-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: #0f172a;
+}
+
+.fees-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+
 .table-note {
-    font-size: 0.85rem;
-    color: #666;
+    font-size: 0.825rem;
+    color: black;
+    line-height: 1.45;
     margin-top: 0.5rem;
 }
 
+/* Planning & Footer Sections */
 .planning-section {
     padding-bottom: 3rem;
     border-bottom: 1px solid #E5E5E5;
@@ -647,7 +678,7 @@ section {
     }
 
     .visit-columns {
-        gap: 3rem;
+        gap: 2rem;
     }
 
     .section4-top {
@@ -730,11 +761,6 @@ section {
         height: 280px;
     }
 
-    .fade-right,
-    .fade-left {
-        background: linear-gradient(180deg, transparent 60%, #F5F5F3 100%);
-    }
-
     .section4-top {
         grid-template-columns: 1fr;
         margin-bottom: 3rem;
@@ -753,8 +779,8 @@ section {
     }
 
     .visit-columns {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+        flex-direction: column;
+        gap: 2.5rem;
     }
 
     .visit-header {
@@ -786,12 +812,6 @@ section {
     .location-banner-footer {
         font-size: 1rem;
         text-align: center;
-    }
-
-    .fees-table th,
-    .fees-table td {
-        padding: 8px 0;
-        font-size: 0.85rem;
     }
 
     .contact-row {

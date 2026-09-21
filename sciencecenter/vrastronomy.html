@@ -8,12 +8,19 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
   <style>
-    /* ==========================================
-       RESET & GLOBAL STYLES
-       ========================================== */
+    html,
+    body,
+    button,
+    input,
+    textarea,
+    select {
+      font-family: "Inter", sans-serif;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -21,8 +28,7 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #FCFCFA;
+      background-color: white;
       color: #1a1a1a;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -38,67 +44,39 @@
     /* ==========================================
        HERO SECTION
        ========================================== */
+
     .hero-section {
       margin-top: 70px;
-      position: relative;
-      width: 100%;
-      min-height: 480px;
-      display: flex;
+      padding: 3rem 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
       align-items: center;
-      background-color: #f7f6f2;
-      overflow: hidden;
-    }
-
-    .hero-image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 60%;
-      height: 100%;
-    }
-
-    .hero-image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    /* Gradient overlay for smooth transition into text on left */
-    .hero-image-container::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 45%;
-      height: 100%;
-      background: linear-gradient(to right, #f7f6f2 0%, rgba(247, 246, 242, 0) 100%);
-      z-index: 2;
+      background-color: #ffffff;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 3;
-      width: 50%;
-      padding: 3rem 2rem 3rem 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .hero-content h1 {
-      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
       font-weight: 800;
       color: #111;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
     }
 
     .accent-line {
       width: 28px;
       height: 3px;
-      background-color: #008779;
-      margin-bottom: 1.5rem;
+      background-color: black;
+      margin-bottom: 2rem;
     }
 
     .hero-content h3 {
-      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: 700;
       color: #1a1a1a;
       line-height: 1.45;
@@ -106,9 +84,26 @@
     }
 
     .hero-content p {
-      font-size: 0.9rem;
-      color: #444;
-      line-height: 1.6;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.65;
+    }
+
+    .hero-image-container {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      max-height: 500px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .hero-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 16px;
     }
 
     /* ==========================================
@@ -138,20 +133,15 @@
     }
 
     .card {
-      background: #f7f6f2;
+      background:white;
       border: 1px solid #e0dfd9;
       border-radius: 12px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-    }
 
     .card-img {
       width: 100%;
@@ -207,40 +197,39 @@
     }
 
     /* ==========================================
-       BOTTOM FEATURE SECTION
+       BOTTOM FEATURE SECTION (UPDATED TO CENTER)
        ========================================== */
     .feature-section {
-      padding: 2rem 5% 4rem 5%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      padding: 4rem 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .feature-content {
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
     }
 
-    .feature-img-container {
-      width: 100%;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .feature-img-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
     .feature-content h2 {
-      font-size: clamp(1.4rem, 3vw, 1.8rem);
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
       font-weight: 700;
       color: #111;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .feature-content .accent-line {
+      margin-top: 0.4rem;
+      margin-bottom: 1.5rem;
     }
 
     .feature-content p {
-      font-size: 0.92rem;
+      font-size: 1rem;
       color: #444;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     /* ==========================================
@@ -261,42 +250,20 @@
     /* ==========================================
        RESPONSIVE DESIGN (MEDIA QUERIES)
        ========================================== */
-    @media (max-width: 1024px) {
-      .hero-content {
-        width: 55%;
+    @media (max-width: 900px) {
+      .hero-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 2rem;
       }
 
       .hero-image-container {
-        width: 50%;
+        height: 300px;
+        min-height: auto;
       }
     }
 
     @media (max-width: 768px) {
-      .hero-section {
-        flex-direction: column-reverse;
-        min-height: auto;
-      }
-
-      .hero-image-container {
-        position: relative;
-        width: 100%;
-        height: 260px;
-      }
-
-      .hero-image-container::before {
-        display: none;
-      }
-
-      .hero-content {
-        width: 100%;
-        padding: 2.5rem 5%;
-      }
-
-      .feature-section {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
       .shows-section {
         padding: 3rem 5% 2rem 5%;
       }
@@ -304,7 +271,7 @@
 
     @media (max-width: 480px) {
       .hero-image-container {
-        height: 200px;
+        height: 220px;
       }
 
       .card-body {
@@ -323,18 +290,21 @@
     <div class="hero-content">
       <h1>VR Astronomy</h1>
       <div class="accent-line"></div>
-      <h3>Travel through the Solar System, explore distant planets and experience the Universe in ways that are impossible from the ground.</h3>
-      <p>Step into immersive virtual reality and discover space like never before. From our neighbouring planets to distant galaxies, our shows spark curiosity and bring the Universe a little closer.</p>
+      <h3>Travel through the Solar System, explore distant planets and experience the Universe in ways that are
+        impossible from the ground.</h3>
+      <p>Step into immersive virtual reality and discover space like never before. From our neighbouring planets to
+        distant galaxies, our shows spark curiosity and bring the Universe a little closer.</p>
     </div>
     <div class="hero-image-container">
-      <img src="assets/Doscience_VR_Astronomy.jpg" alt="Students exploring space with VR Headsets" />
+      <img src="assets/DoScience- Vr Astronomy sub page - Vr Astronomy 2.png" alt="Students exploring space with VR Headsets" />
     </div>
   </section>
 
   <!-- EXPLORE SHOWS SECTION -->
   <section class="shows-section">
     <h2 class="section-title">Explore Our Shows</h2>
-    <p class="section-subtitle">Three immersive astronomy shows designed to take you on incredible journeys across space.</p>
+    <p class="section-subtitle">Three immersive astronomy shows designed to take you on incredible journeys across
+      space.</p>
 
     <div class="cards-grid">
       <!-- Card 1 -->
@@ -345,9 +315,11 @@
         <div class="card-body">
           <h3>The Solar System</h3>
           <div class="accent-line"></div>
-          <p>An introduction to our planetary neighbourhood. Discover the planets, their moons and the Sun that makes life possible.</p>
+          <p>An introduction to our planetary neighbourhood. Discover the planets, their moons and the Sun that makes
+            life possible.</p>
           <div class="card-footer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
@@ -364,9 +336,11 @@
         <div class="card-body">
           <h3>Mars</h3>
           <div class="accent-line"></div>
-          <p>A closer look at the Red Planet. Explore its landscapes, ongoing missions and the search for signs of life.</p>
+          <p>A closer look at the Red Planet. Explore its landscapes, ongoing missions and the search for signs of life.
+          </p>
           <div class="card-footer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
@@ -378,14 +352,17 @@
       <!-- Card 3 -->
       <article class="card">
         <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80" alt="Hot & Energetic Universe" />
+          <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80"
+            alt="Hot & Energetic Universe" />
         </div>
         <div class="card-body">
           <h3>Hot & Energetic Universe</h3>
           <div class="accent-line"></div>
-          <p>Journey through powerful cosmic events like black holes, supernovae and other high-energy phenomena that shape our Universe.</p>
+          <p>Journey through powerful cosmic events like black holes, supernovae and other high-energy phenomena that
+            shape our Universe.</p>
           <div class="card-footer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
@@ -398,13 +375,11 @@
 
   <!-- FEATURE SECTION -->
   <section class="feature-section">
-    <div class="feature-img-container">
-      <img src="assets/kids_exploring_VR.png" alt="Girl experiencing VR Astronomy" />
-    </div>
     <div class="feature-content">
       <h2>A Universe Waiting to be Explored</h2>
       <div class="accent-line"></div>
-      <p>Whether you're seeing Saturn's rings for the first time, travelling through the Solar System or exploring distant galaxies, VR Astronomy invites visitors of all ages to experience space with curiosity and wonder.</p>
+      <p>Whether you're seeing Saturn's rings for the first time, travelling through the Solar System or exploring
+        distant galaxies, VR Astronomy invites visitors of all ages to experience space with curiosity and wonder.</p>
     </div>
   </section>
 
