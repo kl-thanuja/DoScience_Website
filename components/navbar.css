@@ -100,7 +100,7 @@
 
 .ds-navbar-list a:hover,
 .ds-navbar-list a.active-link {
-    color:var(--green-dark);
+    color: #1b5e20;
 }
 
 
@@ -116,7 +116,7 @@
     bottom: -4px;
     left: 0;
 
-    background-color:var(--green-dark);
+    background-color: #1b5e20;
 
     transition: width 0.3s ease-in-out;
 }
