@@ -79,7 +79,8 @@
 .ds-navbar-list a {
     text-decoration: none;
 
-    color: #333;
+    color: black;
+    /* color: #333; */
 
     font-weight: 525;
 
