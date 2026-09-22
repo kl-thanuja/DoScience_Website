@@ -186,71 +186,42 @@ SET ACTIVE NAVIGATION ITEM
 */
 
 function setActiveNavigation() {
-
-    const currentPath =
-        window.location.pathname
-            .replace(/\\/g, "/")
-            .toLowerCase();
-
-
-    const links =
-        document.querySelectorAll(
-            "#nav-list a[data-page]"
-        );
-
+    const currentPath = window.location.pathname.replace(/\\/g, "/").toLowerCase();
+    const links = document.querySelectorAll("#nav-list a[data-page]");
 
     links.forEach(function (link) {
+        const pageId = link.getAttribute("data-page");
+        link.classList.remove("active-link");
 
-        const pageId =
-            link.getAttribute("data-page");
+        const page = NAVIGATION_CONFIG[pageId];
+        if (!page || !page.path) return;
 
+        const configuredPath = page.path.replace(/\\/g, "/").toLowerCase();
 
-        link.classList.remove(
-            "active-link"
-        );
+        if (pageId === "home") {
+            const isRootIndex = currentPath.endsWith("/index.html") && !currentPath.split("/").slice(0, -1).some(segment => segment.length > 0 && !segment.includes(":"));
+            const isBareRoot = currentPath.endsWith("/") || currentPath === "" || currentPath.endsWith("/index.html") && currentPath.split("/").length <= 3;
 
+            const isSubpage = Object.keys(NAVIGATION_CONFIG).some(key => {
+                if (key === "home") return false;
+                const subPath = NAVIGATION_CONFIG[key].path.replace(/\\/g, "/").toLowerCase();
+                const folder = subPath.split("/")[0];
+                return folder && currentPath.includes("/" + folder + "/");
+            });
 
-        const page =
-            NAVIGATION_CONFIG[pageId];
+            if (!isSubpage && (isRootIndex || isBareRoot || currentPath.endsWith("/" + configuredPath))) {
+                link.classList.add("active-link");
+            }
+        } else {
+            const pathSegments = configuredPath.split("/");
+            const folderOrFile = pathSegments[0].includes(".html") ? pathSegments[0] : pathSegments[0] + "/";
 
-
-        if (!page || !page.path) {
-            return;
+            if (currentPath.includes("/" + folderOrFile)) {
+                link.classList.add("active-link");
+            }
         }
-
-
-        /*
-        Normalize configured path
-        */
-
-        const configuredPath =
-            page.path
-                .replace(/\\/g, "/")
-                .toLowerCase();
-
-
-        /*
-        Check whether current page
-        corresponds to this navigation item.
-        */
-
-        if (
-            currentPath.endsWith(
-                configuredPath
-            )
-        ) {
-
-            link.classList.add(
-                "active-link"
-            );
-
-        }
-
     });
-
 }
-
-
 /*
 =========================================================
 SET CORRECT LOGO
@@ -258,79 +229,33 @@ SET CORRECT LOGO
 */
 
 function setNavigationLogo() {
+    const logo = document.getElementById("header-logo");
+    if (!logo) return;
 
-    const logo =
-        document.getElementById(
-            "header-logo"
-        );
-
-    if (!logo) {
-        return;
-    }
-
-
-    const currentPath =
-        window.location.pathname
-            .replace(/\\/g, "/")
-            .toLowerCase();
-
-
+    const currentPath = window.location.pathname.replace(/\\/g, "/").toLowerCase();
     let currentPage = "home";
 
+    Object.keys(NAVIGATION_CONFIG).forEach(function (pageId) {
+        if (pageId === "home") return;
 
-    /*
-    Find current page
-    */
+        const page = NAVIGATION_CONFIG[pageId];
+        if (!page.path) return;
 
-    Object.keys(
-        NAVIGATION_CONFIG
-    ).forEach(function (pageId) {
+        const configuredPath = page.path.replace(/\\/g, "/").toLowerCase();
+        const pathSegments = configuredPath.split("/");
+        const folderOrFile = pathSegments[0].includes(".html") ? pathSegments[0] : pathSegments[0] + "/";
 
-        const page =
-            NAVIGATION_CONFIG[pageId];
-
-        if (!page.path) {
-            return;
-        }
-
-
-        const configuredPath =
-            page.path
-                .replace(/\\/g, "/")
-                .toLowerCase();
-
-
-        if (
-            currentPath.endsWith(
-                configuredPath
-            )
-        ) {
-
+        if (currentPath.includes("/" + folderOrFile)) {
             currentPage = pageId;
-
         }
-
     });
 
+    const page = NAVIGATION_CONFIG[currentPage];
+    if (!page || !page.logo) return;
 
-    const page =
-        NAVIGATION_CONFIG[currentPage];
-
-
-    if (!page || !page.logo) {
-        return;
-    }
-
-
-    const root =
-        getProjectRoot();
-
-
-    logo.src =
-        root + page.logo;
-
+    const root = getProjectRoot();
+    logo.src = root + page.logo;
 }
-
 
 /*
 =========================================================
