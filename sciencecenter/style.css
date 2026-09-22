@@ -110,10 +110,10 @@ section {
 }
 
 .accent-line {
-    width: 60px;
-    height: 2px;
-    background-color: black;
-    margin-bottom: 2rem;
+    width: 65px;
+    height: 3px;
+    background-color:black;
+    margin: 14px 0;
 }
 
 .link-arrow {
