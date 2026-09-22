@@ -583,8 +583,7 @@ body::-webkit-scrollbar {
     width: 68px;
     height: 68px;
     border-radius: 50%;
-    background: #f4f0e4;
-    color: var(--sb-green);
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -610,7 +609,7 @@ body::-webkit-scrollbar {
 .sb-network-strip p {
     font-size: 18px;
     line-height: 1.45;
-    color: #4B5563;
+    color: black;
 }
 
 /* SECTION 5 */
