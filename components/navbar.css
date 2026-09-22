@@ -80,7 +80,6 @@
     text-decoration: none;
 
     color: black;
-    /* color: #333; */
 
     font-weight: 525;
 
@@ -101,7 +100,7 @@
 
 .ds-navbar-list a:hover,
 .ds-navbar-list a.active-link {
-    color: #6a4c93;
+    color: rgb(117,187,71);
 }
 
 
@@ -117,7 +116,7 @@
     bottom: -4px;
     left: 0;
 
-    background-color: #6a4c93;
+    background-color: rgb(117,187,71);;
 
     transition: width 0.3s ease-in-out;
 }
@@ -146,7 +145,7 @@
     width: 25px;
     height: 3px;
 
-    background-color: #333;
+    background-color: black;
 
     transition: 0.3s;
 }
