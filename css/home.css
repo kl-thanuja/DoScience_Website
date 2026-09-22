@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
 
 .home-hero {
     width: 100%;
-    background: #ffffff;
+    background:#fafafa;
     padding: 28px 5% 22px;
     box-sizing: border-box;
 }
