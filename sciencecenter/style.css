@@ -549,7 +549,7 @@ section {
     color:black;
     margin-bottom: 0.75rem;
     padding-bottom: 0.35rem;
-    border-bottom: 2px solid: black;
+    border-bottom: 2px solid black;
     display: inline-block;
 }
 
@@ -558,7 +558,7 @@ section {
     border-collapse: separate;
     border-spacing: 0;
     margin: 0.5rem 0 0.75rem 0;
-    background-color: #f8fafc;
+    background-color:white;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid #e2e8f0;
