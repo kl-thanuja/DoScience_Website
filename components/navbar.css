@@ -97,14 +97,14 @@
 }
 
 
-/* .ds-navbar-list a:hover,
+.ds-navbar-list a:hover,
 .ds-navbar-list a.active-link {
     color: #6a4c93;
-} */
+}
 
 
 
-/* .ds-navbar-list a::after {
+.ds-navbar-list a::after {
     content: '';
 
     position: absolute;
@@ -118,12 +118,12 @@
     background-color: #6a4c93;
 
     transition: width 0.3s ease-in-out;
-} */
+}
 
-/* .ds-navbar-list a:hover::after,
+.ds-navbar-list a:hover::after,
 .ds-navbar-list a.active-link::after {
     width: 100%;
-} */
+}
 
 
 /* =========================================================
