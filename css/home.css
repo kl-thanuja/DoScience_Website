@@ -1,11 +1,7 @@
-/* =========================================================
-   HOME PAGE - COMPACT SINGLE SCREEN LAYOUT
-========================================================= */
-
-/* Hide the old hero on Home page */
-/* =========================================================
-   GLOBAL FONT - INTER
-========================================================= */
+html,
+body {
+    background-color: #fafafa;
+}
 html,
 body,
 button,
@@ -85,13 +81,12 @@ body::-webkit-scrollbar {
 ========================================================= */
 
 .home-category-grid {
-    margin-top:25px;
+    padding-top: 25px;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background: #ffffff;
-    border-top: 1px solid #e8e8e8;
+    background: #fafafa;
     box-sizing: border-box;
 }
 
@@ -108,7 +103,7 @@ body::-webkit-scrollbar {
 
     border-right: 1px solid #e8e8e8;
 
-    background: #ffffff;
+    background: #fafafa;
 
     text-decoration: none;
 
@@ -126,11 +121,9 @@ body::-webkit-scrollbar {
 
 .category-image {
     width: 100%;
-
-    /* Reduced from 260px */
-    height: 185px;
+    height: 205px; 
     overflow: hidden;
-    background: #f0f0f0;
+    background: #fafafa;
     flex-shrink: 0;
 }
 
@@ -261,7 +254,7 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 185px;
+        height: 205px; /* Original 185px + 20px */
     }
 
     .category-content {
@@ -292,7 +285,7 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 175px;
+        height: 195px; /* Original 175px + 20px */
     }
 
     .category-content {
@@ -350,7 +343,7 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 180px;
+        height: 200px; /* Original 180px + 20px */
     }
 
     .category-content {
@@ -418,7 +411,7 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 175px;
+        height: 195px; /* Original 175px + 20px */
     }
 
     .category-content {
@@ -507,7 +500,7 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 200px;
+        height: 220px; /* Original 200px + 20px */
     }
 
     .category-content {
@@ -544,7 +537,7 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 185px;
+        height: 205px; /* Original 185px + 20px */
     }
 
     .category-content {
