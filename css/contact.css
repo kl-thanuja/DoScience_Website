@@ -16,18 +16,18 @@ body {
 :root {
     --nav-height: 80px;
     --transition-speed: 0.6s;
-    --green-dark: #1b5e20;
-    --green-primary: #2e7d32;
+    --text-dark: #000000;
+    --text-light: #666666;
 }
 
 .contact-container {
     max-width: 100%;
     margin: 0 auto;
     padding: 108px 5% 60px 5%;
-    /* 80px navbar + 28px home padding */
     box-sizing: border-box;
 }
 
+/* Main Contact Section */
 .contact-main {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -56,14 +56,10 @@ body {
 .contact-intro p {
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
-
     color: black;
     text-align: left;
-
     margin: 0;
-
     max-width: 620px;
-
     display: block;
 }
 
@@ -111,12 +107,11 @@ body {
 .form-group label {
     display: block;
     font-weight: 550;
-    margin-bottom: 8px;
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
     color: black;
     text-align: left;
-    margin: 0;
+    margin: 0 0 8px 0;
     max-width: 620px;
 }
 
@@ -124,10 +119,7 @@ body {
     color: #d32f2f;
 }
 
-.navigation::-webkit-scrollbar {
-    display: none;
-}
-
+.navigation::-webkit-scrollbar,
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
     display: none;
@@ -142,7 +134,7 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--green-primary);
+    border-color: #343837;
 }
 
 .form-group textarea {
@@ -164,12 +156,12 @@ body {
 
 .checkbox-group label {
     display: block;
-    font-weight: 600;
-    margin-bottom: 12px;
-    font-size: clamp(12px, 1.0vw, 15px);
+    font-weight: 550;
+    font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
     color: black;
-    margin-top: 5px;
+    text-align: left;
+    margin: 0;
     max-width: 620px;
 }
 
@@ -193,6 +185,7 @@ body {
     font-weight: 400;
     margin-bottom: 0;
     color: var(--text-light);
+    font-size: clamp(14px, 1.15vw, 17px);
 }
 
 .submit-btn {
@@ -225,102 +218,98 @@ body {
     transition: fill 0.3s;
 }
 
-/* Find Us Section */
+/* Find Us Section Header */
 .find-us-section {
-    display: grid;
-    grid-template-columns: 1fr 1.3fr 1fr;
-    gap: 40px;
     padding: 60px 0;
     margin-bottom: 60px;
-    align-items: start;
 }
-.find-us-left,
-.find-us-right {
+
+.find-us-header {
+    margin-bottom: 30px;
+}
+
+.find-us-header h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.find-us-header .divider {
+    width: 65px;
+    height: 3px;
+    background-color: black;
+    margin: 14px 0 0 0;
+}
+
+/* 3-Column Top Baseline Alignment Grid */
+.find-us-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 35px;
+    align-items: flex-start; /* Keeps DoScience, Map top, and Our work travels perfectly in one line */
+}
+
+/* Left Column Styling */
+.find-us-left {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-.find-us-info h3 {
-    font-size: 1.5rem;
-    color: var(--text-dark);
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.find-us-info .divider {
-    width: 65px;
-    height: 3px;
-    background-color: black;
-    margin: 14px 0;
-}
 
 .find-us-info h4 {
-    margin: 0 0 8px;
-
+    margin: 0 0 8px 0;
     font-size: 1.14rem;
     font-weight: 600;
-
     color: black;
-
     line-height: 1.25;
 }
 
 .find-us-info p {
-    margin: 0 0 14px;
-
+    margin: 0 0 14px 0;
     font-size: 13px;
     line-height: 1.45;
-
     color: black;
-
-    flex: 1;
-
-    display: block;
-
     text-align: left;
 }
 
+/* Map Container Styling */
 .map-container {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    height: 320px;
+    width: 100%;
+    max-width: 340px;
+    height: 260px;
+    margin: 0;
 }
+
 .map-container iframe {
+    width: 100%;
     height: 100%;
 }
 
-.map-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+/* Work Travels & Social Column Styling */
+.work-travels-col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .work-travels h3 {
-    margin: 0 0 8px;
-
+    margin: 0 0 8px 0;
     font-size: 1.14rem;
     font-weight: 600;
-
     color: black;
-
     line-height: 1.25;
 }
 
 .work-travels p {
-    margin: 0 0 14px;
-
+    margin: 0 0 14px 0;
     font-size: 13px;
     line-height: 1.45;
-
     color: black;
-
-    flex: 1;
-
-    display: block;
-
     text-align: left;
 }
 
@@ -329,67 +318,53 @@ body {
     margin-bottom: 0;
 }
 
-.contact-details-section h3 {
-    font-size: clamp(14px, 1.15vw, 17px);
-    line-height: 1.45;
-
-    color: black;
-    text-align: left;
-
-    margin: 0;
-
-    max-width: 620px;
-
-    display: block;
-}
-
-.contact-details-section .divider {
-    width: 65px;
-    height: 3px;
-    background-color: black;
-    margin: 14px 0;
-}
-
-.contact-details-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
 .contact-detail-item h4 {
     font-size: 1rem;
     color: var(--text-dark);
-    margin-bottom: 6px;
+    margin: 0 0 6px 0;
     font-weight: 600;
 }
 
 .contact-detail-item a,
 .contact-detail-item p {
-    margin: 0 0 14px;
-    font-size: 14px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.45;
     color: black;
-    display: block;
     text-align: left;
     text-decoration: none;
 }
-
+.phone-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.phone-numbers p {
+    margin: 0;
+}
+.phone-numbers a {
+    display: inline-block;
+    margin: 0;
+}
+.contact-details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 .contact-detail-item a:hover {
     color: #343837;
 }
 
 /* Social Media */
 .social-section {
-    padding:0;
+    padding: 0;
 }
 
 .social-section h3 {
     margin: 0 0 8px;
-
     font-size: 1.14rem;
     font-weight: 600;
-
     color: black;
-
     line-height: 1.25;
 }
 
@@ -425,19 +400,10 @@ body {
     fill: white;
 }
 
-.copyright {
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-/* =========================================================
-   RESPONSIVE DESIGN (ALIGNING EXACTLY WITH HOME.CSS & NAVBAR)
-========================================================= */
-
+/* RESPONSIVE DESIGN */
 @media (min-width: 1400px) {
     .contact-container {
         padding-top: 110px;
-        /* 80px navbar + 30px home padding */
     }
 
     .contact-intro h2 {
@@ -448,7 +414,6 @@ body {
 @media (min-width: 1025px) and (max-width: 1399px) {
     .contact-container {
         padding-top: 105px;
-        /* 80px navbar + 25px home padding */
     }
 
     .contact-intro h2 {
@@ -459,15 +424,9 @@ body {
 @media (max-width: 1024px) {
     .contact-main {
         grid-template-columns: 1fr;
-        gap: 40px;
     }
 
-    .find-us-section {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .contact-details-grid {
+    .find-us-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
@@ -476,7 +435,6 @@ body {
 @media (max-width: 768px) {
     .contact-container {
         padding-top: 102px;
-        /* 80px navbar + 22px home padding */
     }
 
     .contact-intro h2 {
@@ -493,11 +451,9 @@ body {
     }
 }
 
-/* Small Mobile (Navbar shrinks to 70px) */
 @media (max-width: 600px) {
     .contact-container {
         padding-top: 90px;
-        /* 70px navbar + 20px home padding */
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -509,9 +465,7 @@ body {
 }
 
 @media (max-width: 480px) {
-
-    .find-us-info h3,
-    .contact-details-section h3 {
+    .find-us-header h3 {
         font-size: 1.3rem;
     }
 }
@@ -519,7 +473,6 @@ body {
 @media (max-width: 360px) {
     .contact-container {
         padding-top: 88px;
-        /* 70px navbar + 18px home padding */
         padding-left: 18px;
         padding-right: 18px;
     }
