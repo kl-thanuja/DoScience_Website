@@ -7,6 +7,10 @@ textarea,
 select {
     font-family: "Inter", sans-serif;
 }
+html,
+body {
+    background-color: #fafafa;
+}
 
 .about-container {
     max-width: 100%;
@@ -15,9 +19,8 @@ select {
 }
 
 .about-section {
-    margin-bottom: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1.5px solid #e0e0e0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .about-section:last-child {
@@ -30,7 +33,20 @@ select {
     font-size: clamp(34px, 3.8vw, 52px);
     font-weight: 500;
     line-height: 1.12;
-    color:black;
+    color: black;
+    text-align: left;
+
+    margin: 0 0 0px;
+
+    letter-spacing: -0.025em;
+
+    max-width: 1080px;
+}
+.about-section-secondary h2 {
+    font-size: clamp(34px, 3.8vw, 52px);
+    font-weight: 500;
+    line-height: 1.12;
+    color: black;
     text-align: left;
 
     margin: 0 0 14px;
@@ -39,12 +55,11 @@ select {
 
     max-width: 1080px;
 }
-
 .about-section p {
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
 
-    color:black;
+    color: black;
     text-align: left;
 
     margin: 0;
@@ -53,16 +68,40 @@ select {
 
     display: block;
 }
-
+.work-around{
+    margin-top: 14px;
+}
 .about-item {
     margin-bottom: 12px;
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.45;
+}
+
+
+.about-item:last-child {
+    margin-bottom: 0px;
 }
 
 .about-item.last {
     margin-bottom: 0px;
     margin-top: 0px;
 }
+.about-item p + p {
+    margin-top: 4px; /* Adjust this value to bring lines closer */
+}
+/* --- Inline Links Styling --- */
+a.founder-link {
+    color:black;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
 
+a.founder-link:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+/* --- Scrollbar Behavior --- */
 .navigation::-webkit-scrollbar {
     display: none;
 }
@@ -74,54 +113,12 @@ body::-webkit-scrollbar {
 
 html,
 body {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-.about-item.highlight {
-    color:black;
-    font-weight: 550;
-    font-size:clamp(14px, 1.15vw, 17px);
-    margin-top: 12px;
-}
-
-/* --- Added Founders & Team Styles --- */
-
-.team-content {
-    margin-top: 24px;
-}
-
-.founders-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin: 16px 0;
-}
-
-.founder-card {
-    background-color: #f9f9f9;
-    padding: 12px 18px;
-    border-left: 3px solid var(--green-dark, #2e7d32);
-    border-radius: 0 6px 6px 0;
-}
-
-.founder-card a {
-    color: var(--green-dark, #2e7d32);
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-.founder-card a:hover {
-    text-decoration: underline;
-    opacity: 0.85;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;    /* Firefox */
 }
 
 /* --- Responsive Design --- */
-
 @media (max-width: 768px) {
-
     .about-section h2 {
         font-size: 1.8rem;
     }
