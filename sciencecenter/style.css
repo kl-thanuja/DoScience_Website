@@ -178,10 +178,11 @@ section {
     min-height: 100vh;
 
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
 
-    /* SAME LEFT/RIGHT ALIGNMENT AS CONTACT PAGE */
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+
     padding: 108px 5% 60px;
 
     box-sizing: border-box;
