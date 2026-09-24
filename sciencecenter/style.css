@@ -6,7 +6,10 @@ textarea,
 select {
     font-family: "Inter", sans-serif;
 }
-
+html,
+body{
+    background-color: #fafafa;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,8 +22,7 @@ html {
 }
 
 body {
-    color: #222222;
-    line-height: 1.6;
+    color: black;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
@@ -92,21 +94,31 @@ section {
 }
 
 .heading-primary {
-    font-size: 3.5rem;
-    font-weight: 600;
-    line-height: 1.15;
-    color: #1A1A1A;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.04em;
-    word-spacing: 5px;
+    font-size: clamp(34px, 3.8vw, 52px);
+    font-weight: 500;
+    line-height: 1.12;
+    color:black;
+    text-align: left;
+
+    margin: 0 0 14px;
+
+    letter-spacing: -0.025em;
+
+    max-width: 1080px;
 }
 
 .heading-secondary {
-    font-size: 2.2rem;
-    font-weight: 600;
-    line-height: 1.25;
-    color: #1A1A1A;
-    margin-bottom: 1rem;
+    font-size: clamp(34px, 3.8vw, 52px);
+    font-weight: 500;
+    line-height: 1.12;
+    color:black;
+    text-align: left;
+
+    margin: 0 0 14px;
+
+    letter-spacing: -0.025em;
+
+    max-width: 1080px;
 }
 
 .accent-line {
@@ -119,12 +131,17 @@ section {
 .link-arrow {
     display: inline-flex;
     align-items: center;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: #1A1A1A;
     text-decoration: underline;
     text-underline-offset: 4px;
     transition: opacity 0.2s ease;
+    margin: 0 0 8px;
+
+    font-size: 1.14rem;
+    font-weight: 600;
+
+    color:black;
+
+    line-height: 1.25;
 }
 
 .link-arrow:hover {
@@ -149,7 +166,7 @@ section {
    SECTION 1: HERO
    ========================================================================== */
 #section-1 {
-    background-color: white;
+    background-color: #fafafa;
     padding: 0;
 }
 
@@ -175,17 +192,24 @@ section {
 }
 
 .hero-subtitle {
-    font-size: 1rem;
-    color: #4A4A4A;
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.45;
+
+    color:black;
+    text-align: left;
+
+    margin: 0;
+
+    max-width: 620px;
+
+    display: block;
 }
 
 .hero-tagline {
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #333333;
+    color: black;
     text-transform: uppercase;
 }
 
@@ -224,7 +248,7 @@ section {
    SECTION 2: WHY DISCOVERY MATTERS
    ========================================================================== */
 #section-2 {
-    background-color: white;
+    background-color:#fafafa;
 }
 
 .specific-section {
@@ -247,12 +271,22 @@ section {
     z-index: 2;
     flex: 1;
 }
+.section2-text p+p{
+    margin-top: 10px;
+}
 
 .section2-text p {
-    font-size: 1rem;
-    color: #4A4A4A;
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.45;
+
+    color:black;
+    text-align: left;
+
+    margin: 0;
+
+    max-width: 620px;
+
+    display: block;
 }
 
 .section2-image-wrapper {
@@ -276,7 +310,6 @@ section {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: black;
     opacity: 0.2;
 }
 
@@ -284,7 +317,7 @@ section {
    SECTION 3: WHAT YOU'LL EXPERIENCE
    ========================================================================== */
 #section-3 {
-    background-color: white;
+    background-color:#fafafa;
     flex-direction: column;
     justify-content: center;
     padding: 60px;
@@ -318,17 +351,31 @@ section {
 }
 
 .experience-text-box h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #1A1A1A;
+    font-size: clamp(34px, 3.8vw, 52px);
+    font-weight: 500;
+    line-height: 1.12;
+    color:black;
+    text-align: left;
+
+    margin: 0 0 14px;
+
+    letter-spacing: -0.025em;
+
+    max-width: 1080px;
 }
 
 .experience-text-box p {
-    color: #555555;
-    font-size: 1.05rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.45;
+
+    color:black;
+    text-align: left;
+
+    margin: 0;
+
+    max-width: 620px;
+
+    display: block;
 }
 
 .full-width-banner {
@@ -389,10 +436,17 @@ section {
 }
 
 .section4-middle-text p {
-    font-size: 1.1rem;
-    color: #4A4A4A;
-    margin-bottom: 2rem;
-    line-height: 1.7;
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.45;
+
+    color:black;
+    text-align: left;
+
+    margin: 0;
+
+    max-width: 620px;
+
+    display: block;
 }
 
 .landscape-banner-container {
@@ -413,9 +467,14 @@ section {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: #222;
+    margin: 0 0 8px;
+
+    font-size: 1.14rem;
+    font-weight: 600;
+
+    color:black;
+
+    line-height: 1.25;
 }
 
 /* ==========================================================================
@@ -427,10 +486,17 @@ section {
 }
 
 .visit-header {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-    color: #1A1A1A;
+    font-size: clamp(34px, 3.8vw, 52px);
+    font-weight: 500;
+    line-height: 1.12;
+    color:black;
+    text-align: left;
+
+    margin: 0 0 14px;
+
+    letter-spacing: -0.025em;
+
+    max-width: 1080px;
 }
 
 .info-grid-top {
@@ -453,29 +519,44 @@ section {
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.5rem;
+    
 }
 
 .info-card-header h4 {
-    font-size: 1.1rem;
+    margin: 0 0 8px;
+
+    font-size: 1.14rem;
     font-weight: 600;
+
+    color:black;
+
+    line-height: 1.25;
 }
 
 .info-card-header svg {
     width: 24px;
     height: 24px;
-    stroke: #333;
+    stroke: black;
 }
 
 .info-card p {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.5;
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.45;
+
+    color:black;
+    text-align:start;
+
+    margin: 0;
+
+    max-width: 620px;
+
+    display: block;
 }
 
 .info-card a {
     font-size: 0.95rem;
     text-decoration: underline;
-    color: #222;
+    color: black;
 }
 
 /* Two-column Layout Cards for Public Visitors vs School Visits */
@@ -501,17 +582,28 @@ section {
 }
 
 .visit-col h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
     margin-bottom: 0.75rem;
-    color: #111;
+    font-size: 1.14rem;
+    font-weight: 600;
+
+    color:black;
+
+    line-height: 1.25;
 }
 
 .visit-col p {
-    font-size: 0.95rem;
-    color: #555;
     margin-bottom: 1.25rem;
-    line-height: 1.6;
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.45;
+
+    color:black;
+    text-align: left;
+
+    margin: 0;
+
+    max-width: 620px;
+
+    display: block;
 }
 
 .visit-list {
@@ -524,9 +616,16 @@ section {
     position: relative;
     padding-left: 1.25rem;
     margin-bottom: 0.6rem;
-    font-size: 0.925rem;
-    color: #444;
-    line-height: 1.5;
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.45;
+
+    color:black;
+
+    margin: 0;
+
+    max-width: 620px;
+
+    display: block;
 }
 
 .visit-list li::before {
@@ -544,13 +643,16 @@ section {
 }
 
 .fees-table-title {
-    font-weight: 700;
-    font-size: 1.05rem;
-    color:black;
     margin-bottom: 0.75rem;
     padding-bottom: 0.35rem;
     border-bottom: 2px solid black;
     display: inline-block;
+    font-size: 1.14rem;
+    font-weight: 600;
+
+    color:black;
+
+    line-height: 1.25;
 }
 
 .fees-table {
@@ -569,10 +671,9 @@ section {
     color: black;
     font-weight: 600;
     font-size: 0.8rem;
-    text-transform: uppercase;
     letter-spacing: 0.03em;
     padding: 10px 12px;
-    text-align: right;
+    text-align: center;
     border-bottom: 1px solid white;
 }
 
@@ -585,7 +686,7 @@ section {
     font-size: 0.9rem;
     color: black;
     border-bottom: 1px solid white;
-    text-align: right;
+    text-align: center;
     vertical-align: middle;
 }
 
@@ -616,14 +717,28 @@ section {
 }
 
 .planning-section h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
     margin-bottom: 0.75rem;
+    font-size: 1.14rem;
+    font-weight: 600;
+
+    color:black;
+
+    line-height: 1.25;
 }
 
 .planning-section p {
-    color: #555;
     margin-bottom: 1.5rem;
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.45;
+
+    color:black;
+    text-align: left;
+
+    margin: 0;
+
+    max-width: 620px;
+
+    display: block;
 }
 
 .contact-details {
@@ -640,8 +755,25 @@ section {
 }
 
 .contact-label {
+    font-size: 1.14rem;
     font-weight: 600;
-    width: 60px;
+
+    color:black;
+
+    line-height: 1.25;
+    margin-top: 0.75rem;
+}
+.contact-info{
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.45;
+
+    color:black;
+
+    margin-top: 0.75rem;
+
+    max-width: 620px;
+
+    display: block;
 }
 
 .download-link {
@@ -650,12 +782,21 @@ section {
     gap: 8px;
     font-weight: 600;
     text-decoration: underline;
-    color: #111;
+    color: black;
 }
 
 .footer-tagline {
-    font-size: 1rem;
-    color: #555;
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.45;
+
+    color:black;
+    text-align: left;
+
+    margin: 0;
+
+    max-width: 620px;
+
+    display: block;
 }
 
 /* ==========================================================================
