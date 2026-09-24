@@ -184,7 +184,7 @@ body {
     cursor: pointer;
     font-weight: 400;
     margin-bottom: 0;
-    color: var(--text-light);
+    color: black;
     font-size: clamp(14px, 1.15vw, 17px);
 }
 

@@ -20,6 +20,10 @@
     select {
       font-family: "Inter", sans-serif;
     }
+    html,
+    body{
+      background-color: #fafafa;
+    }
 
     * {
       box-sizing: border-box;
@@ -28,7 +32,7 @@
     }
 
     body {
-      background-color: white;
+      background-color: #fafafa;
       color: #1a1a1a;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -52,7 +56,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 3.5rem;
       align-items: center;
-      background-color: #ffffff;
+      background-color: #fafafa;
     }
 
     .hero-content {
@@ -62,10 +66,17 @@
     }
 
     .hero-content h1 {
-      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
-      font-weight: 800;
-      color: #111;
-      margin-bottom: 0.8rem;
+      font-size: clamp(34px, 3.8vw, 52px);
+      font-weight: 500;
+      line-height: 1.12;
+      color: black;
+      text-align: left;
+
+      margin: 0 0 14px;
+
+      letter-spacing: -0.025em;
+
+      max-width: 1080px;
     }
 
     .accent-line {
@@ -78,17 +89,28 @@
     }
 
     .hero-content h3 {
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      font-weight: 700;
-      color: #1a1a1a;
-      line-height: 1.45;
-      margin-bottom: 1.2rem;
+      margin: 0 0 8px;
+
+      font-size: 1.14rem;
+      font-weight: 600;
+
+      color: black;
+
+      line-height: 1.25;
     }
 
     .hero-content p {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.65;
+      font-size: clamp(14px, 1.15vw, 17px);
+      line-height: 1.45;
+
+      color: black;
+      text-align: left;
+
+      margin: 0;
+
+      max-width: 620px;
+
+      display: block;
     }
 
     .hero-image-container {
@@ -116,16 +138,31 @@
     }
 
     .section-title {
-      font-size: clamp(1.5rem, 3vw, 1.8rem);
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 0.4rem;
+      font-size: clamp(25px, 3.8vw, 30px);
+      font-weight: 500;
+      line-height: 1.12;
+      color: black;
+      text-align: left;
+
+      margin: 0 0 14px;
+
+      letter-spacing: -0.025em;
+
+      max-width: 1080px;
     }
 
     .section-subtitle {
-      font-size: 0.9rem;
-      color: #444;
-      margin-bottom: 2.5rem;
+      font-size: clamp(14px, 1.15vw, 17px);
+      line-height: 1.45;
+
+      color: black;
+      text-align: left;
+
+      margin: 0;
+
+      max-width: 620px;
+
+      display: block;
     }
 
     .cards-grid {
@@ -165,10 +202,14 @@
     }
 
     .card-body h3 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 0.4rem;
+      margin: 0 0 8px;
+
+      font-size: 1.14rem;
+      font-weight: 600;
+
+      color: black;
+
+      line-height: 1.25;
     }
 
     .card-body .accent-line {
@@ -176,11 +217,17 @@
     }
 
     .card-body p {
-      font-size: 0.88rem;
-      color: #444;
-      line-height: 1.55;
-      flex-grow: 1;
-      margin-bottom: 1.5rem;
+      font-size: clamp(14px, 1.15vw, 17px);
+      line-height: 1.45;
+
+      color: black;
+      text-align: left;
+
+      margin: 0;
+
+      max-width: 620px;
+
+      display: block;
     }
 
     .card-footer {
@@ -217,10 +264,17 @@
     }
 
     .feature-content h2 {
-      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 0.6rem;
+      font-size: clamp(34px, 3.8vw, 52px);
+      font-weight: 500;
+      line-height: 1.12;
+      color: black;
+      text-align: left;
+
+      margin: 0 0 14px;
+
+      letter-spacing: -0.025em;
+
+      max-width: 1080px;
     }
 
     .feature-content .accent-line {
@@ -229,9 +283,17 @@
     }
 
     .feature-content p {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.65;
+      font-size: clamp(14px, 1.15vw, 17px);
+      line-height: 1.45;
+
+      color: black;
+      text-align: left;
+
+      margin: 0;
+
+      max-width: 620px;
+
+      display: block;
     }
 
     /* ==========================================
@@ -244,9 +306,14 @@
     }
 
     footer p {
-      font-size: 1.05rem;
+      margin: 0 0 8px;
+
+      font-size: 1.14rem;
       font-weight: 600;
-      color: #222;
+
+      color: black;
+
+      line-height: 1.25;
     }
 
     /* ==========================================
