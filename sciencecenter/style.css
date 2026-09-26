@@ -173,7 +173,8 @@ section {
     min-height: 100vh;
     position: relative;
     width: 100%;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 .hero-wrapper {
     position: relative;
@@ -184,6 +185,18 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 0;
     padding: 108px 0 60px 5%;
+    box-sizing: border-box;
+}
+.hero-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 108px 5% 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     box-sizing: border-box;
 }
 
@@ -264,18 +277,17 @@ section {
 .hero-bg-full {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 55%; 
     height: 100%;
     z-index: 1;
 }
 .hero-bg-image {
-    position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center right;
+    background-size: contain; /* Prevents unwanted zooming/cropping */
+    background-repeat: no-repeat;
+    background-position: left center;
 }
 .hero-image-overlay {
     position: absolute;
@@ -284,11 +296,9 @@ section {
     pointer-events: none;
     background: linear-gradient(
         to right,
-        #fafafa 0%,              /* Pure white at the far left edge */
-        #fafafa 30%,             /* Holds solid white behind main left text */
-        rgba(250, 250, 250, 0.85) 55%, /* Soft gradient transition */
-        rgba(250, 250, 250, 0.2) 80%,
-        rgba(250, 250, 250, 0) 100%   /* Fully reveals image on the far right */
+        #fafafa 0%,
+        rgba(250, 250, 250, 0.4) 15%,
+        rgba(250, 250, 250, 0) 40%
     );
 }
 @keyframes bounce {
