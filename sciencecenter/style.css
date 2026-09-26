@@ -166,25 +166,24 @@ section {
    SECTION 1: HERO
 ========================================================= */
 
+
 #section-1 {
     background-color: #fafafa;
     padding: 0;
     min-height: 100vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
-
-/* Main hero layout */
 .hero-wrapper {
+    position: relative;
+    z-index: 10;
     width: 100%;
     min-height: 100vh;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 0;
-
-    padding: 108px 5% 60px;
-
+    padding: 108px 0 60px 5%;
     box-sizing: border-box;
 }
 
@@ -257,29 +256,40 @@ section {
 
 .hero-bg-container {
     position: relative;
-
     width: 100%;
     height: 100%;
-
-    min-height: 500px;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-
-    padding: 0;
-}
-
-.hero-bg-image {
-    position: relative;
-
-    width: 100%;
-    height: 500px;
-
-    border-radius: 12px;
+    min-height: 100%;
     overflow: hidden;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.hero-bg-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.hero-bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center right;
+}
+.hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(
+        to right,
+        #fafafa 0%,              /* Pure white at the far left edge */
+        #fafafa 30%,             /* Holds solid white behind main left text */
+        rgba(250, 250, 250, 0.85) 55%, /* Soft gradient transition */
+        rgba(250, 250, 250, 0.2) 80%,
+        rgba(250, 250, 250, 0) 100%   /* Fully reveals image on the far right */
+    );
 }
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
