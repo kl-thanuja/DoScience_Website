@@ -58,27 +58,22 @@ const NAVIGATION_CONFIG = {
 };
 
 
-/*
-=========================================================
-GET PROJECT ROOT
-=========================================================
-*/
 
 function getProjectRoot() {
+    const currentPath = window.location.pathname.replace(/\\/g, "/");
 
-    const currentPath =
-        window.location.pathname;
+    const isSubfolder = Object.keys(NAVIGATION_CONFIG).some((key) => {
+        if (key === "home") return false;
+        const pagePath = NAVIGATION_CONFIG[key].path;
+        if (pagePath.includes("/")) {
+            const folder = pagePath.split("/")[0];
+            return currentPath.includes("/" + folder + "/");
+        }
+        return false;
+    });
 
-    if (
-        currentPath.includes("/sciencecenter/") ||
-        currentPath.includes("/story-box/")
-    ) {
-        return "../";
-    }
-
-    return "./";
+    return isSubfolder ? "../" : "./";
 }
-
 
 /*
 =========================================================
