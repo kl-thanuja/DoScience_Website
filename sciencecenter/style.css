@@ -6,10 +6,12 @@ textarea,
 select {
     font-family: "Inter", sans-serif;
 }
+
 html,
-body{
+body {
     background-color: #fafafa;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -97,13 +99,10 @@ section {
     font-size: clamp(34px, 3.8vw, 52px);
     font-weight: 500;
     line-height: 1.12;
-    color:black;
+    color: black;
     text-align: left;
-
     margin: 0 0 14px;
-
     letter-spacing: -0.025em;
-
     max-width: 1080px;
 }
 
@@ -111,20 +110,17 @@ section {
     font-size: clamp(34px, 3.8vw, 52px);
     font-weight: 500;
     line-height: 1.12;
-    color:black;
+    color: black;
     text-align: left;
-
     margin: 0 0 14px;
-
     letter-spacing: -0.025em;
-
     max-width: 1080px;
 }
 
 .accent-line {
     width: 65px;
     height: 3px;
-    background-color:black;
+    background-color: black;
     margin: 14px 0;
 }
 
@@ -135,12 +131,9 @@ section {
     text-underline-offset: 4px;
     transition: opacity 0.2s ease;
     margin: 0 0 8px;
-
     font-size: 1.14rem;
     font-weight: 600;
-
-    color:black;
-
+    color: black;
     line-height: 1.25;
 }
 
@@ -166,7 +159,6 @@ section {
    SECTION 1: HERO
 ========================================================= */
 
-
 #section-1 {
     background-color: #fafafa;
     padding: 0;
@@ -176,6 +168,7 @@ section {
     display: flex;
     align-items: center;
 }
+
 .hero-wrapper {
     position: relative;
     z-index: 10;
@@ -187,86 +180,36 @@ section {
     padding: 108px 0 60px 5%;
     box-sizing: border-box;
 }
-.hero-wrapper {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 108px 5% 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    box-sizing: border-box;
-}
 
-/* =========================================================
-   LEFT SIDE - TEXT
-========================================================= */
-
+/* LEFT SIDE - TEXT */
 .hero-content {
     position: relative;
     padding: 0;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-/* Heading */
-.heading-primary {
-    font-size: clamp(34px, 3.8vw, 52px);
-    font-weight: 500;
-    line-height: 1.12;
-    color: black;
-    text-align: left;
-
-    margin: 0 0 14px;
-
-    letter-spacing: -0.025em;
-
-    max-width: 1080px;
-}
-
-/* Divider */
-.accent-line {
-    width: 65px;
-    height: 3px;
-    background-color: black;
-    margin: 14px 0;
-}
-
-/* Description */
 .hero-subtitle {
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
-
     color: black;
     text-align: left;
-
     margin: 0;
-
     max-width: 620px;
 }
 
-/* Tagline */
 .hero-tagline {
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 2px;
-
     color: black;
     text-transform: uppercase;
-
     margin-top: 0;
 }
 
-
-/* =========================================================
-   RIGHT SIDE - IMAGE
-========================================================= */
-
+/* RIGHT SIDE - IMAGE */
 .hero-bg-container {
     position: relative;
     width: 100%;
@@ -274,21 +217,24 @@ section {
     min-height: 100%;
     overflow: hidden;
 }
+
 .hero-bg-full {
     position: absolute;
     top: 0;
     right: 0;
-    width: 55%; 
+    width: 55%;
     height: 100%;
     z-index: 1;
 }
+
 .hero-bg-image {
     width: 100%;
     height: 100%;
-    background-size: contain; /* Prevents unwanted zooming/cropping */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: center center;
 }
+
 .hero-image-overlay {
     position: absolute;
     inset: 0;
@@ -301,23 +247,12 @@ section {
         rgba(250, 250, 250, 0) 40%
     );
 }
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translate(-50%, 0);
-    }
-    40% {
-        transform: translate(-50%, -8px);
-    }
-    60% {
-        transform: translate(-50%, -4px);
-    }
-}
 
 /* ==========================================================================
    SECTION 2: WHY DISCOVERY MATTERS
    ========================================================================== */
 #section-2 {
-    background-color:#fafafa;
+    background-color: #fafafa;
 }
 
 .specific-section {
@@ -325,71 +260,92 @@ section {
     width: 100%;
     display: flex;
     overflow: hidden;
-    padding: 0px !important;
-    align-items: start !important;
-    min-height: 0% !important;
+    padding: 60px 5% !important;
+    align-items: center !important;
+    min-height: auto !important;
+}
+
+.container2 {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .section2-grid {
     display: flex;
-    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 2rem;
 }
 
 .section2-text {
-    padding: 3.5rem 1.3rem 2.8rem 3.2rem;
+    padding: 0;
     z-index: 2;
     flex: 1;
 }
-.section2-text p+p{
+
+.section2-text p + p {
     margin-top: 10px;
 }
 
 .section2-text p {
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
-
-    color:black;
+    color: black;
     text-align: left;
-
     margin: 0;
-
     max-width: 620px;
-
     display: block;
 }
 
 .section2-image-wrapper {
     position: relative;
-    min-height: 100%;
-    border-radius: 4px;
+    border-radius: 15px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1.1;
+    height: 100%;
 }
 
 .image-container {
-    height: 65%;
+    height: 100%;
     position: relative;
-    width: 90%;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.image-container .img-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
 }
 
 .section2-image-overlay {
     position: absolute;
     inset: 0;
-    z-index: 1;
-    opacity: 0.2;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 15px;
+    background: linear-gradient(
+        to right,
+        #fafafa 0%,
+        rgba(250, 250, 250, 0.2) 20%,
+        rgba(250, 250, 250, 0) 50%
+    );
 }
 
 /* ==========================================================================
    SECTION 3: WHAT YOU'LL EXPERIENCE
    ========================================================================== */
 #section-3 {
-    background-color:#fafafa;
+    background-color: #fafafa;
     flex-direction: column;
     justify-content: center;
-    padding: 60px;
+    padding: 60px 5%;
 }
 
 .experience-header {
@@ -411,7 +367,7 @@ section {
     flex: 1.2;
     height: 380px;
     position: relative;
-    border-radius: 4px;
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -423,27 +379,20 @@ section {
     font-size: clamp(25px, 3.8vw, 30px);
     font-weight: 500;
     line-height: 1.12;
-    color:black;
+    color: black;
     text-align: left;
-
     margin: 0 0 14px;
-
     letter-spacing: -0.025em;
-
     max-width: 1080px;
 }
 
 .experience-text-box p {
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
-
-    color:black;
+    color: black;
     text-align: left;
-
-    margin: 0;
-
+    margin: 0 0 14px;
     max-width: 620px;
-
     display: block;
 }
 
@@ -456,9 +405,25 @@ section {
 .banner-img-container {
     width: 100%;
     height: 400px;
-    border-radius: 4px;
+    border-radius: 15px;
     overflow: hidden;
     margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.banner-image-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 15px;
+    background: linear-gradient(
+        to bottom,
+        rgba(250, 250, 250, 0.2) 0%,
+        rgba(250, 250, 250, 0) 25%,
+        rgba(250, 250, 250, 0) 75%,
+        rgba(250, 250, 250, 0.2) 100%
+    );
 }
 
 .banner-content {
@@ -469,11 +434,29 @@ section {
 .fade-right {
     position: absolute;
     inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 15px;
+    background: linear-gradient(
+        to left,
+        #fafafa 0%,
+        rgba(250, 250, 250, 0.3) 20%,
+        rgba(250, 250, 250, 0) 50%
+    );
 }
 
 .fade-left {
     position: absolute;
     inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 15px;
+    background: linear-gradient(
+        to right,
+        #fafafa 0%,
+        rgba(250, 250, 250, 0.3) 20%,
+        rgba(250, 250, 250, 0) 50%
+    );
 }
 
 /* ==========================================================================
@@ -494,27 +477,38 @@ section {
 .section4-card-img {
     width: 100%;
     height: 450px;
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
+    position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
+.section4-image-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 15px;
+    background: linear-gradient(
+        to right,
+        #fafafa 0%,
+        rgba(250, 250, 250, 0.3) 20%,
+        rgba(250, 250, 250, 0) 50%
+    );
+}
+
 .section4-middle-text {
-    max-width: 760px;
-    margin: 0 auto 5rem;
+    max-width: 620px;
+    margin: 0;
 }
 
 .section4-middle-text p {
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
-
-    color:black;
+    color: black;
     text-align: left;
-
-    margin: 0;
-
+    margin: 0 0 1rem;
     max-width: 620px;
-
     display: block;
 }
 
@@ -527,7 +521,7 @@ section {
 .landscape-banner-box {
     width: 100%;
     height: 500px;
-    border-radius: 4px;
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -537,12 +531,9 @@ section {
     justify-content: center;
     gap: 6px;
     margin: 0 0 8px;
-
     font-size: 1.14rem;
     font-weight: 600;
-
-    color:black;
-
+    color: black;
     line-height: 1.25;
 }
 
@@ -558,13 +549,10 @@ section {
     font-size: clamp(34px, 3.8vw, 52px);
     font-weight: 500;
     line-height: 1.12;
-    color:black;
+    color: black;
     text-align: left;
-
     margin: 0 0 14px;
-
     letter-spacing: -0.025em;
-
     max-width: 1080px;
 }
 
@@ -588,17 +576,13 @@ section {
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.5rem;
-    
 }
 
 .info-card-header h4 {
-    margin: 0 0 8px;
-
+    margin: 0;
     font-size: 1.14rem;
     font-weight: 600;
-
-    color:black;
-
+    color: black;
     line-height: 1.25;
 }
 
@@ -611,14 +595,10 @@ section {
 .info-card p {
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
-
-    color:black;
-    text-align:start;
-
+    color: black;
+    text-align: start;
     margin: 0;
-
     max-width: 620px;
-
     display: block;
 }
 
@@ -654,9 +634,7 @@ section {
     margin-bottom: 0.75rem;
     font-size: 1.14rem;
     font-weight: 600;
-
-    color:black;
-
+    color: black;
     line-height: 1.25;
 }
 
@@ -664,14 +642,10 @@ section {
     margin-bottom: 1.25rem;
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
-
-    color:black;
+    color: black;
     text-align: left;
-
-    margin: 0;
-
+    margin: 0 0 1rem;
     max-width: 620px;
-
     display: block;
 }
 
@@ -687,13 +661,8 @@ section {
     margin-bottom: 0.6rem;
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
-
-    color:black;
-
-    margin: 0;
-
+    color: black;
     max-width: 620px;
-
     display: block;
 }
 
@@ -701,7 +670,7 @@ section {
     content: "•";
     position: absolute;
     left: 0;
-    color:black;
+    color: black;
     font-size: 1.2rem;
     line-height: 1;
 }
@@ -718,9 +687,7 @@ section {
     display: inline-block;
     font-size: 1.14rem;
     font-weight: 600;
-
-    color:black;
-
+    color: black;
     line-height: 1.25;
 }
 
@@ -729,21 +696,21 @@ section {
     border-collapse: separate;
     border-spacing: 0;
     margin: 0.5rem 0 0.75rem 0;
-    background-color:white;
+    background-color: white;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid #e2e8f0;
 }
 
 .fees-table th {
-    background-color: white;
+    background-color: #f8fafc;
     color: black;
     font-weight: 600;
     font-size: 0.8rem;
     letter-spacing: 0.03em;
     padding: 10px 12px;
     text-align: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .fees-table th:first-child {
@@ -754,7 +721,7 @@ section {
     padding: 11px 12px;
     font-size: 0.8rem;
     color: black;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #e2e8f0;
     text-align: center;
     vertical-align: middle;
 }
@@ -768,8 +735,6 @@ section {
 .fees-table tbody tr:last-child td {
     border-bottom: none;
 }
-
-
 
 .table-note {
     font-size: 0.825rem;
@@ -789,9 +754,7 @@ section {
     margin-bottom: 0.75rem;
     font-size: 1.14rem;
     font-weight: 600;
-
-    color:black;
-
+    color: black;
     line-height: 1.25;
 }
 
@@ -799,14 +762,10 @@ section {
     margin-bottom: 1.5rem;
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
-
-    color:black;
+    color: black;
     text-align: left;
-
-    margin: 0;
-
+    margin: 0 0 1rem;
     max-width: 620px;
-
     display: block;
 }
 
@@ -821,27 +780,21 @@ section {
 .contact-row {
     display: flex;
     gap: 1.5rem;
+    align-items: center;
 }
 
 .contact-label {
     font-size: 1.14rem;
     font-weight: 600;
-
-    color:black;
-
+    color: black;
     line-height: 1.25;
-    margin-top: 0.75rem;
 }
-.contact-info{
+
+.contact-info {
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
-
-    color:black;
-
-    margin-top: 0.75rem;
-
+    color: black;
     max-width: 620px;
-
     display: block;
 }
 
@@ -857,14 +810,10 @@ section {
 .footer-tagline {
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
-
-    color:black;
+    color: black;
     text-align: left;
-
     margin: 0;
-
     max-width: 620px;
-
     display: block;
 }
 
@@ -874,12 +823,9 @@ section {
 
 /* Tablets and small laptops (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
-    .heading-primary {
-        font-size: 2.8rem;
-    }
-
+    .heading-primary,
     .heading-secondary {
-        font-size: 1.8rem;
+        font-size: clamp(30px, 3.5vw, 42px);
     }
 
     .info-grid-top {
@@ -908,7 +854,7 @@ section {
     }
 
     .hero-wrapper {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         height: auto;
         min-height: 100vh;
     }
@@ -922,20 +868,19 @@ section {
         padding: 40px 5% 20px;
     }
 
-    .hero-bg-container {
+    .hero-bg-full {
+        width: 100%;
         height: 50vh;
-        min-height: 300px;
-    }
-
-    .hero-bg-image {
-        margin-left: 0;
+        position: relative;
     }
 
     .hero-image-overlay {
-        background: linear-gradient(180deg,
-                #F7F7F7 0%,
-                rgba(247, 247, 247, 0.6) 30%,
-                rgba(247, 247, 247, 0) 100%);
+        background: linear-gradient(
+            180deg,
+            #fafafa 0%,
+            rgba(250, 250, 250, 0.6) 30%,
+            rgba(250, 250, 250, 0) 100%
+        );
     }
 
     .section2-grid {
@@ -943,11 +888,12 @@ section {
     }
 
     .section2-text {
-        padding: 2.5rem 1.5rem;
+        padding: 0;
     }
 
     .section2-image-wrapper {
         min-height: 350px;
+        width: 100%;
     }
 
     .image-container {
