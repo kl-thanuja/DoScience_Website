@@ -410,6 +410,17 @@ section {
     margin-bottom: 2.5rem;
     position: relative;
 }
+.banner-img-container .img-placeholder {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    
+    /* Feather edges smoothly on all 4 sides */
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+}
 
 .banner-image-overlay {
     position: absolute;
@@ -417,12 +428,12 @@ section {
     z-index: 2;
     pointer-events: none;
     border-radius: 15px;
-    background: linear-gradient(
-        to bottom,
-        rgba(250, 250, 250, 0.2) 0%,
-        rgba(250, 250, 250, 0) 25%,
-        rgba(250, 250, 250, 0) 75%,
-        rgba(250, 250, 250, 0.2) 100%
+    /* Soft 4-way vignette gradient fading into #fafafa */
+    background: radial-gradient(
+        ellipse at center,
+        rgba(250, 250, 250, 0) 50%,
+        rgba(250, 250, 250, 0.5) 80%,
+        #fafafa 100%
     );
 }
 
