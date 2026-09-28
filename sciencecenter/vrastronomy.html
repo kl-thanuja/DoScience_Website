@@ -20,8 +20,9 @@
     select {
       font-family: "Inter", sans-serif;
     }
+
     html,
-    body{
+    body {
       background-color: #fafafa;
     }
 
@@ -29,6 +30,10 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body::-webkit-scrollbar {
+      width: 0px;
     }
 
     body {
@@ -163,6 +168,7 @@
       max-width: 620px;
 
       display: block;
+      margin-bottom: 30px;
     }
 
     .cards-grid {
@@ -237,7 +243,7 @@
       font-size: 0.85rem;
       color: #222;
       font-weight: 500;
-      
+      margin-top: 30px;
     }
 
     .card-footer svg {
@@ -269,26 +275,19 @@
       font-weight: 500;
       line-height: 1.12;
       color: black;
-      text-align: left;
+      text-align: center;
 
       margin: 0 0 14px;
-
-      letter-spacing: -0.025em;
-
       max-width: 1080px;
     }
 
-    /* .feature-content .accent-line {
-      margin-top: 0.4rem;
-      margin-bottom: 1.5rem;
-    } */
 
     .feature-content p {
       font-size: clamp(14px, 1.15vw, 17px);
       line-height: 1.45;
 
       color: black;
-      text-align: left;
+      text-align: center;
 
       margin: 0;
 

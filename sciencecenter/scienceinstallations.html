@@ -20,10 +20,16 @@
     select {
       font-family: "Inter", sans-serif;
     }
+
     html,
-    body{
+    body {
       background-color: #fafafa;
     }
+
+    body::-webkit-scrollbar {
+      width: 0px;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -206,30 +212,30 @@
 
     .category-info h3 {
       font-size: clamp(25px, 3.8vw, 30px);
-    font-weight: 500;
-    line-height: 1.12;
-    color:black;
-    text-align: left;
+      font-weight: 500;
+      line-height: 1.12;
+      color: black;
+      text-align: left;
 
-    margin: 0 0 14px;
+      margin: 0 0 14px;
 
-    letter-spacing: -0.025em;
+      letter-spacing: -0.025em;
 
-    max-width: 1080px;
+      max-width: 1080px;
     }
 
     .category-info .description {
       font-size: clamp(14px, 1.15vw, 17px);
-    line-height: 1.45;
+      line-height: 1.45;
 
-    color:black;
-    text-align: left;
+      color: black;
+      text-align: left;
 
-    margin: 0;
+      margin: 0;
 
-    max-width: 620px;
+      max-width: 620px;
 
-    display: block;
+      display: block;
     }
 
     /* Multi-column bullet lists */
@@ -259,12 +265,12 @@
     footer p {
       margin: 0 0 8px;
 
-    font-size: 1.14rem;
-    font-weight: 600;
+      font-size: 1.14rem;
+      font-weight: 600;
 
-    color:black;
+      color: black;
 
-    line-height: 1.25;
+      line-height: 1.25;
     }
 
     /* Laptops & Tablets (max-width: 1024px) */
