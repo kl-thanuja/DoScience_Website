@@ -344,9 +344,9 @@ body::-webkit-scrollbar {
 
     .category-image {
         height: 195px; /* Original 175px + 20px */
-    }
+    /* } */
 
-    .category-content {
+    /* .category-content {
         padding: 15px 16px 17px;
     }
 
