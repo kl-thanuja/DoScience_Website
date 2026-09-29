@@ -2,6 +2,7 @@ html,
 body {
     background-color: #fafafa;
 }
+
 html,
 body,
 button,
@@ -10,9 +11,11 @@ textarea,
 select {
     font-family: "Inter", sans-serif;
 }
+
 #home .hero-section {
     display: none;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -34,14 +37,14 @@ body::-webkit-scrollbar {
 } */
 .home-hero {
     width: 100%;
-    max-width: 1440px; /* Locks max container width */
-    margin: 0 auto;    /* Centers content on large screens */
+    max-width: 1440px;
+    margin: 0 auto;
     background: #fafafa;
     padding: 28px 4% 22px;
     box-sizing: border-box;
 }
 
-.home-hero-content{
+.home-hero-content {
     width: 100%;
     margin: 0 auto;
 }
@@ -50,7 +53,7 @@ body::-webkit-scrollbar {
     font-size: clamp(34px, 3.8vw, 52px);
     font-weight: 500;
     line-height: 1.12;
-    color:black;
+    color: black;
     text-align: left;
 
     margin: 0 0 14px;
@@ -64,7 +67,7 @@ body::-webkit-scrollbar {
     width: 65px;
     height: 3px;
 
-    background-color:black;
+    background-color: black;
 
     margin: 14px 0;
 }
@@ -73,7 +76,7 @@ body::-webkit-scrollbar {
     font-size: clamp(14px, 1.15vw, 17px);
     line-height: 1.45;
 
-    color:black;
+    color: black;
     text-align: left;
 
     margin: 0;
@@ -101,8 +104,10 @@ body::-webkit-scrollbar {
 .home-category-grid {
     padding-top: 25px;
     width: 100%;
-    max-width: 1440px; /* Locks grid width */
-    margin: 0 auto;    /* Centers grid on large screens */
+    max-width: 1440px;
+    /* Locks grid width */
+    margin: 0 auto;
+    /* Centers grid on large screens */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background: #fafafa;
@@ -139,7 +144,7 @@ body::-webkit-scrollbar {
 
 .category-image {
     width: 100%;
-    height: 205px; 
+    height: 205px;
     overflow: hidden;
     background: #fafafa;
     flex-shrink: 0;
@@ -151,10 +156,11 @@ body::-webkit-scrollbar {
     height: 100%;
     object-fit: cover;
 
-    object-position: center top; 
+    object-position: center top;
 
     transition: transform 0.4s ease;
 }
+
 .category-card:hover .category-image img {
     transform: scale(1.04);
 }
@@ -181,7 +187,7 @@ body::-webkit-scrollbar {
     font-size: 1.14rem;
     font-weight: 600;
 
-    color:black;
+    color: black;
 
     line-height: 1.25;
 }
@@ -218,7 +224,7 @@ body::-webkit-scrollbar {
     border: 1.5px solid black;
     border-radius: 50%;
 
-    color:#343837;
+    color: #343837;
 
     text-decoration: none;
 
@@ -233,7 +239,7 @@ body::-webkit-scrollbar {
 }
 
 .category-arrow:hover {
-    background:#343837;
+    background: #343837;
 
     color: #ffffff;
 
@@ -245,15 +251,14 @@ body::-webkit-scrollbar {
     height: 16px;
 }
 
-
-/* =========================================================
-   DESKTOP - LARGE SCREENS
-   1400px+
-========================================================= */
 /* =========================================================
    DESKTOP & LARGE SCREENS (1025px and up)
 ========================================================= */
 @media (min-width: 1025px) {
+    body::-webkit-scrollbar {
+        width: 0px;
+    }
+
     .home-hero {
         padding: 28px 3% 20px;
     }
@@ -269,7 +274,8 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 180px; /* Locks aspect ratio consistent with VivoBook view */
+        height: 180px;
+        /* Locks aspect ratio consistent with VivoBook view */
     }
 
     .category-content {
@@ -292,6 +298,10 @@ body::-webkit-scrollbar {
 }
 
 @media (min-width: 1400px) {
+    body::-webkit-scrollbar {
+        width: 0px;
+    }
+
 
     .home-hero {
         padding: 30px 5% 24px;
@@ -312,7 +322,8 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 205px; /* Original 185px + 20px */
+        height: 205px;
+        /* Original 185px + 20px */
     }
 
     .category-content {
@@ -344,9 +355,9 @@ body::-webkit-scrollbar {
 
     .category-image {
         height: 195px; /* Original 175px + 20px */
-    /* } */
+/* } */
 
-    /* .category-content {
+/* .category-content {
         padding: 15px 16px 17px;
     }
 
@@ -372,6 +383,10 @@ body::-webkit-scrollbar {
 ========================================================= */
 
 @media (max-width: 1024px) {
+    body::-webkit-scrollbar {
+        width: 0px;
+    }
+
 
     .home-hero {
         padding: 25px 5% 20px;
@@ -401,7 +416,8 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 200px; /* Original 180px + 20px */
+        height: 200px;
+        /* Original 180px + 20px */
     }
 
     .category-content {
@@ -424,6 +440,10 @@ body::-webkit-scrollbar {
 ========================================================= */
 
 @media (max-width: 768px) {
+    body::-webkit-scrollbar {
+        width: 0px;
+    }
+
 
     .home-hero {
         padding: 22px 5% 18px;
@@ -469,7 +489,8 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 195px; /* Original 175px + 20px */
+        height: 195px;
+        /* Original 175px + 20px */
     }
 
     .category-content {
@@ -510,6 +531,9 @@ body::-webkit-scrollbar {
 ========================================================= */
 
 @media (max-width: 480px) {
+    body::-webkit-scrollbar {
+        width: 0px;
+    }
 
     .home-hero {
         padding: 20px 20px 16px;
@@ -558,7 +582,8 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 220px; /* Original 200px + 20px */
+        height: 220px;
+        /* Original 200px + 20px */
     }
 
     .category-content {
@@ -581,6 +606,10 @@ body::-webkit-scrollbar {
 ========================================================= */
 
 @media (max-width: 360px) {
+    body::-webkit-scrollbar {
+        width: 0px;
+    }
+
 
     .home-hero {
         padding: 18px 18px 15px;
@@ -595,7 +624,8 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 205px; /* Original 185px + 20px */
+        height: 205px;
+        /* Original 185px + 20px */
     }
 
     .category-content {
