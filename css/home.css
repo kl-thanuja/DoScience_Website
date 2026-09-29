@@ -251,52 +251,6 @@ body::-webkit-scrollbar {
     height: 16px;
 }
 
-/* =========================================================
-   DESKTOP & LARGE SCREENS (1025px and up)
-========================================================= */
-@media (min-width: 1025px) {
-    body::-webkit-scrollbar {
-        width: 0px;
-    }
-
-    .home-hero {
-        padding: 28px 3% 20px;
-    }
-
-    .home-hero-content h1 {
-        font-size: 42px;
-        max-width: 980px;
-    }
-
-    .home-hero-content p {
-        font-size: 15px;
-        max-width: 580px;
-    }
-
-    .category-image {
-        height: 180px;
-        /* Locks aspect ratio consistent with VivoBook view */
-    }
-
-    .category-content {
-        padding: 15px 16px 18px;
-    }
-
-    .category-content h3 {
-        font-size: 16px;
-    }
-
-    .category-content p {
-        font-size: 13px;
-        line-height: 1.4;
-    }
-
-    .category-arrow {
-        width: 32px;
-        height: 32px;
-    }
-}
-
 @media (min-width: 1400px) {
     body::-webkit-scrollbar {
         width: 0px;
@@ -337,7 +291,7 @@ body::-webkit-scrollbar {
    1025px - 1399px
 ========================================================= */
 
-/* @media (min-width: 1025px) and (max-width: 1399px) {
+@media (min-width: 1025px) and (max-width: 1399px) {
 
     .home-hero {
         padding: 25px 5% 20px;
@@ -354,10 +308,10 @@ body::-webkit-scrollbar {
     }
 
     .category-image {
-        height: 195px; /* Original 175px + 20px */
-/* } */
+        height: 195px;
+    }
 
-/* .category-content {
+    .category-content {
         padding: 15px 16px 17px;
     }
 
@@ -374,7 +328,7 @@ body::-webkit-scrollbar {
         width: 32px;
         height: 32px;
     }
-} */
+}
 
 
 /* =========================================================
@@ -606,10 +560,6 @@ body::-webkit-scrollbar {
 ========================================================= */
 
 @media (max-width: 360px) {
-    body::-webkit-scrollbar {
-        width: 0px;
-    }
-
 
     .home-hero {
         padding: 18px 18px 15px;
