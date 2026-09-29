@@ -26,10 +26,18 @@ body::-webkit-scrollbar {
    HOME HERO
 ========================================================= */
 
-.home-hero {
+/* .home-hero {
     width: 100%;
     background:#fafafa;
     padding: 28px 5% 22px;
+    box-sizing: border-box;
+} */
+.home-hero {
+    width: 100%;
+    max-width: 1440px; /* Locks max container width */
+    margin: 0 auto;    /* Centers content on large screens */
+    background: #fafafa;
+    padding: 28px 4% 22px;
     box-sizing: border-box;
 }
 
@@ -80,7 +88,7 @@ body::-webkit-scrollbar {
    CATEGORY GRID - 5 COLUMNS
 ========================================================= */
 
-.home-category-grid {
+/* .home-category-grid {
     padding-top: 25px;
     width: 100%;
     margin-bottom: 0px;
@@ -88,8 +96,18 @@ body::-webkit-scrollbar {
     grid-template-columns: repeat(5, 1fr);
     background: #fafafa;
     box-sizing: border-box;
-}
+} */
 
+.home-category-grid {
+    padding-top: 25px;
+    width: 100%;
+    max-width: 1440px; /* Locks grid width */
+    margin: 0 auto;    /* Centers grid on large screens */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background: #fafafa;
+    box-sizing: border-box;
+}
 
 /* =========================================================
    CATEGORY CARD
@@ -232,6 +250,46 @@ body::-webkit-scrollbar {
    DESKTOP - LARGE SCREENS
    1400px+
 ========================================================= */
+/* =========================================================
+   DESKTOP & LARGE SCREENS (1025px and up)
+========================================================= */
+@media (min-width: 1025px) {
+    .home-hero {
+        padding: 28px 3% 20px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 42px;
+        max-width: 980px;
+    }
+
+    .home-hero-content p {
+        font-size: 15px;
+        max-width: 580px;
+    }
+
+    .category-image {
+        height: 180px; /* Locks aspect ratio consistent with VivoBook view */
+    }
+
+    .category-content {
+        padding: 15px 16px 18px;
+    }
+
+    .category-content h3 {
+        font-size: 16px;
+    }
+
+    .category-content p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .category-arrow {
+        width: 32px;
+        height: 32px;
+    }
+}
 
 @media (min-width: 1400px) {
 
@@ -268,7 +326,7 @@ body::-webkit-scrollbar {
    1025px - 1399px
 ========================================================= */
 
-@media (min-width: 1025px) and (max-width: 1399px) {
+/* @media (min-width: 1025px) and (max-width: 1399px) {
 
     .home-hero {
         padding: 25px 5% 20px;
@@ -305,7 +363,7 @@ body::-webkit-scrollbar {
         width: 32px;
         height: 32px;
     }
-}
+} */
 
 
 /* =========================================================
