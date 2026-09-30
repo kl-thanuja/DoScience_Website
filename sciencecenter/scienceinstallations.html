@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DO SCI - Hands-on Science</title>
+  <title>DoScience</title>
   <!-- Google Fonts for crisp typography (Montserrat / sans-serif feel) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,9 +65,7 @@
       align-items: flex-start;
       justify-content: flex-start;
       padding: 108px 5% 60px 5%;
-      /* Matches the left-align baseline of 5% */
       margin-top: 0;
-      /* Removed unnecessary margin top offset if navbar is fixed */
       gap: 3rem;
     }
 
@@ -76,7 +74,6 @@
       z-index: 3;
       width: 45%;
       padding: 0;
-      /* REMOVED: padding-left: 5% and padding-right: 2rem */
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -97,7 +94,6 @@
       object-position: center;
     }
 
-    /* Fixed from clamp(34px, 3.8vw, 52px) */
     .hero-content h1 {
       font-size: 52px;
       font-weight: 500;
@@ -115,7 +111,6 @@
       margin: 14px 0;
     }
 
-    /* Fixed from clamp(14px, 1.15vw, 17px) */
     .hero-content p {
       font-size: 15px;
       line-height: 1.45;
@@ -133,7 +128,6 @@
       padding: 4rem 5% 2rem 5%;
     }
 
-    /* Fixed from clamp(25px, 3.8vw, 30px) */
     .section-title {
       font-size: 30px;
       font-weight: 500;
@@ -145,7 +139,6 @@
       max-width: 1080px;
     }
 
-    /* Fixed from clamp(14px, 1.15vw, 17px) */
     .section-subtitle {
       font-size: 15px;
       line-height: 1.45;
@@ -185,7 +178,6 @@
       object-fit: cover;
     }
 
-    /* Fixed from clamp(25px, 3.8vw, 30px) */
     .category-info h3 {
       font-size: 30px;
       font-weight: 500;
@@ -197,7 +189,6 @@
       max-width: 1080px;
     }
 
-    /* Fixed from clamp(14px, 1.15vw, 17px) */
     .category-info .description {
       font-size: 15px;
       line-height: 1.45;
@@ -224,23 +215,80 @@
     }
 
     /* ==========================================
-   FOOTER CALLOUT
+   FEATURE SECTION & BACK BUTTON
    ========================================== */
-    footer {
-      border-top: 1px solid #e0dfd9;
-      padding: 2.5rem 5%;
-      text-align: left;
+    .feature-section {
+      padding: 4rem 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
-    footer p {
-      margin: 0 0 8px;
-      font-size: 18px;
-      font-weight: 600;
+    .feature-content {
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .feature-content p {
+      font-size: 15px;
+      line-height: 1.45;
       color: black;
-      line-height: 1.25;
+      text-align: center;
+      margin: 0;
+      max-width: 620px;
+      display: block;
     }
 
-    /* Laptops & Tablets (max-width: 1024px) */
+    /* Back Button Styling */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 32px;
+      text-decoration: none;
+      color: #1a1a1a;
+      transition: opacity 0.3s ease;
+    }
+
+    .back-arrow-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1.5px solid #1a1a1a;
+      border-radius: 50%;
+      color: #1a1a1a;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .back-arrow-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .back-btn-text {
+      font-size: 15px;
+      line-height: 1.45;
+      color: black;
+      text-align: center;
+      margin: 0;
+      max-width: 620px;
+      display: block;
+    }
+
+    /* Hover effect: Smooth left movement for going back */
+    .back-btn:hover .back-arrow-icon {
+      background: #1a1a1a;
+      color: #ffffff;
+      transform: translateX(-5px);
+    }
+
+    /* Responsive adjustments */
     @media screen and (max-width: 1024px) {
       .category-row {
         grid-template-columns: 300px 1fr;
@@ -267,7 +315,6 @@
       }
     }
 
-    /* Medium Tablets (max-width: 768px) */
     @media screen and (max-width: 768px) {
       .hero-section {
         flex-direction: column;
@@ -329,7 +376,6 @@
       }
     }
 
-    /* Mobile Devices (max-width: 480px) */
     @media screen and (max-width: 480px) {
       .hero-content h1 {
         font-size: 28px;
@@ -345,17 +391,14 @@
 
       .hero-content p,
       .section-subtitle,
-      .category-info .description {
-        font-size: 13.5px;
+      .category-info .description,
+      .feature-content p {
+        font-size: 14px;
       }
 
       .items-grid {
         grid-template-columns: 1fr;
         gap: 0.5rem;
-      }
-
-      footer p {
-        font-size: 15px;
       }
     }
   </style>
@@ -374,15 +417,15 @@
         observation, experimentation and play.</p>
     </div>
     <div class="hero-image-container">
-      <img src="assets/DoScience_section-3-1-2-mechanics.png" alt="Hands-on science exhibit" />
+      <img src="assets/DoScience_ A space designed for discovery_(1).png" alt="Hands-on science exhibit" />
     </div>
   </section>
 
   <!-- MORE THAN 50 INTERACTIVE INSTALLATIONS SECTION -->
   <section class="installations-section">
     <h2 class="section-title">More than 50 Interactive Installations</h2>
-    <p class="section-subtitle">Grouped broadly into Mechanics, Sound, Light and Mathematics, each installation explores
-      a scientific idea through direct experience.</p>
+    <p class="section-subtitle">Grouped broadly into Mechanics, Sound, Light and Mathematics.Each installation connects
+      learning principles with real-world applications.</p>
 
     <!-- Category 1: Mechanics -->
     <div class="category-row">
@@ -393,21 +436,28 @@
         <h3>Mechanics</h3>
         <p class="description">Explore forces, motion and energy through interactive mechanical installations.</p>
         <ul class="items-grid">
-          <li>Newton's Cradle</li>
-          <li>Pulley Drive</li>
-          <li>Lift Yourself</li>
-          <li>Chair of Nails</li>
-          <li>Gyro Chair</li>
-          <li>Snake Pendulum</li>
-          <li>Giant Lever</li>
-          <li>Reverse Cycle</li>
-          <li>Trampoline</li>
-          <li>Double-Ended Cone</li>
-          <li>Pulleys</li>
-          <li>Yo-Yo</li>
+          <li>Belt & Pulley Drive</li>
           <li>Black Hole</li>
+          <li>Chair of Nails</li>
+          <li>Cycloidal Path</li>
+          <li>Defying Gravity</li>
+          <li>Double-Ended Cone</li>
+          <li>First Order Lever</li>
+          <li>Gear Drive</li>
+          <li>Giant lever</li>
+          <li>Gyro Chair</li>
+          <li>Lift Yourself</li>
+          <li>Newton's Cradle</li>
+          <li>Pulley Yo-Yo</li>
+          <li>Pulleys</li>
           <li>Race the Rollers</li>
-          <li>...and many more</li>
+          <li>Resonance Bars</li>
+          <li>Reverse Cycle</li>
+          <li>Second Order Lever</li>
+          <li>Snake pendulum</li>
+          <li>Square Wheeled Cycle</li>
+          <li>Third Order Lever</li>
+          <li>Trampoline</li>
         </ul>
       </div>
     </div>
@@ -422,14 +472,13 @@
         <p class="description">Discover how sound is produced, travels and interacts through vibration and resonance.
         </p>
         <ul class="items-grid">
-          <li>Echo Tube</li>
           <li>Delayed Sound</li>
           <li>Metal Gongs</li>
-          <li>Percussion Drums</li>
+          <li>Echo Tube</li>
+          <li>Percussion drums</li>
           <li>Hexagonal Chimes</li>
           <li>Resonance Pipes</li>
           <li>Hollow Pipes</li>
-          <li>...and many more</li>
         </ul>
       </div>
     </div>
@@ -444,17 +493,15 @@
         <p class="description">Investigate reflection, perception and optical phenomena with simple, surprising models.
         </p>
         <ul class="items-grid">
-          <li>3D Funnel Illusion</li>
-          <li>Illusion Disc</li>
-          <li>Invisible Batman</li>
-          <li>Antigravity Mirrors</li>
+          <li>3D Funnel Illusion Disc</li>
+          <li>Multiple reflections</li>
+          <li>Antigravity mirrors</li>
           <li>Periscope</li>
-          <li>Multiple Reflections</li>
           <li>Giant Magic Mirror</li>
           <li>Planck's Constant</li>
-          <li>...and many more</li>
           <li>Infinity Well</li>
-          <li>Striped Mirrors</li>
+          <li>Striped mirrors</li>
+          <li>Invisible Batman</li>
         </ul>
       </div>
     </div>
@@ -470,25 +517,37 @@
           activities.</p>
         <ul class="items-grid">
           <li>Plinko Board</li>
-          <li>Mobius Strip</li>
-          <li>Chess</li>
+          <li>Mobius strip</li>
           <li>40 Year Calendar</li>
           <li>Pythagoras Theorem</li>
-          <li>Double-Ended Cone</li>
           <li>American Abacus</li>
           <li>Value of Pi</li>
-          <li>...and many more</li>
           <li>Japanese Abacus</li>
           <li>Cycloidal Path</li>
+          <li>Chess</li>
+          <li>Double-Ended Cone</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>Every installation invites you to experiment, observe and ask questions.<br>Explore at your own pace and discover
-      what captures your curiosity.</p>
-  </footer>
+  <!-- FEATURE SECTION WITH BACK BUTTON -->
+  <section class="feature-section">
+    <div class="feature-content">
+      <p>Every installation invites you to experiment, observe and ask questions. Explore at your own pace and discover
+        what captures your curiosity.</p>
+
+      <a href="index.html" class="back-btn">
+        <span class="back-arrow-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </span>
+        <span class="back-btn-text">Back to science center</span>
+      </a>
+    </div>
+  </section>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {

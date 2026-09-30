@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rolling Ball Sculptures - DO SCI</title>
+    <title>DoScience</title>
 
     <!-- Google Fonts for typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,36 +130,62 @@
         /* ==========================================
    FOOTER (Matches dark theme callout baseline)
    ========================================== */
+
+
         footer {
-            background-color: #222222;
-            color: #ffffff;
-            padding: 2.5rem 5%;
-            text-align: center;
-            margin-top: auto;
-        }
-
-        footer .footer-text {
-            font-size: 14px;
-            color: #cccccc;
-            margin-bottom: 8px;
-        }
-
-        footer .footer-links {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 5%;
+            background-color: #1a1a1a;
+            box-sizing: border-box;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
             gap: 20px;
         }
 
-        footer .footer-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: opacity 0.2s;
+        .footer-links p {
+            margin: 0;
+            font-size: 0.8rem;
+            font-weight: 525;
+            letter-spacing: -0.01em;
         }
 
-        footer .footer-links a:hover {
-            opacity: 0.8;
+        .footer-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 525;
+            letter-spacing: -0.01em;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            white-space: nowrap;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover,
+        .footer-links a.active-link {
+            color: #267316;
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #267316;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .footer-links a:hover::after,
+        .footer-links a.active-link::after {
+            width: 100%;
         }
 
         /* ==========================================
@@ -172,6 +198,11 @@
 
             .hero-content p {
                 font-size: 15px;
+            }
+
+            .footer-links a,
+            .footer-links p {
+                font-size: 0.9rem;
             }
         }
 
@@ -233,14 +264,6 @@
         </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <p class="footer-text">&copy; 2026 DoScience. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="../aboutus.html">About</a>
-            <a href="../contactUs.html">Contact</a>
-        </div>
-    </footer>
 
     <!-- Scripts -->
     <script src="../components/navbar.js"></script>

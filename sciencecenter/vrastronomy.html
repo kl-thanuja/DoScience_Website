@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DO SCI - VR Astronomy</title>
+  <title>DoScience</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -245,12 +245,13 @@
     }
 
     .feature-content h2 {
-      font-size: 52px;
-      font-weight: 500;
-      line-height: 1.12;
-      color: black;
       text-align: center;
       max-width: 1080px;
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: 600;
+      color: black;
+      line-height: 1.25;
     }
 
     .feature-content p {
@@ -261,6 +262,51 @@
       margin: 0;
       max-width: 620px;
       display: block;
+    }
+    /* Back Button Styling */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 32px;
+      text-decoration: none;
+      color: #1a1a1a;
+      transition: opacity 0.3s ease;
+    }
+
+    .back-arrow-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;         /* Increased size from 34px */
+      height: 44px;        /* Increased size from 34px */
+      border: 1.5px solid #1a1a1a;
+      border-radius: 50%;
+      color: #1a1a1a;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .back-arrow-icon svg {
+      width: 22px;         /* Increased arrow icon size */
+      height: 22px;
+    }
+
+    .back-btn-text {
+      font-size: 15px;
+      line-height: 1.45;
+      color: black;
+      text-align: center;
+      margin: 0;
+      max-width: 620px;
+      display: block;
+    }
+
+    /* Hover effect: Smooth left movement for going back */
+    .back-btn:hover .back-arrow-icon {
+      background: #1a1a1a;
+      color: #ffffff;
+      transform: translateX(-5px);
     }
 
     /* ==========================================
@@ -273,11 +319,14 @@
     }
 
     footer p {
-      margin: 0 0 8px;
-      font-size: 18.24px;
+      text-align: center;
+      max-width: 1080px;
+      font-size: 18px;
       font-weight: 600;
       color: black;
       line-height: 1.25;
+      justify-content: center;
+      margin-left: 60px;
     }
 
     /* ==========================================
@@ -380,8 +429,6 @@
     <div class="hero-content">
       <h1>VR Astronomy</h1>
       <div class="accent-line"></div>
-      <h3>Travel through the Solar System, explore distant planets and experience the Universe in ways that are
-        impossible from the ground.</h3>
       <p>Step into immersive virtual reality and discover space like never before. From our neighbouring planets to
         distant galaxies, our shows spark curiosity and bring the Universe a little closer.</p>
     </div>
@@ -467,16 +514,22 @@
   <!-- FEATURE SECTION -->
   <section class="feature-section">
     <div class="feature-content">
-      <h2>A Universe Waiting to be Explored</h2>
-      <div class="accent-line"></div>
       <p>Whether you're seeing Saturn's rings for the first time, travelling through the Solar System or exploring
         distant galaxies, VR Astronomy invites visitors of all ages to experience space with curiosity and wonder.</p>
+      
+      <!-- Back to Science Center Button -->
+      <a href="index.html" class="back-btn">
+        <span class="back-arrow-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </span>
+        <span class="back-btn-text">Back to science center</span>
+      </a>
     </div>
   </section>
 
-  <footer>
-    <p>Visit DoScience to experience VR Astronomy.</p>
-  </footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {

@@ -199,7 +199,55 @@ body::-webkit-scrollbar {
     height: 16px;
 }
 
-
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #1a1a1a;
+    box-sizing: border-box;
+}
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer-links p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 525;
+    letter-spacing: -0.01em;
+}
+.footer-links a {
+    text-decoration: none;
+    color: #ffffff; /* Base color for dark footer; change to black if background is light */
+    font-size: 0.8rem;
+    font-weight: 525;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover,
+.footer-links a.active-link {
+    color: #267316;
+}
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #267316;
+    transition: width 0.3s ease-in-out;
+}
+.footer-links a:hover::after,
+.footer-links a.active-link::after {
+    width: 100%;
+}
 /* =========================================================
    LARGE DESKTOP (1400px and above)
 ========================================================= */
@@ -306,6 +354,10 @@ body::-webkit-scrollbar {
 @media (max-width: 1024px) {
     body::-webkit-scrollbar {
         width: 0px;
+    }
+    .footer-links a,
+    .footer-links p {
+        font-size: 0.9rem;
     }
 
     .home-hero {
