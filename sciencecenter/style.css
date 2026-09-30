@@ -505,7 +505,7 @@ section {
 
 .section4-top {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1.3fr 1.2fr;
     gap: 4rem;
     align-items: flex-start;
     margin-bottom: 5rem;
@@ -513,7 +513,7 @@ section {
 
 .section4-card-img {
     width: calc(100% + 5.5vw);
-    height: 580px;
+    height: 600px;
     border-radius: 0;
     overflow: hidden;
     position: relative;
@@ -532,7 +532,7 @@ section {
     pointer-events: none;
     background: linear-gradient(to right,
             #fafafa 0%,
-            rgba(250, 250, 250, 0.3) 20%,
+            rgba(250, 250, 250, 0.6) 20%,
             rgba(250, 250, 250, 0) 50%);
 }
 
