@@ -1,6 +1,251 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <h3>Yet to recieve the file</h3>
-    </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolling Ball Sculptures - DO SCI</title>
+
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        button,
+        input,
+        textarea,
+        select {
+            font-family: "Inter", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ==========================================
+   MAIN HERO SECTION (Matches Installations Page Padding)
+   ========================================== */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 108px 5% 80px 5%;
+            /* Matches padding from original section */
+            gap: 1.5rem;
+            flex: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* Fixed 52px header matching original installations page typography */
+        .hero-content h1 {
+            font-size: 52px;
+            font-weight: 500;
+            line-height: 1.12;
+            color: #000000;
+            text-align: left;
+            letter-spacing: -0.025em;
+            max-width: 1080px;
+        }
+
+        /* Accent Line (Green accent bar matching inspiration image) */
+        .accent-line {
+            width: 65px;
+            height: 4px;
+            background-color: black;
+            margin: 14px 0;
+        }
+
+        /* Subtitle & Descriptive Paragraphs */
+        .hero-content p {
+            font-size: 15px;
+            line-height: 1.45;
+            color: black;
+            text-align: left;
+            margin: 0;
+            max-width: 620px;
+            display: block;
+        }
+
+        .hero-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Hero Image Container */
+        .hero-image-container {
+            position: relative;
+            width: 48%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            object-fit: contain;
+        }
+
+        /* ==========================================
+   FOOTER (Matches dark theme callout baseline)
+   ========================================== */
+        footer {
+            background-color: #222222;
+            color: #ffffff;
+            padding: 2.5rem 5%;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer .footer-text {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 8px;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        footer .footer-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* ==========================================
+   RESPONSIVE BREAKPOINTS (Matches original CSS)
+   ========================================== */
+        @media screen and (max-width: 1024px) {
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .hero-content p {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                padding: 80px 5% 40px 5%;
+                gap: 1.25rem;
+                align-items: stretch;
+            }
+
+            .hero-content {
+                width: 100%;
+                order: 1;
+                margin-bottom: 0;
+            }
+
+            .hero-image-container {
+                width: 100%;
+                order: 2;
+            }
+
+            .hero-content h1 {
+                font-size: 34px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .hero-content p {
+                font-size: 13.5px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../components/navbar.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- HERO SECTION -->
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>Science Installations<br>Coming Soon</h1>
+            <div class="accent-line"></div>
+            <p>We’re working on this section and will be adding more information shortly.</p>
+            <p>In the meantime, you can explore our other offerings or get in touch if you have any questions.</p>
+        </div>
+
+        <div class="hero-image-container">
+            <img src="../images/home-Science installations.png" alt="Rolling Ball Sculpture Illustration" />
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="footer-text">&copy; 2026 DoScience. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="../aboutus.html">About</a>
+            <a href="../contactUs.html">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../components/navbar.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="script.js"></script>
+</body>
+
 </html>
