@@ -29,12 +29,6 @@ body::-webkit-scrollbar {
    HOME HERO
 ========================================================= */
 
-/* .home-hero {
-    width: 100%;
-    background:#fafafa;
-    padding: 28px 5% 22px;
-    box-sizing: border-box;
-} */
 .home-hero {
     width: 100%;
     max-width: 1440px;
@@ -49,40 +43,32 @@ body::-webkit-scrollbar {
     margin: 0 auto;
 }
 
+/* Level 1 Font Size */
 .home-hero-content h1 {
-    font-size: clamp(34px, 3.8vw, 52px);
+    font-size: 52px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
     text-align: left;
-
-    margin: 0 0 14px;
-
     letter-spacing: -0.025em;
-
     max-width: 1080px;
 }
 
 .home-divider {
     width: 65px;
     height: 3px;
-
     background-color: black;
-
     margin: 14px 0;
 }
 
+/* Level 2 Font Size */
 .home-hero-content p {
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
-
     color: black;
     text-align: left;
-
     margin: 0;
-
     max-width: 620px;
-
     display: block;
 }
 
@@ -91,23 +77,11 @@ body::-webkit-scrollbar {
    CATEGORY GRID - 5 COLUMNS
 ========================================================= */
 
-/* .home-category-grid {
-    padding-top: 25px;
-    width: 100%;
-    margin-bottom: 0px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background: #fafafa;
-    box-sizing: border-box;
-} */
-
 .home-category-grid {
     padding-top: 25px;
     width: 100%;
     max-width: 1440px;
-    /* Locks grid width */
     margin: 0 auto;
-    /* Centers grid on large screens */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background: #fafafa;
@@ -120,16 +94,11 @@ body::-webkit-scrollbar {
 
 .category-card {
     min-width: 0;
-
     display: flex;
     flex-direction: column;
-
     border-right: 1px solid #e8e8e8;
-
     background: #fafafa;
-
     text-decoration: none;
-
     box-sizing: border-box;
 }
 
@@ -155,9 +124,7 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
     object-position: center top;
-
     transition: transform 0.4s ease;
 }
 
@@ -172,38 +139,29 @@ body::-webkit-scrollbar {
 
 .category-content {
     padding: 17px 20px 18px;
-
     display: flex;
     flex-direction: column;
-
     flex: 1;
-
     box-sizing: border-box;
 }
 
+/* Level 3 Font Size */
 .category-content h3 {
     margin: 0 0 8px;
-
-    font-size: 1.14rem;
+    font-size: 18px;
     font-weight: 600;
-
     color: black;
-
     line-height: 1.25;
 }
 
+/* Level 4 Font Size */
 .category-content p {
     margin: 0 0 14px;
-
     font-size: 13px;
     line-height: 1.45;
-
     color: black;
-
     flex: 1;
-
     display: block;
-
     text-align: left;
 }
 
@@ -214,35 +172,25 @@ body::-webkit-scrollbar {
 
 .category-arrow {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
-
     width: 34px;
     height: 34px;
-
     border: 1.5px solid black;
     border-radius: 50%;
-
     color: #343837;
-
     text-decoration: none;
-
     transition:
         background 0.3s ease,
         color 0.3s ease,
         transform 0.3s ease;
-
     margin-top: auto;
-
     flex-shrink: 0;
 }
 
 .category-arrow:hover {
     background: #343837;
-
     color: #ffffff;
-
     transform: translateX(4px);
 }
 
@@ -251,16 +199,21 @@ body::-webkit-scrollbar {
     height: 16px;
 }
 
+
+/* =========================================================
+   LARGE DESKTOP (1400px and above)
+========================================================= */
+
 @media (min-width: 1400px) {
     body::-webkit-scrollbar {
         width: 0px;
     }
 
-
     .home-hero {
         padding: 30px 5% 24px;
     }
 
+    /* Level 1 */
     .home-hero-content h1 {
         font-size: 52px;
         max-width: 1100px;
@@ -270,6 +223,7 @@ body::-webkit-scrollbar {
         margin: 13px 0;
     }
 
+    /* Level 2 */
     .home-hero-content p {
         font-size: 17px;
         max-width: 650px;
@@ -277,11 +231,20 @@ body::-webkit-scrollbar {
 
     .category-image {
         height: 205px;
-        /* Original 185px + 20px */
     }
 
     .category-content {
         padding: 17px 20px 18px;
+    }
+
+    /* Level 3 */
+    .category-content h3 {
+        font-size: 18px;
+    }
+
+    /* Level 4 */
+    .category-content p {
+        font-size: 13px;
     }
 }
 
@@ -297,11 +260,13 @@ body::-webkit-scrollbar {
         padding: 25px 5% 20px;
     }
 
+    /* Level 1 */
     .home-hero-content h1 {
-        font-size: clamp(34px, 4vw, 48px);
+        font-size: 52px;
         max-width: 950px;
     }
 
+    /* Level 2 */
     .home-hero-content p {
         font-size: 15px;
         max-width: 580px;
@@ -315,10 +280,12 @@ body::-webkit-scrollbar {
         padding: 15px 16px 17px;
     }
 
+    /* Level 3 */
     .category-content h3 {
         font-size: 16px;
     }
 
+    /* Level 4 */
     .category-content p {
         font-size: 12.5px;
         line-height: 1.4;
@@ -341,16 +308,17 @@ body::-webkit-scrollbar {
         width: 0px;
     }
 
-
     .home-hero {
         padding: 25px 5% 20px;
     }
 
+    /* Level 1 */
     .home-hero-content h1 {
-        font-size: clamp(30px, 4.2vw, 44px);
+        font-size: 42px;
         line-height: 1.12;
     }
 
+    /* Level 2 */
     .home-hero-content p {
         font-size: 15px;
         max-width: 600px;
@@ -371,17 +339,18 @@ body::-webkit-scrollbar {
 
     .category-image {
         height: 200px;
-        /* Original 180px + 20px */
     }
 
     .category-content {
         padding: 17px 18px 20px;
     }
 
+    /* Level 3 */
     .category-content h3 {
         font-size: 16px;
     }
 
+    /* Level 4 */
     .category-content p {
         font-size: 13px;
     }
@@ -398,32 +367,27 @@ body::-webkit-scrollbar {
         width: 0px;
     }
 
-
     .home-hero {
         padding: 22px 5% 18px;
     }
 
+    /* Level 1 */
     .home-hero-content h1 {
-        font-size: clamp(27px, 6vw, 38px);
-
+        font-size: 36px;
         line-height: 1.15;
-
         margin-bottom: 12px;
     }
 
     .home-divider {
         width: 55px;
-
         height: 3px;
-
         margin: 12px 0;
     }
 
+    /* Level 2 */
     .home-hero-content p {
         font-size: 14px;
-
         line-height: 1.45;
-
         max-width: 100%;
     }
 
@@ -444,26 +408,23 @@ body::-webkit-scrollbar {
 
     .category-image {
         height: 195px;
-        /* Original 175px + 20px */
     }
 
     .category-content {
         padding: 16px 16px 18px;
     }
 
+    /* Level 3 */
     .category-content h3 {
         font-size: 16px;
-
         line-height: 1.25;
-
         margin-bottom: 7px;
     }
 
+    /* Level 4 */
     .category-content p {
         font-size: 13px;
-
         line-height: 1.45;
-
         margin-bottom: 13px;
     }
 
@@ -493,25 +454,22 @@ body::-webkit-scrollbar {
         padding: 20px 20px 16px;
     }
 
+    /* Level 1 */
     .home-hero-content h1 {
         font-size: 27px;
-
         line-height: 1.15;
-
         letter-spacing: -0.02em;
-
         margin-bottom: 10px;
     }
 
     .home-divider {
         width: 50px;
-
         margin: 10px 0;
     }
 
+    /* Level 2 */
     .home-hero-content p {
         font-size: 13.5px;
-
         line-height: 1.45;
     }
 
@@ -521,7 +479,6 @@ body::-webkit-scrollbar {
 
     .category-card {
         border-right: none;
-
         border-bottom: 1px solid #e8e8e8;
     }
 
@@ -537,17 +494,18 @@ body::-webkit-scrollbar {
 
     .category-image {
         height: 220px;
-        /* Original 200px + 20px */
     }
 
     .category-content {
         padding: 16px 18px 18px;
     }
 
+    /* Level 3 */
     .category-content h3 {
         font-size: 17px;
     }
 
+    /* Level 4 */
     .category-content p {
         font-size: 13.5px;
     }
@@ -565,20 +523,31 @@ body::-webkit-scrollbar {
         padding: 18px 18px 15px;
     }
 
+    /* Level 1 */
     .home-hero-content h1 {
         font-size: 25px;
     }
 
+    /* Level 2 */
     .home-hero-content p {
         font-size: 13px;
     }
 
     .category-image {
         height: 205px;
-        /* Original 185px + 20px */
     }
 
     .category-content {
         padding: 14px 16px 17px;
+    }
+
+    /* Level 3 */
+    .category-content h3 {
+        font-size: 16px;
+    }
+
+    /* Level 4 */
+    .category-content p {
+        font-size: 13px;
     }
 }

@@ -30,13 +30,12 @@ body {
 /* Main Contact Section */
 .contact-main {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1.2fr 1.5fr;
     gap: 60px;
     margin-bottom: 80px;
 }
-
 .contact-intro h2 {
-    font-size: clamp(34px, 3.8vw, 52px);
+    font-size: 52px;
     font-weight: 500;
     line-height: 1.12;
     color: #000000 !important;
@@ -53,8 +52,9 @@ body {
     margin: 14px 0;
 }
 
+/* Fixed from clamp(14px, 1.15vw, 17px) */
 .contact-intro p {
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -73,7 +73,7 @@ body {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    font-size: 0.85rem;
+    font-size: 13.6px;
     font-weight: 400;
     color: #888888;
 }
@@ -87,7 +87,7 @@ body {
     padding: 12px 16px;
     border: 1px solid #ddd;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 16px;
     transition: border-color 0.3s;
     font-family: inherit;
 }
@@ -104,10 +104,11 @@ body {
     min-width: 0;
 }
 
+/* Fixed from clamp(14px, 1.15vw, 17px) */
 .form-group label {
     display: block;
     font-weight: 550;
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 17px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -154,10 +155,11 @@ body {
     margin-top: 10px;
 }
 
+/* Fixed from clamp(14px, 1.15vw, 17px) */
 .checkbox-group label {
     display: block;
     font-weight: 550;
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 17px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -180,12 +182,13 @@ body {
     accent-color: black;
 }
 
+/* Fixed from clamp(14px, 1.15vw, 17px) */
 .checkbox-item label {
     cursor: pointer;
     font-weight: 400;
     margin-bottom: 0;
     color: black;
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 17px;
 }
 
 .submit-btn {
@@ -194,7 +197,7 @@ body {
     padding: 14px 32px;
     border: 1px solid black;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     display: inline-flex;
@@ -229,7 +232,7 @@ body {
 }
 
 .find-us-header h3 {
-    font-size: 1.5rem;
+    font-size: 24px;
     color: var(--text-dark);
     margin: 0 0 15px 0;
     font-weight: 600;
@@ -247,7 +250,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1.2fr 1fr;
     gap: 35px;
-    align-items: flex-start; /* Keeps DoScience, Map top, and Our work travels perfectly in one line */
+    align-items: flex-start;
 }
 
 /* Left Column Styling */
@@ -259,7 +262,7 @@ body {
 
 .find-us-info h4 {
     margin: 0 0 8px 0;
-    font-size: 1.14rem;
+    font-size: 18.24px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
@@ -299,7 +302,7 @@ body {
 
 .work-travels h3 {
     margin: 0 0 8px 0;
-    font-size: 1.14rem;
+    font-size: 18.24px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
@@ -316,10 +319,13 @@ body {
 /* Contact Details Section */
 .contact-details-section {
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .contact-detail-item h4 {
-    font-size: 1rem;
+    font-size: 16px;
     color: var(--text-dark);
     margin: 0 0 6px 0;
     font-weight: 600;
@@ -334,23 +340,22 @@ body {
     text-align: left;
     text-decoration: none;
 }
+
 .phone-numbers {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
+
 .phone-numbers p {
     margin: 0;
 }
+
 .phone-numbers a {
     display: inline-block;
     margin: 0;
 }
-.contact-details-section {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
+
 .contact-detail-item a:hover {
     color: #343837;
 }
@@ -362,7 +367,7 @@ body {
 
 .social-section h3 {
     margin: 0 0 8px;
-    font-size: 1.14rem;
+    font-size: 18.24px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
@@ -416,8 +421,9 @@ body {
         padding-top: 105px;
     }
 
+    /* Fixed from clamp(34px, 4vw, 48px) */
     .contact-intro h2 {
-        font-size: clamp(34px, 4vw, 48px);
+        font-size: 52px;
     }
 }
 
@@ -430,6 +436,17 @@ body {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+
+    .contact-intro h2 {
+        font-size: 38px;
+    }
+
+    .contact-intro p,
+    .form-group label,
+    .checkbox-group label,
+    .checkbox-item label {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -437,9 +454,17 @@ body {
         padding-top: 102px;
     }
 
+    /* Fixed from clamp(27px, 6vw, 38px) */
     .contact-intro h2 {
-        font-size: clamp(27px, 6vw, 38px);
+        font-size: 34px;
         margin-bottom: 12px;
+    }
+
+    .contact-intro p,
+    .form-group label,
+    .checkbox-group label,
+    .checkbox-item label {
+        font-size: 14px;
     }
 
     .form-row {
@@ -465,8 +490,19 @@ body {
 }
 
 @media (max-width: 480px) {
+    .contact-intro h2 {
+        font-size: 26px;
+    }
+
+    .contact-intro p,
+    .form-group label,
+    .checkbox-group label,
+    .checkbox-item label {
+        font-size: 13.5px;
+    }
+
     .find-us-header h3 {
-        font-size: 1.3rem;
+        font-size: 20.8px;
     }
 }
 

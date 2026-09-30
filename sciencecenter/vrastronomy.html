@@ -51,75 +51,68 @@
     }
 
     /* ==========================================
-       HERO SECTION
-       ========================================== */
+   HERO SECTION
+   ========================================== */
 
     .hero-section {
-      margin-top: 70px;
-      padding: 3rem 5%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3.5rem;
-      align-items: center;
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 108px 5% 60px 5%;
+      margin-top: 0;
+      gap: 3rem;
       background-color: #fafafa;
     }
 
     .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 45%;
+      padding: 0;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: flex-start;
     }
 
     .hero-content h1 {
-      font-size: clamp(34px, 3.8vw, 52px);
+      font-size: 52px;
       font-weight: 500;
       line-height: 1.12;
       color: black;
       text-align: left;
-
-      margin: 0 0 14px;
-
       letter-spacing: -0.025em;
-
       max-width: 1080px;
     }
 
     .accent-line {
       width: 65px;
       height: 3px;
-
       background-color: black;
-
       margin: 14px 0;
     }
 
     .hero-content h3 {
       margin: 0 0 8px;
-
-      font-size: 1.14rem;
+      font-size: 18.24px;
       font-weight: 600;
-
       color: black;
-
       line-height: 1.25;
     }
 
     .hero-content p {
-      font-size: clamp(14px, 1.15vw, 17px);
+      font-size: 15px;
       line-height: 1.45;
-
       color: black;
       text-align: left;
-
       margin: 0;
-
       max-width: 620px;
-
       display: block;
     }
 
     .hero-image-container {
-      width: 100%;
+      width: 55%;
       height: 100%;
       min-height: 380px;
       max-height: 500px;
@@ -136,37 +129,30 @@
     }
 
     /* ==========================================
-       SHOWS SECTION
-       ========================================== */
+   SHOWS SECTION
+   ========================================== */
     .shows-section {
       padding: 4rem 5% 3rem 5%;
     }
 
     .section-title {
-      font-size: clamp(25px, 3.8vw, 30px);
+      font-size: 30px;
       font-weight: 500;
       line-height: 1.12;
       color: black;
       text-align: left;
-
       margin: 0 0 14px;
-
       letter-spacing: -0.025em;
-
       max-width: 1080px;
     }
 
     .section-subtitle {
-      font-size: clamp(14px, 1.15vw, 17px);
+      font-size: 15px;
       line-height: 1.45;
-
       color: black;
       text-align: left;
-
       margin: 0;
-
       max-width: 620px;
-
       display: block;
       margin-bottom: 30px;
     }
@@ -186,7 +172,6 @@
       flex-direction: column;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     }
-
 
     .card-img {
       width: 100%;
@@ -208,31 +193,20 @@
     }
 
     .card-body h3 {
-      margin: 0 0 8px;
-
-      font-size: 1.14rem;
+      font-size: 18.24px;
       font-weight: 600;
-
       color: black;
-
       line-height: 1.25;
     }
 
-    .card-body .accent-line {
-      margin-bottom: 1rem;
-    }
 
     .card-body p {
-      font-size: clamp(14px, 1.15vw, 17px);
+      font-size: 15px;
       line-height: 1.45;
-
       color: black;
       text-align: left;
-
       margin: 0;
-
       max-width: 620px;
-
       display: block;
     }
 
@@ -240,7 +214,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.85rem;
+      font-size: 13.6px;
       color: #222;
       font-weight: 500;
       margin-top: 30px;
@@ -253,8 +227,8 @@
     }
 
     /* ==========================================
-       BOTTOM FEATURE SECTION (UPDATED TO CENTER)
-       ========================================== */
+   BOTTOM FEATURE SECTION
+   ========================================== */
     .feature-section {
       padding: 4rem 5%;
       display: flex;
@@ -271,34 +245,27 @@
     }
 
     .feature-content h2 {
-      font-size: clamp(34px, 3.8vw, 52px);
+      font-size: 52px;
       font-weight: 500;
       line-height: 1.12;
       color: black;
       text-align: center;
-
-      margin: 0 0 14px;
       max-width: 1080px;
     }
 
-
     .feature-content p {
-      font-size: clamp(14px, 1.15vw, 17px);
+      font-size: 15px;
       line-height: 1.45;
-
       color: black;
       text-align: center;
-
       margin: 0;
-
       max-width: 620px;
-
       display: block;
     }
 
     /* ==========================================
-       FOOTER
-       ========================================== */
+   FOOTER
+   ========================================== */
     footer {
       border-top: 1px solid #e0dfd9;
       padding: 2.5rem 5%;
@@ -307,34 +274,68 @@
 
     footer p {
       margin: 0 0 8px;
-
-      font-size: 1.14rem;
+      font-size: 18.24px;
       font-weight: 600;
-
       color: black;
-
       line-height: 1.25;
     }
 
     /* ==========================================
-       RESPONSIVE DESIGN (MEDIA QUERIES)
-       ========================================== */
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================== */
     @media (max-width: 900px) {
       .hero-section {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 2rem;
-        padding-top: 2rem;
+        padding-top: 108px;
+      }
+
+      .hero-content,
+      .hero-image-container {
+        width: 100%;
       }
 
       .hero-image-container {
         height: 300px;
         min-height: auto;
       }
+
+      .hero-content h1,
+      .feature-content h2 {
+        font-size: 38px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+
+      .hero-content p,
+      .section-subtitle,
+      .card-body p,
+      .feature-content p {
+        font-size: 15px;
+      }
     }
 
     @media (max-width: 768px) {
       .shows-section {
         padding: 3rem 5% 2rem 5%;
+      }
+
+      .hero-content h1,
+      .feature-content h2 {
+        font-size: 34px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .hero-content p,
+      .section-subtitle,
+      .card-body p,
+      .feature-content p {
+        font-size: 14px;
       }
     }
 
@@ -345,6 +346,26 @@
 
       .card-body {
         padding: 1.25rem;
+      }
+
+      .hero-content h1,
+      .feature-content h2 {
+        font-size: 28px;
+      }
+
+      .section-title {
+        font-size: 22px;
+      }
+
+      .hero-content p,
+      .section-subtitle,
+      .card-body p,
+      .feature-content p {
+        font-size: 13.5px;
+      }
+
+      footer p {
+        font-size: 15px;
       }
     }
   </style>

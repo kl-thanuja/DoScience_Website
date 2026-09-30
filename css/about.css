@@ -6,6 +6,7 @@ textarea,
 select {
     font-family: "Inter", sans-serif;
 }
+
 html,
 body {
     background-color: #fafafa;
@@ -35,8 +36,9 @@ body {
     padding-bottom: 0;
 }
 
+/* Fixed from clamp(34px, 3.8vw, 52px) */
 .about-section h2 {
-    font-size: clamp(34px, 3.8vw, 52px);
+    font-size: 52px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
@@ -46,15 +48,16 @@ body {
     max-width: 1080px;
 }
 
+/* Fixed from clamp(34px, 3.8vw, 52px) */
 .about-section-secondary h2 {
-    font-size: clamp(34px, 3.8vw, 52px);
+    font-size: 52px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
     text-align: left;
-    margin: 0 0 14px;
     letter-spacing: -0.025em;
     max-width: 1080px;
+    margin: 0;
 }
 
 .about-content {
@@ -62,18 +65,21 @@ body {
     width: 100%;
 }
 
+/* Fixed from clamp(14px, 1.15vw, 17px) */
 .about-section p {
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     text-align: left;
     margin: 0;
+    max-width: 620px;
     display: block;
 }
 
+/* Fixed from clamp(14px, 1.15vw, 17px) */
 .about-item {
     margin-bottom: 12px;
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 17px;
     line-height: 1.45;
 }
 
@@ -117,17 +123,43 @@ body {
     scrollbar-width: none;    
 }
 
-@media (max-width: 768px) {
-    .about-section h2 {
-        font-size: 1.8rem;
+/* --- Responsive Design (Media Queries) --- */
+@media (max-width: 900px) {
+    .about-section h2,
+    .about-section-secondary h2 {
+        font-size: 38px;
     }
+
+    .about-section p,
+    .about-item {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section h2,
+    .about-section-secondary h2 {
+        font-size: 28.8px; /* Converted from 1.8rem */
+    }
+
+    .about-section p,
+    .about-item {
+        font-size: 14px;
+    }
+
     .about-content {
         max-width: 100%; 
     }
 }
 
 @media (max-width: 480px) {
-    .about-section h2 {
-        font-size: 1.3rem;
+    .about-section h2,
+    .about-section-secondary h2 {
+        font-size: 20.8px; /* Converted from 1.3rem */
+    }
+
+    .about-section p,
+    .about-item {
+        font-size: 13.5px;
     }
 }

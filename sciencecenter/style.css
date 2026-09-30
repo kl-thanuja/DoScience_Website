@@ -95,8 +95,9 @@ section {
     color: black;
 }
 
+/* Level 1 Font Size */
 .heading-primary {
-    font-size: clamp(34px, 3.8vw, 52px);
+    font-size: 52px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
@@ -105,13 +106,13 @@ section {
     max-width: 1080px;
 }
 
+/* Level 1 Font Size */
 .heading-secondary {
-    font-size: clamp(34px, 3.8vw, 52px);
+    font-size: 52px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
     text-align: left;
-    margin: 0 0 14px;
     letter-spacing: -0.025em;
     max-width: 1080px;
 }
@@ -123,6 +124,7 @@ section {
     margin: 14px 0;
 }
 
+/* Level 3 Font Size */
 .link-arrow {
     display: inline-flex;
     align-items: center;
@@ -130,7 +132,7 @@ section {
     text-underline-offset: 4px;
     transition: opacity 0.2s ease;
     margin: 0 0 8px;
-    font-size: 1.14rem;
+    font-size: 18px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
@@ -151,7 +153,7 @@ section {
     height: 100%;
     background-size: cover;
     background-position: center;
-    border-radius: 15px;
+    border-radius: 0;
 }
 
 /* =========================================================
@@ -174,7 +176,7 @@ section {
     width: 100%;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: 0;
     padding: 108px 0 60px 5%;
     box-sizing: border-box;
@@ -190,22 +192,24 @@ section {
     align-items: flex-start;
 }
 
+/* Level 2 Font Size */
 .hero-subtitle {
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     text-align: left;
     margin: 0;
     max-width: 620px;
+    display: block;
 }
 
+/* Level 3 Font Size */
 .hero-tagline {
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
     color: black;
-    text-transform: uppercase;
-    margin-top: 0;
+    line-height: 1.25;
 }
 
 /* RIGHT SIDE - IMAGE */
@@ -257,35 +261,38 @@ section {
     width: 100%;
     display: flex;
     overflow: hidden;
-    padding: 60px 5% !important;
+    padding: 60px 0 60px 5% !important;
     align-items: center !important;
     min-height: auto !important;
 }
 
 .container2 {
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     width: 100%;
 }
 
 .section2-grid {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
+    width: 100%;
 }
 
 .section2-text {
     padding: 0;
     z-index: 2;
     flex: 1;
+    max-width: 620px;
 }
 
 .section2-text p+p {
     margin-top: 10px;
 }
 
+/* Level 2 Font Size */
 .section2-text p {
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -296,12 +303,11 @@ section {
 
 .section2-image-wrapper {
     position: relative;
-    border-radius: 15px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1.1;
+    flex: 1.2;
     height: 100%;
 }
 
@@ -309,7 +315,7 @@ section {
     height: 100%;
     position: relative;
     width: 100%;
-    border-radius: 15px;
+    border-radius: 0;
     overflow: hidden;
 }
 
@@ -318,7 +324,7 @@ section {
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 15px;
+    border-radius: 0;
 }
 
 .section2-image-overlay {
@@ -326,7 +332,7 @@ section {
     inset: 0;
     z-index: 2;
     pointer-events: none;
-    border-radius: 15px;
+    border-radius: 0;
     background: linear-gradient(to right,
             #fafafa 0%,
             rgba(250, 250, 250, 0.2) 20%,
@@ -349,7 +355,7 @@ section {
 
 .experience-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 5rem;
     gap: 4rem;
 }
@@ -362,16 +368,35 @@ section {
     flex: 1.2;
     height: 380px;
     position: relative;
-    border-radius: 15px;
     overflow: hidden;
+}
+
+.experience-row:not(.reverse) .experience-img-box {
+    margin-left: -5.5vw;
+}
+
+.experience-row:not(.reverse) .experience-img-box .img-placeholder,
+.experience-row:not(.reverse) .experience-img-box .fade-right {
+    border-radius: 0;
+}
+
+.experience-row.reverse .experience-img-box {
+    margin-right: -5.5vw;
+    border-radius: 0;
+}
+
+.experience-row.reverse .experience-img-box .img-placeholder,
+.experience-row.reverse .experience-img-box .fade-left {
+    border-radius: 0;
 }
 
 .experience-text-box {
     flex: 1;
 }
 
+/* Fixed from clamp(25px, 3.8vw, 30px) */
 .experience-text-box h3 {
-    font-size: clamp(25px, 3.8vw, 30px);
+    font-size: 30px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
@@ -381,18 +406,22 @@ section {
     max-width: 1080px;
 }
 
+/* Level 2 Font Size */
 .experience-text-box p {
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     text-align: left;
-    margin: 0 0 14px;
+    margin: 0;
     max-width: 620px;
     display: block;
+    margin-bottom: 10px;
 }
 
 .full-width-banner {
-    width: 100%;
+    width: calc(100% + 11vw);
+    margin-left: -5.5vw;
+    margin-right: -5.5vw;
     margin-top: 2rem;
     text-align: center;
 }
@@ -400,7 +429,7 @@ section {
 .banner-img-container {
     width: 100%;
     height: 400px;
-    border-radius: 15px;
+    border-radius: 0;
     overflow: hidden;
     margin-bottom: 2.5rem;
     position: relative;
@@ -411,11 +440,22 @@ section {
     height: 100%;
     background-size: cover;
     background-position: center;
-    border-radius: 15px;
+    border-radius: 0;
 
-    /* Feather edges smoothly on all 4 sides */
-    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 15%,
+        rgba(0, 0, 0, 1) 85%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 15%,
+        rgba(0, 0, 0, 1) 85%,
+        rgba(0, 0, 0, 0) 100%
+    );
 }
 
 .banner-image-overlay {
@@ -423,12 +463,15 @@ section {
     inset: 0;
     z-index: 2;
     pointer-events: none;
-    border-radius: 15px;
-    /* Soft 4-way vignette gradient fading into #fafafa */
-    background: radial-gradient(ellipse at center,
-            rgba(250, 250, 250, 0) 50%,
-            rgba(250, 250, 250, 0.5) 80%,
-            #fafafa 100%);
+    border-radius: 0;
+
+    background: linear-gradient(
+        to bottom,
+        #fafafa 0%,
+        rgba(250, 250, 250, 0) 15%,
+        rgba(250, 250, 250, 0) 85%,
+        #fafafa 100%
+    );
 }
 
 .banner-content {
@@ -441,7 +484,7 @@ section {
     inset: 0;
     z-index: 2;
     pointer-events: none;
-    border-radius: 15px;
+    border-radius: 0;
     background: linear-gradient(to left,
             #fafafa 0%,
             rgba(250, 250, 250, 0.3) 20%,
@@ -453,7 +496,7 @@ section {
     inset: 0;
     z-index: 2;
     pointer-events: none;
-    border-radius: 15px;
+    border-radius: 0;
     background: linear-gradient(to right,
             #fafafa 0%,
             rgba(250, 250, 250, 0.3) 20%,
@@ -471,17 +514,22 @@ section {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 4rem;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 5rem;
 }
 
 .section4-card-img {
-    width: 100%;
-    height: 450px;
-    border-radius: 15px;
+    width: calc(100% + 5.5vw);
+    height: 580px;
+    border-radius: 0;
     overflow: hidden;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.section4-card-img .img-placeholder,
+.section4-image-overlay {
+    border-radius: 0;
 }
 
 .section4-image-overlay {
@@ -489,7 +537,6 @@ section {
     inset: 0;
     z-index: 2;
     pointer-events: none;
-    border-radius: 15px;
     background: linear-gradient(to right,
             #fafafa 0%,
             rgba(250, 250, 250, 0.3) 20%,
@@ -501,8 +548,9 @@ section {
     margin: 0;
 }
 
+/* Level 2 Font Size */
 .section4-middle-text p {
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -520,17 +568,18 @@ section {
 .landscape-banner-box {
     width: 100%;
     height: 500px;
-    border-radius: 15px;
+    border-radius: 0;
     overflow: hidden;
 }
 
+/* Level 3 Font Size */
 .location-banner-footer {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
     margin: 0 0 8px;
-    font-size: 1.14rem;
+    font-size: 18px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
@@ -544,8 +593,9 @@ section {
     padding: 60px 5%;
 }
 
+/* Level 1 Font Size */
 .visit-header {
-    font-size: clamp(34px, 3.8vw, 52px);
+    font-size: 52px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
@@ -577,9 +627,10 @@ section {
     margin-bottom: 0.5rem;
 }
 
+/* Level 3 Font Size */
 .info-card-header h4 {
     margin: 0;
-    font-size: 1.14rem;
+    font-size: 18px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
@@ -591,8 +642,9 @@ section {
     stroke: black;
 }
 
+/* Level 2 Font Size */
 .info-card p {
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     text-align: start;
@@ -607,7 +659,6 @@ section {
     color: black;
 }
 
-/* Two-column Layout Cards for Public Visitors vs School Visits */
 .visit-columns {
     display: flex;
     gap: 2.5rem;
@@ -624,22 +675,24 @@ section {
     justify-content: space-between;
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    border-radius: 0;
     padding: 2.25rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
+/* Level 3 Font Size */
 .visit-col h3 {
     margin-bottom: 0.75rem;
-    font-size: 1.14rem;
+    font-size: 18px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
 }
 
+/* Level 2 Font Size */
 .visit-col p {
     margin-bottom: 1.25rem;
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -654,11 +707,12 @@ section {
     padding-left: 0;
 }
 
+/* Level 2 Font Size */
 .visit-list li {
     position: relative;
     padding-left: 1.25rem;
     margin-bottom: 0.6rem;
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     max-width: 620px;
@@ -679,12 +733,13 @@ section {
     padding-top: 1rem;
 }
 
+/* Level 3 Font Size */
 .fees-table-title {
     margin-bottom: 0.75rem;
     padding-bottom: 0.35rem;
     border-bottom: 2px solid black;
     display: inline-block;
-    font-size: 1.14rem;
+    font-size: 18px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
@@ -696,7 +751,7 @@ section {
     border-spacing: 0;
     margin: 0.5rem 0 0.75rem 0;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 0;
     overflow: hidden;
     border: 1px solid #e2e8f0;
 }
@@ -735,8 +790,9 @@ section {
     border-bottom: none;
 }
 
+/* Level 4 Font Size */
 .table-note {
-    font-size: 0.825rem;
+    font-size: 13px;
     color: black;
     line-height: 1.45;
     margin-top: 0.5rem;
@@ -748,17 +804,19 @@ section {
     margin-bottom: 2.5rem;
 }
 
+/* Level 3 Font Size */
 .planning-section h3 {
     margin-bottom: 0.75rem;
-    font-size: 1.14rem;
+    font-size: 18px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
 }
 
+/* Level 2 Font Size */
 .planning-section p {
     margin-bottom: 1.5rem;
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -781,15 +839,17 @@ section {
     align-items: center;
 }
 
+/* Level 3 Font Size */
 .contact-label {
-    font-size: 1.14rem;
+    font-size: 18px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
 }
 
+/* Level 2 Font Size */
 .contact-info {
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     max-width: 620px;
@@ -805,8 +865,9 @@ section {
     color: black;
 }
 
+/* Level 2 Font Size */
 .footer-tagline {
-    font-size: clamp(14px, 1.15vw, 17px);
+    font-size: 15px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -816,15 +877,43 @@ section {
 }
 
 /* ==========================================================================
-   RESPONSIVE MEDIA QUERIES (MOBILE & TABLET ENHANCEMENTS)
+   RESPONSIVE MEDIA QUERIES (FIXED PIXELS REPLACING CLAMPS)
    ========================================================================== */
 
 /* Tablets and small laptops (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
 
     .heading-primary,
-    .heading-secondary {
-        font-size: clamp(30px, 3.5vw, 42px);
+    .heading-secondary,
+    .visit-header {
+        font-size: 42px;
+    }
+
+    .hero-subtitle,
+    .section2-text p,
+    .experience-text-box p,
+    .section4-middle-text p,
+    .info-card p,
+    .visit-col p,
+    .visit-list li,
+    .planning-section p,
+    .contact-info,
+    .footer-tagline {
+        font-size: 15px;
+    }
+
+    .experience-text-box h3 {
+        font-size: 26px;
+    }
+
+    .link-arrow,
+    .hero-tagline,
+    .info-card-header h4,
+    .visit-col h3,
+    .fees-table-title,
+    .planning-section h3,
+    .contact-label {
+        font-size: 16px;
     }
 
     body::-webkit-scrollbar {
@@ -852,6 +941,37 @@ section {
         min-height: auto;
     }
 
+    .specific-section {
+        padding: 40px 5% 20px !important;
+    }
+
+    .heading-primary,
+    .heading-secondary {
+        font-size: 36px;
+    }
+
+    .visit-header {
+        font-size: 32px;
+        margin-bottom: 1.5rem;
+    }
+
+    .experience-text-box h3 {
+        font-size: 24px;
+    }
+
+    .hero-subtitle,
+    .section2-text p,
+    .experience-text-box p,
+    .section4-middle-text p,
+    .info-card p,
+    .visit-col p,
+    .visit-list li,
+    .planning-section p,
+    .contact-info,
+    .footer-tagline {
+        font-size: 14px;
+    }
+
     body::-webkit-scrollbar {
         width: 0px;
     }
@@ -862,6 +982,7 @@ section {
         flex-direction: column;
         display: flex;
     }
+
     .hero-wrapper {
         display: flex;
         flex-direction: column;
@@ -869,6 +990,7 @@ section {
         padding: 80px 5% 30px 5%;
         width: 100%;
     }
+
     .hero-bg-full {
         position: relative;
         width: 100%;
@@ -879,11 +1001,11 @@ section {
     .hero-bg-image {
         width: 100%;
         height: 100%;
-        border-radius: 12px;
+        border-radius: 0;
     }
 
     .hero-image-overlay {
-        border-radius: 12px;
+        border-radius: 0;
         background: linear-gradient(180deg,
                 rgba(250, 250, 250, 0) 60%,
                 #fafafa 100%);
@@ -895,7 +1017,7 @@ section {
         width: 100%;
     }
 
-    /* --- SECTION 2: WHY DISCOVERY MATTERS (Text First, Image Next) --- */
+    /* --- SECTION 2: WHY DISCOVERY MATTERS --- */
     .section2-grid {
         display: flex;
         flex-direction: column;
@@ -904,24 +1026,26 @@ section {
 
     .section2-text {
         order: 1;
-        /* Heading & Text First */
         width: 100%;
     }
 
     .section2-image-wrapper {
         order: 2;
-        /* Image Next */
         width: 100%;
         height: 280px;
         min-height: 280px;
+        border-radius: 0;
     }
 
-    .image-container {
+    .image-container,
+    .image-container .img-placeholder,
+    .section2-image-overlay {
         width: 100%;
         height: 100%;
+        border-radius: 0;
     }
 
-    /* --- SECTION 3: WHAT YOU'LL EXPERIENCE (Fix Image Visibility) --- */
+    /* --- SECTION 3: WHAT YOU'LL EXPERIENCE --- */
     #section-3 {
         padding: 40px 5%;
     }
@@ -938,38 +1062,36 @@ section {
         margin-bottom: 3.5rem;
     }
 
-    .experience-img-box {
+    .experience-img-box,
+    .experience-row:not(.reverse) .experience-img-box,
+    .experience-row.reverse .experience-img-box {
         order: 1;
         width: 100%;
         height: 250px;
         min-height: 250px;
-        /* Ensures container doesn't collapse */
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
         display: block;
     }
 
-    /* Fix background-image placeholder div inside experience rows */
-    .experience-img-box .img-placeholder {
+    .experience-img-box .img-placeholder,
+    .experience-row:not(.reverse) .experience-img-box .img-placeholder,
+    .experience-row.reverse .experience-img-box .img-placeholder,
+    .fade-right,
+    .fade-left {
         width: 100%;
         height: 100%;
         min-height: 250px;
         display: block;
         background-size: cover;
         background-position: center;
-        border-radius: 15px;
+        border-radius: 0;
     }
 
     .experience-text-box {
         order: 2;
         width: 100%;
-    }
-
-    .full-width-banner {
-        margin-top: 1rem;
-    }
-
-    .banner-img-container {
-        height: 240px;
-        min-height: 240px;
     }
 
     .banner-img-container .img-placeholder {
@@ -978,7 +1100,19 @@ section {
         min-height: 240px;
     }
 
-    /* --- SECTION 4: THOUGHTFULLY SIMPLE (Image First) --- */
+    .full-width-banner {
+        width: calc(100% + 10vw);
+        margin-left: -5vw;
+        margin-right: -5vw;
+        margin-top: 1rem;
+    }
+
+    .banner-img-container {
+        height: 240px;
+        min-height: 240px;
+    }
+
+    /* --- SECTION 4: THOUGHTFULLY SIMPLE --- */
     .section4-top {
         display: flex;
         flex-direction: column;
@@ -991,12 +1125,15 @@ section {
         width: 100%;
         height: 280px;
         min-height: 280px;
+        border-radius: 0;
     }
 
-    .section4-card-img .img-placeholder {
+    .section4-card-img .img-placeholder,
+    .section4-image-overlay {
         width: 100%;
         height: 100%;
         min-height: 280px;
+        border-radius: 0;
     }
 
     .section4-top>div:first-child {
@@ -1018,12 +1155,6 @@ section {
         padding: 1.25rem;
     }
 
-    .visit-header {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    /* Table adjustments */
     .pricing-container {
         width: 100%;
         overflow-x: auto;
@@ -1045,17 +1176,44 @@ section {
 /* Extra Small Mobile Devices (max-width: 480px) */
 @media screen and (max-width: 480px) {
     .heading-primary {
-        font-size: 1.85rem;
+        font-size: 27px;
         line-height: 1.2;
+    }
+
+    .heading-secondary {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    .visit-header {
+        font-size: 27px;
+    }
+
+    .hero-subtitle,
+    .section2-text p,
+    .experience-text-box p,
+    .section4-middle-text p,
+    .info-card p,
+    .visit-col p,
+    .visit-list li,
+    .planning-section p,
+    .contact-info,
+    .footer-tagline {
+        font-size: 13.5px;
+    }
+
+    .link-arrow,
+    .hero-tagline,
+    .info-card-header h4,
+    .visit-col h3,
+    .fees-table-title,
+    .planning-section h3,
+    .contact-label {
+        font-size: 17px;
     }
 
     body::-webkit-scrollbar {
         width: 0px;
-    }
-
-    .heading-secondary {
-        font-size: 1.5rem;
-        line-height: 1.25;
     }
 
     .info-grid-top {
@@ -1072,7 +1230,7 @@ section {
     }
 
     .location-banner-footer {
-        font-size: 0.95rem;
+        font-size: 15px;
         text-align: center;
     }
 
