@@ -1013,6 +1013,9 @@ section {
     }
 
     /* --- SECTION 2: WHY DISCOVERY MATTERS --- */
+    #section-2{
+        padding: 40px 5%;
+    }
     .section2-grid {
         display: flex;
         flex-direction: column;
