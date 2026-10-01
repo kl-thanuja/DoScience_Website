@@ -1014,7 +1014,7 @@ section {
 
     /* --- SECTION 2: WHY DISCOVERY MATTERS --- */
     #section-2{
-        padding: 40px 5%;
+        padding: 40px 5% 20px !important
     }
     .section2-grid {
         display: flex;
@@ -1045,7 +1045,7 @@ section {
 
     /* --- SECTION 3: WHAT YOU'LL EXPERIENCE --- */
     #section-3 {
-        padding: 40px 5%;
+        padding: 40px 5% 20px !important
     }
 
     .experience-header {
@@ -1115,7 +1115,7 @@ section {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        margin-bottom: 3rem;
+        padding: 40px 5% 20px !important
     }
 
     .section4-card-img {
