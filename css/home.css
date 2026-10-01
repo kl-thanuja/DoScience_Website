@@ -309,14 +309,14 @@ footer {
 
     /* Level 1 */
     .home-hero-content h1 {
-        font-size: 52px;
-        max-width: 950px;
+        font-size: 48px;
+        max-width: 1150px;
     }
 
     /* Level 2 */
     .home-hero-content p {
         font-size: 15px;
-        max-width: 580px;
+        max-width: 650px;
     }
 
     .category-image {
