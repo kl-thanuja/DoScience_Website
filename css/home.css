@@ -50,7 +50,7 @@ body::-webkit-scrollbar {
     color: black;
     text-align: left;
     letter-spacing: -0.025em;
-    max-width: 1080px;
+    max-width: 80%;
 }
 
 .home-divider {
@@ -67,7 +67,7 @@ body::-webkit-scrollbar {
     color: black;
     text-align: left;
     margin: 0;
-    max-width: 620px;
+    max-width: 50%;
     display: block;
 }
 
