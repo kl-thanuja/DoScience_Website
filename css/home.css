@@ -352,12 +352,16 @@ footer {
 ========================================================= */
 
 @media (max-width: 1024px) {
-    body::-webkit-scrollbar {
+   body::-webkit-scrollbar {
         width: 0px;
     }
-    .footer-links a,
+
     .footer-links p {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
     }
 
     .home-hero {
