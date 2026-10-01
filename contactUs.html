@@ -24,21 +24,21 @@
                         enquire about a rolling ball or kinetic wind sculpture, we would be happy to hear from you.</p>
                 </div>
 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" novalidate>
                     <div class="form-row">
                         <div class="form-group">
                             <label>Name <span class="required">*</span></label>
-                            <input type="text" id="name" placeholder="Your name" required>
+                            <input type="text" id="name" placeholder="Your name" maxlength="40" required>
                         </div>
                         <div class="form-group">
                             <label>Organisation</label>
-                            <input type="text" id="organisation" placeholder="School / Organisation / Institution">
+                            <input type="text" id="organisation" placeholder="School / Organisation / Institution" maxlength="52">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>Email / Phone <span class="required">*</span></label>
-                        <input type="text" id="contactInfo" placeholder="Your email address or phone number" required>
+                        <input type="text" id="contactInfo" placeholder="Your email address or 10-digit phone number" required>
                     </div>
 
                     <div class="checkbox-group">
@@ -163,6 +163,7 @@
             </div>
         </div>
     </section>
+
     <!-- Custom Modal UI -->
     <div id="customModal" class="modal-overlay">
         <div class="modal-content">
@@ -170,25 +171,67 @@
             <button id="modalCloseBtn">OK</button>
         </div>
     </div>
+
     <script src="components/navbar.js"></script>
     <script src="js/navigation.js"></script>
 
     <!-- Form Handler Script -->
     <script>
-        // Helper function to trigger the custom modal popup
         function showCustomAlert(message) {
             document.getElementById('modalMessage').textContent = message;
             document.getElementById('customModal').classList.add('active');
         }
 
-        // Modal close button listener
         document.getElementById('modalCloseBtn').addEventListener('click', function () {
             document.getElementById('customModal').classList.remove('active');
         });
 
-        // Form submit listener
+        // Validation helper for Email or 10-digit Phone Number
+        function isValidContactInfo(value) {
+            const trimmed = value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^\d{10}$/;
+            return emailRegex.test(trimmed) || phoneRegex.test(trimmed);
+        }
+
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const organisation = document.getElementById('organisation').value.trim();
+            const contactInfo = document.getElementById('contactInfo').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Client-side validations
+            if (!name) {
+                showCustomAlert('Please enter your name.');
+                return;
+            }
+
+            if (name.length > 40) {
+                showCustomAlert('Name must be 40 characters or fewer.');
+                return;
+            }
+
+            if (organisation.length > 52) {
+                showCustomAlert('Organisation name must be 52 characters or fewer.');
+                return;
+            }
+
+            if (!contactInfo) {
+                showCustomAlert('Please enter your email or phone number.');
+                return;
+            }
+
+            if (!isValidContactInfo(contactInfo)) {
+                showCustomAlert('Please enter a valid email address or a 10-digit phone number.');
+                return;
+            }
+
+            if (!message) {
+                showCustomAlert('Please enter your message.');
+                return;
+            }
 
             const submitBtn = document.getElementById('submitBtn');
             submitBtn.disabled = true;
@@ -198,20 +241,20 @@
                 .map(cb => cb.value);
 
             const payload = {
-                name: document.getElementById('name').value,
-                organisation: document.getElementById('organisation').value,
-                contactInfo: document.getElementById('contactInfo').value,
+                name: name,
+                organisation: organisation,
+                contactInfo: contactInfo,
                 interests: selectedInterests,
-                message: document.getElementById('message').value
+                message: message
             };
 
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzB3RHane9mm_zcMDr6sFsQ_bKEteiOxBRx_g2dzAhMm7sTvXc4M4dIFY22ckZbzuKQ/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyH6LchS8cRjMRrdJTiCuXTsezNsP5VoFqFAxc_DW1pVpOoEhXm_fyWfWoOMhJpLyxw/exec';
 
             fetch(scriptURL, {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'text/plain;charset=utf-8'
                 },
                 body: JSON.stringify(payload)
             })
@@ -234,7 +277,6 @@
                 });
         });
     </script>
-
 </body>
 
 </html>
