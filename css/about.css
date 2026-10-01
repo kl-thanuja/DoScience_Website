@@ -137,9 +137,12 @@ body {
 }
 
 @media (max-width: 768px) {
+    .about-container{
+        padding: 100px 5% 40px 5%;
+    }
     .about-section h2,
     .about-section-secondary h2 {
-        font-size: 28.8px; /* Converted from 1.8rem */
+        font-size: 34px;
     }
 
     .about-section p,
