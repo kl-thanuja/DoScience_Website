@@ -31,11 +31,10 @@ body::-webkit-scrollbar {
 
 .home-hero {
     width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    background: #fafafa;
-    padding: 28px 4% 22px;
+    max-width: 100%;
+    padding: 28px 5% 22px;
     box-sizing: border-box;
+     background: #fafafa;
 }
 
 .home-hero-content {
@@ -78,10 +77,10 @@ body::-webkit-scrollbar {
 ========================================================= */
 
 .home-category-grid {
-    padding-top: 25px;
     width: 100%;
-    max-width: 1440px;
+    max-width: 100%;
     margin: 0 auto;
+    padding-top:25px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background: #fafafa;

@@ -227,97 +227,97 @@
     }
 
     /* ==========================================
-   BOTTOM FEATURE SECTION
+   FEATURE CARD & BACK BUTTON STYLES
    ========================================== */
     .feature-section {
-      padding: 4rem 5%;
+      padding: 3rem 5% 4rem 5%;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
     }
 
-    .feature-content {
+    .feature-card {
+      width: 100%;
       max-width: 800px;
+      background-color: #ffffff;
+      border: 1px solid #e0dfd9;
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    .feature-content h2 {
       text-align: center;
-      max-width: 1080px;
-      margin: 0 0 8px;
-      font-size: 18px;
-      font-weight: 600;
-      color: black;
-      line-height: 1.25;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     }
 
-    .feature-content p {
+    .feature-text {
       font-size: 15px;
-      line-height: 1.45;
-      color: black;
+      line-height: 1.6;
+      color: #1a1a1a;
       text-align: center;
-      margin: 0;
-      max-width: 620px;
+      margin: 0 0 1.75rem 0;
+      max-width: 640px;
       display: block;
     }
 
-    /* Back Button Styling */
+    /* Embedded Back Button */
     .back-btn {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      margin-top: 32px;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      background-color: #fafafa;
+      border: 1px solid #e0dfd9;
       text-decoration: none;
-      color: #1a1a1a;
-      transition: opacity 0.3s ease;
+      transition: all 0.25s ease;
     }
 
     .back-arrow-icon {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 44px;
-      /* Increased size from 34px */
-      height: 44px;
-      /* Increased size from 34px */
+      width: 36px;
+      height: 36px;
       border: 1.5px solid #1a1a1a;
       border-radius: 50%;
       color: #1a1a1a;
-      transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      background-color: #ffffff;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
       flex-shrink: 0;
     }
 
     .back-arrow-icon svg {
-      width: 22px;
-      /* Increased arrow icon size */
-      height: 22px;
+      width: 18px;
+      height: 18px;
     }
 
     .back-btn-text {
       font-size: 15px;
-      line-height: 1.45;
-      color: black;
-      text-align: center;
-      margin: 0;
-      max-width: 620px;
-      display: block;
+      font-weight: 500;
+      color: #1a1a1a;
+      line-height: 1;
     }
 
-    /* Hover effect: Smooth left movement for going back */
+    /* Hover effect */
+    .back-btn:hover {
+      background-color: #f0f0f0;
+      border-color: #ccc;
+    }
+
     .back-btn:hover .back-arrow-icon {
       background: #1a1a1a;
       color: #ffffff;
-      transform: translateX(-5px);
+      transform: translateX(-4px);
     }
+
 
     .repository-note {
       margin-top: 24px;
       font-size: 15px;
       line-height: 1.5;
-      color:black;
+      color: black;
       font-weight: 500;
       max-width: 780px;
       text-align: left;
@@ -403,6 +403,14 @@
     }
 
     @media (max-width: 480px) {
+      .feature-card {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .feature-text {
+        font-size: 14px;
+      }
+
       .hero-image-container {
         height: 220px;
       }
@@ -530,12 +538,14 @@
   </section>
 
   <!-- FEATURE SECTION -->
+  <!-- FEATURE / BACK SECTION -->
   <section class="feature-section">
-    <div class="feature-content">
-      <p>Whether you're seeing Saturn's rings for the first time, travelling through the Solar System or exploring
-        distant galaxies, VR Astronomy invites visitors of all ages to experience space with curiosity and wonder.</p>
+    <div class="feature-card">
+      <p class="feature-text">
+        Whether you're seeing Saturn's rings for the first time, travelling through the Solar System or exploring
+        distant galaxies, VR Astronomy invites visitors of all ages to experience space with curiosity and wonder.
+      </p>
 
-      <!-- Back to Science Center Button -->
       <a href="index.html#VR-astronomy" class="back-btn">
         <span class="back-arrow-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
