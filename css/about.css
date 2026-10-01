@@ -17,6 +17,9 @@ body {
     margin: 0 auto;
     padding: 108px 5% 60px 5%;
 }
+.desktop-break {
+    display: block;
+}
 
 .home-divider {
     width: 65px;
@@ -65,7 +68,6 @@ body {
     width: 100%;
 }
 
-/* Fixed from clamp(14px, 1.15vw, 17px) */
 .about-section p {
     font-size: 15px;
     line-height: 1.45;
@@ -125,6 +127,7 @@ body {
 
 /* --- Responsive Design (Media Queries) --- */
 @media (max-width: 900px) {
+
     .about-section h2,
     .about-section-secondary h2 {
         font-size: 38px;
@@ -137,6 +140,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .desktop-break {
+        display: inline;
+    }
     .about-container{
         padding: 100px 5% 40px 5%;
     }
@@ -156,9 +162,12 @@ body {
 }
 
 @media (max-width: 480px) {
+    .desktop-break {
+        display: inline;
+    }
     .about-section h2,
     .about-section-secondary h2 {
-        font-size: 20.8px; /* Converted from 1.3rem */
+        font-size: 28px
     }
 
     .about-section p,
