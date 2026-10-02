@@ -280,11 +280,11 @@ body {
     position: relative;
     display: block;
     border-radius: 12px;
-    overflow: hidden;
+    overflow: hidden; /* Clips the overflow */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 340px;
-    height: 260px;
+    height: 260px; /* Fixed viewport height */
     margin: 0;
     cursor: pointer;
     text-decoration: none;
@@ -292,11 +292,11 @@ body {
 
 .map-container iframe {
     width: 100%;
-    height: 100%;
+    height: calc(100% + 30px); /* Extends height past container to push footer out */
     border: 0;
-    pointer-events: none; 
+    pointer-events: none;
 }
-/* Work Travels & Social Column Styling */
+
 .work-travels-col {
     display: flex;
     flex-direction: column;
@@ -486,11 +486,6 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .find-us-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
     .contact-intro h2 {
         font-size: 38px;
     }
@@ -501,8 +496,47 @@ body {
     .checkbox-item label {
         font-size: 15px;
     }
-}
 
+    /* Set grid to vertical flex container for easy ordering */
+    .find-us-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Un-group column wrappers so all child elements can be ordered independently */
+    .find-us-left,
+    .work-travels-col {
+        display: contents;
+    }
+
+    /* Mobile standard order sequence:
+       1. DoScience
+       2. Map
+       3. Our work travels
+       4. Email / Phone
+       5. Follow us
+    */
+    .find-us-info {
+        order: 1;
+    }
+
+    .map-container {
+        order: 2;
+    }
+
+    .work-travels {
+        order: 3;
+    }
+
+    .contact-details-section {
+        order: 4;
+    }
+
+    .social-section {
+        order: 5;
+    }
+}
 @media (max-width: 768px) {
     .contact-container {
         padding-top: 102px;
