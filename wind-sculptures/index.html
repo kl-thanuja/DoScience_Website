@@ -4,239 +4,257 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DoScience</title>
-
-    <!-- Google Fonts for typography -->
+    <title>Kinetic Wind Sculptures - DoScience</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
 
-        html,
-        body,
-        button,
-        input,
-        textarea,
-        select {
-            font-family: "Inter", sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            background-color: #fafafa;
-            color: #1a1a1a;
-            line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        body::-webkit-scrollbar {
-            width: 0px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* ==========================================
-   MAIN HERO SECTION (Matches Installations Page Padding)
-   ========================================== */
-        .hero-section {
-            position: relative;
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 108px 5% 80px 5%;
-            /* Matches padding from original section */
-            gap: 1.5rem;
-            flex: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            width: 48%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        /* Fixed 52px header matching original installations page typography */
-        .hero-content h1 {
-            font-size: 52px;
-            font-weight: 500;
-            line-height: 1.12;
-            color: #000000;
-            text-align: left;
-            letter-spacing: -0.025em;
-            max-width: 1080px;
-        }
-
-        /* Accent Line (Green accent bar matching inspiration image) */
-        .accent-line {
-            width: 65px;
-            height: 4px;
-            background-color: black;
-            margin: 14px 0;
-        }
-
-        /* Subtitle & Descriptive Paragraphs */
-        .hero-content p {
-            font-size: 15px;
-            line-height: 1.45;
-            color: black;
-            text-align: left;
-            margin: 0;
-            max-width: 620px;
-            display: block;
-        }
-
-        .hero-content p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Hero Image Container */
-        .hero-image-container {
-            position: relative;
-            width: 48%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image-container img {
-            width: 100%;
-            height: 350px;
-            max-height: 320px;
-            object-fit: contain;
-        }
-
-        /* ==========================================
-   FOOTER (Matches dark theme callout baseline)
-   ========================================== */
-        footer {
-            background-color: #222222;
-            color: #ffffff;
-            padding: 2.5rem 5%;
-            text-align: center;
-            margin-top: auto;
-        }
-
-        footer .footer-text {
-            font-size: 14px;
-            color: #cccccc;
-            margin-bottom: 8px;
-        }
-
-        footer .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        footer .footer-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: opacity 0.2s;
-        }
-
-        footer .footer-links a:hover {
-            opacity: 0.8;
-        }
-
-        /* ==========================================
-   RESPONSIVE BREAKPOINTS (Matches original CSS)
-   ========================================== */
-        @media screen and (max-width: 1024px) {
-            .hero-content h1 {
-                font-size: 38px;
-            }
-
-            .hero-content p {
-                font-size: 15px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .hero-section {
-                flex-direction: column;
-                padding: 100px 5% 40px 5%;
-                gap: 1.25rem;
-                align-items: stretch;
-            }
-
-            .hero-content {
-                width: 100%;
-                order: 1;
-                margin-bottom: 0;
-            }
-
-            .hero-image-container {
-                width: 100%;
-                order: 2;
-            }
-
-            .hero-content h1 {
-                font-size: 34px;
-            }
-
-            .hero-content p {
-                font-size: 14px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 28px;
-            }
-
-            .hero-content p {
-                font-size: 13.5px;
-            }
-        }
-    </style>
     <link rel="stylesheet" href="../components/navbar.css">
 </head>
 
 <body>
     <div id="navbar-container"></div>
+    <main>
+        <!-- SECTION 1: HERO & INTRO -->
+        <!-- SECTION 1: HERO & INTRO -->
+        <section id="section-1" class="hero-section">
+            <!-- Full background image layer taking up the right side -->
+            <div class="hero-bg-full">
+                <video class="cat-img" autoplay loop muted playsinline poster="WS-Section-2.jpg">
+                                <source src="assets/videos/Initial.mp4" type="video/mp4" />
+                </div>
+            </div>
 
-    <!-- HERO SECTION -->
-    <main class="hero-section">
-        <div class="hero-content">
-            <h1>Wind Sculptures<br>Coming Soon</h1>
-            <div class="accent-line"></div>
-            <p>We’re working on this section and will be adding more information shortly.</p>
-            <p>In the meantime, you can explore our other offerings or get in touch if you have any questions.</p>
-        </div>
+            <!-- Content layer on the left side -->
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <h1 class="hero-title">Wind, turned into movement.</h1>
 
-        <div class="hero-image-container">
-            <img src="../images/Photos/home-kinetic-windsculptures.jpg" alt="Wind Sculpture Illustration" />
-        </div>
+                    <div class="accent-line"></div>
+
+                    <p class="body-lead">
+                        We design and build kinetic wind sculptures that bring movement, form and curiosity into open
+                        spaces.
+                    </p>
+
+                    <div class="body-text-group">
+                        <p>
+                            Wind sculptures change with the breeze, the light and the time of day. Their movement gives
+                            people something to notice, follow and return to - creating moments of curiosity,
+                            conversation and quiet observation.
+                        </p>
+                        <p>
+                            And sometimes, simply watching something move brings a sense of calm.
+                        </p>
+                    </div>
+
+                    <div class="accent-line"></div>
+
+                    <p class="target-locations">
+                        For schools &bull; campuses &bull; parks<br />
+                        traffic islands &bull; public spaces
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 2: CATEGORIES RANGE -->
+        <section class="categories-section">
+            <div class="container">
+                <div class="section-header-block">
+                    <span class="section-label">A RANGE OF SCULPTURES</span>
+                    <div class="accent-line"></div>
+
+                    <h2 class="section-title">A range of forms.<br />A range of movement.</h2>
+                    <p class="section-subtitle">
+                        From simple rotating elements to complex combinations, our wind sculptures respond to the breeze
+                        in many ways. Explore the different kinds of movement they create.
+                    </p>
+                </div>
+
+                <div class="category-list">
+                    <!-- Row 1 -->
+                    <div class="category-row">
+                        <div class="category-image-wrap">
+                            <video class="cat-img" autoplay loop muted playsinline poster="WS-Section-2.jpg">
+                                <source src="assets/videos/Horizontal_Axis.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="category-info">
+                            <h3 class="category-title">Horizontal Axis</h3>
+                            <p class="category-desc">
+                                Fan-like forms that rotate around a horizontal axis, creating a strong sense of
+                                continuous movement.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="category-row">
+                        <div class="category-image-wrap">
+                            <video class="cat-img" autoplay loop muted playsinline poster="WS-Section-2.jpg">
+                                <source src="assets/videos/Vertical_Axis.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="category-info">
+                            <h3 class="category-title">Vertical Axis</h3>
+                            <p class="category-desc">
+                                Tree-like and other upright forms where elements rotate around a vertical axis,
+                                responding gently to the wind.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="category-row">
+                        <div class="category-image-wrap">
+                            <video class="cat-img" autoplay loop muted playsinline poster="WS-Section-2.jpg">
+                                <source src="assets/videos/Multiple_Axis.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="category-info">
+                            <h3 class="category-title">Multiple Axes &amp; Combinations</h3>
+                            <p class="category-desc">
+                                Sculptures that bring together different moving elements or axes, creating more complex
+                                and varied patterns of movement.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="category-row">
+                        <div class="category-image-wrap">
+                            <video class="cat-img" autoplay loop muted playsinline poster="WS-Section-2.jpg">
+                                <source src="assets/sound-musical.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="category-info">
+                            <h3 class="category-title">Sound &amp; Musical Forms</h3>
+                            <p class="category-desc">
+                                Wind-driven sculptures that combine movement with sound, adding another sensory
+                                dimension to the experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="banner-box">
+                    <h4>Built for open spaces.</h4>
+                    <p>Each sculpture is designed for outdoor environments, where wind, people and nature come together.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: EXPLORE THE RANGE -->
+        <section class="catalogue-section">
+            <div class="container">
+                <div class="catalogue-block">
+                    <span class="section-label">EXPLORE THE RANGE</span>
+                    <h2 class="section-title">Explore the full range of<br />Wind Sculptures.</h2>
+                    <p class="section-subtitle max-600">
+                        Our catalogue brings together the different models we offer, with details of their forms,
+                        movement, dimensions and available options.
+                    </p>
+                    <a href="assets/26-01-LS-Kinetic-Wind-Sculptures-All-India-TEMP.pdf" class="btn btn-outline"
+                        download>
+                        <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download Wind Sculptures Catalogue
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: SELECTED CLIENTS -->
+        <section class="clients-section">
+            <div class="container">
+                <div class="clients-block">
+                    <span class="section-label">SELECTED CLIENTS</span>
+                    <div class="clients-grid">
+                        <div class="client-card">
+                            <div class="client-logo-box">
+                                <img src="assets/logos/GHMC_logo.png" alt="GHMC Logo"
+                                    class="client-logo-img" />
+                            </div>
+                            <span class="client-name">Greater Hyderabad Municipal Corporation</span>
+                        </div>
+
+                        <div class="client-card">
+                            <div class="client-logo-box">
+                                <img src="assets/logos/Kurnool_Logo.png" alt="Kurnool Municipal Corporation Logo"
+                                    class="client-logo-img" />
+                            </div>
+                            <span class="client-name">Kurnool Municipal Corporation</span>
+                        </div>
+
+                        <div class="client-card">
+                            <div class="client-logo-box">
+                                <img src="assets/logos/Brihanmumbai_Municipal_Corporation_Logo.png" alt="Brihanmumbai Municipal Corporation Logo"
+                                    class="client-logo-img" />
+                            </div>
+                            <span class="client-name">Brihanmumbai Municipal Corporation</span>
+                        </div>
+
+                        <div class="client-card">
+                            <div class="client-logo-box">
+                                <img src="assets/logos/Odissa_ForestDept_HQ_Logo.png" alt="Odisha Forest Department Logo"
+                                    class="client-logo-img" />
+                            </div>
+                            <span class="client-name">Odisha Forest Department, Khorda and Deogarh Divisions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: CONTACT CTA BLOCK -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-block">
+                    <h2 class="cta-heading">Interested in a Wind Sculpture?</h2>
+                    <p class="section-subtitle max-600">
+                        Tell us what you have in mind, and we'll be happy to share information about the available
+                        models, options and pricing.
+                    </p>
+                    <a href="../contactUs.html" class="btn btn-outline">
+                        Get in touch
+                        <svg class="btn-icon right" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+
+                    <!-- Contact details structured exactly as per screenshot -->
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:contact@doscience.co.in"
+                                class="contact-value link">contact@doscience.co.in</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Phone / WhatsApp</span>
+                            <span class="contact-value">+91 88972 04422</span>
+                            <span class="contact-value">+91 91542 65672</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <!-- Scripts -->
-    <script src="../components/navbar.js"></script>
     <script src="../js/navigation.js"></script>
-    <script src="script.js"></script>
+    <script src="../components/navbar.js"></script>
 </body>
 
 </html>
