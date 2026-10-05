@@ -41,7 +41,7 @@ body {
 
 /* Fixed from clamp(34px, 3.8vw, 52px) */
 .about-section h2 {
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
@@ -51,9 +51,8 @@ body {
     max-width: 1080px;
 }
 
-/* Fixed from clamp(34px, 3.8vw, 52px) */
 .about-section-secondary h2 {
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
@@ -64,7 +63,7 @@ body {
 }
 
 .about-content {
-    max-width: 55vw; /* Takes slightly more than half the screen */
+    max-width: 55vw;
     width: 100%;
 }
 
@@ -78,7 +77,6 @@ body {
     display: block;
 }
 
-/* Fixed from clamp(14px, 1.15vw, 17px) */
 .about-item {
     margin-bottom: 12px;
     font-size: 17px;
@@ -109,7 +107,6 @@ a.founder-link:hover {
     opacity: 0.85;
 }
 
-/* --- Scrollbar Behavior --- */
 .navigation::-webkit-scrollbar {
     display: none;
 }
@@ -125,7 +122,6 @@ body {
     scrollbar-width: none;    
 }
 
-/* --- Responsive Design (Media Queries) --- */
 @media (max-width: 900px) {
 
     .about-section h2,
