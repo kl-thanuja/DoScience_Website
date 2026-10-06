@@ -201,10 +201,9 @@ img {
 .card-title {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   color: #000000;
   letter-spacing: 0.02em;
-  margin-bottom: 24px;
 }
 
 /* Grid layout for card upper content */
@@ -314,7 +313,6 @@ img {
   text-align: left;
 }
 
-
 /* =========================================
    SECTIONS GENERAL (3, 4, 5)
 ========================================= */
@@ -325,7 +323,7 @@ img {
 }
 
 .sb-heading {
-  font-size: 50px;
+  font-size: 48px;
 }
 
 .sb-intro {
@@ -347,7 +345,7 @@ img {
   border: 1px solid #e5e7eb;
   border-radius: 16px;
   display: flex;
-  align-items:left;
+  align-items: left;
   gap: 20px;
   padding: 24px;
   background: #fafafa;
@@ -366,10 +364,10 @@ img {
   color: #000000;
 }
 
-/* SECTION 4 */
+/* SECTION 4 (UPDATED GRID WITH 4 RIGHT CARDS) */
 .sb-own-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr 0.95fr;
+  grid-template-columns: 1fr 1.8fr;
   gap: 24px;
 }
 
@@ -411,16 +409,14 @@ img {
   object-fit: contain;
 }
 
-.sb-option-copy h4,
-.sb-feature-row h4 {
+.sb-option-copy h4 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 6px;
   color: #000000;
 }
 
-.sb-option-copy p,
-.sb-feature-row p {
+.sb-option-copy p {
   color: #000000;
 }
 
@@ -442,14 +438,46 @@ img {
   margin: 16px 0;
 }
 
-.sb-feature-row {
+/* Four Cards Right Section Grid */
+.sb-four-cards-grid {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 16px;
-  align-items: center;
-  min-height: 100px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 24px;
 }
 
+.sb-info-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 28px 24px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.sb-info-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.sb-info-card p {
+  font-size: 15px;
+  line-height: 1.45;
+  color: #000000;
+}
+
+.sb-info-card .sb-price {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Network Strip */
 .sb-network-strip {
   margin-top: 24px;
   padding: 20px 30px;
@@ -672,6 +700,12 @@ img {
   }
 }
 
+@media (max-width: 650px) {
+  .sb-four-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
   .hero-section,
   .ways-section,
@@ -702,10 +736,6 @@ img {
   .sb-content-fit,
   .sb-talk-row {
     grid-template-columns: 1fr;
-  }
-
-  .sb-feature-row {
-    grid-template-columns: 60px 1fr;
   }
 }
 
