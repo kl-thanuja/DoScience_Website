@@ -147,7 +147,7 @@ img {
 }
 
 .hero-message p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
   margin-bottom: 32px;
   color: black;
@@ -249,7 +249,7 @@ img {
   margin-bottom: 15px;
 }
 .product-subtitle strong {
-  font-weight: 600; /* Ensures 'A' and all text are bold */
+  font-weight: 600;
   display: inline-block;
   text-align: left;
 }
@@ -269,7 +269,6 @@ img {
   flex-direction: column;
   font-size: 15px;
   text-align: right;
-  gap: 2px;
 }
 
 .card-bottom-text {
@@ -320,7 +319,7 @@ img {
   align-items: center;
   gap: 24px;
   padding-top: 17px;
-  font-size: 19px;
+  font-size: 15px;
 }
 
 .languages b {
@@ -1102,7 +1101,7 @@ img {
   }
 
   .hero-message p {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .hero-message span {
