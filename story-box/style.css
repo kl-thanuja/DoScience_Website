@@ -477,7 +477,6 @@ img {
   margin-bottom: 4px;
 }
 
-/* Network Strip */
 .sb-network-strip {
   margin-top: 24px;
   padding: 24px 32px;
@@ -489,14 +488,13 @@ img {
   gap: 32px;
   color: #000000;
 }
-
 .sb-network-strip strong {
   font-size: 18px;
   line-height: 1.35;
   color: #000000;
   flex-shrink: 0;
+  text-align: left;
 }
-
 .sb-network-divider {
   width: 1px;
   height: 48px;
@@ -508,10 +506,10 @@ img {
   font-size: 15px;
   line-height: 1.45;
   color: #000000;
-  text-align: left;
+  text-align: center;
+  flex-grow: 1;      
   margin: 0;
 }
-
 /* SECTION 5 */
 .sb-beyond-inner {
   display: grid;
