@@ -348,7 +348,7 @@ img {
 
 .sb-section {
   width: 100%;
-  background: white;
+  background:#fafafa;
   color: black;
 }
 
@@ -721,61 +721,102 @@ img {
   display: block;
 }
 
-/* SECTION 6 */
+/* ==========================================
+   SECTION 6: CONTACT & CATALOGUE BLOCK
+   ========================================== */
 
-.sb-talk-section {
-  min-height: 700px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.contact-section {
+  padding: 60px 0;
+  background-color: var(--bg-color);
+  border-top: 1px solid #E5E5E5;
+  padding-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
-.sb-talk-inner {
+.contact-section .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--desktop-gutter);
+  padding-right: var(--desktop-gutter);
+  width: 100%;
+}
+
+.contact-block {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
 }
 
-.sb-heading-6 {
-  color: black;
-  margin: 30px 0 30px;
-  font-size: 52px;
-  line-height: 0.99;
-  letter-spacing: -0.025px;
-  font-weight: 500;
-  margin-bottom: 32px;
-  margin-top: 10px;
+.contact-block h3 {
+  margin-bottom: 0.75rem;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.25;
 }
 
-.sb-green-line-center {
-  margin: 0 auto 55px;
-}
-
-.sb-talk-description {
+.contact-block p {
   font-size: 15px;
-  line-height: 1.65;
-  margin-bottom: 30px;
+  line-height: 1.45;
+  color: #000000;
+  text-align: left;
+  margin: 0 0 1.5rem 0;
+  max-width: 620px;
+  display: block;
 }
 
-.sb-talk-button {
-  width: 350px;
-  min-height: 90px;
-  border-radius: 18px;
-  background: black;
-  color: white;
-  text-decoration: none;
+.contact-details {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  font-size: 22px;
-  font-weight: 500;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
 }
-.sb-talk-button span {
-  font-size: 22px;
-  line-height: 1;
-  font-weight: 400;
+
+.contact-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.25;
+}
+
+.contact-info {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.contact-info a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.catalogue-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+
+.download-link {
+  display: inline-flex;
+  padding-left: 0;
+  gap: 8px;
+  font-weight: 600;
+  text-decoration: underline;
+  align-items: center;
+  color: #000000;
 }
 
 /* =========================================
@@ -886,9 +927,8 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .sb-talk-section {
-    min-height: 400px;
-    margin-bottom: 50px;
+  .contact-section {
+    padding: 48px 0;
   }
 }
 
@@ -937,10 +977,6 @@ img {
   .sb-beyond-image {
     height: 500px;
   }
-
-  .sb-talk-description {
-    font-size: 22px;
-  }
 }
 
 /* =========================================
@@ -948,8 +984,6 @@ img {
 ========================================= */
 
 @media (max-width: 600px) {
-  /* Prevent horizontal overflow on small screens */
-
   .sb-eyebrow {
     margin-top: 4rem;
   }
@@ -964,10 +998,6 @@ img {
     max-width: 100%;
     overflow-x: hidden;
   }
-
-  /* =====================================
-       HEADER
-    ===================================== */
 
   .header {
     width: 100%;
@@ -1018,10 +1048,6 @@ img {
     bottom: 0;
   }
 
-  /* =====================================
-       HERO
-    ===================================== */
-
   .hero-section {
     width: 100%;
     min-height: 0;
@@ -1047,8 +1073,6 @@ img {
     max-width: 100%;
   }
 
-  /* STORY TYPES */
-
   .story-types {
     width: 100%;
     display: grid;
@@ -1073,8 +1097,6 @@ img {
     border-right: none;
   }
 
-  /* HERO MESSAGE */
-
   .hero-message {
     width: 100%;
     max-width: 100%;
@@ -1089,8 +1111,6 @@ img {
   .hero-message span {
     font-size: 17px;
   }
-
-  /* HERO VIDEO */
 
   .hero-video-container {
     width: 100%;
@@ -1107,10 +1127,6 @@ img {
     object-fit: contain;
   }
 
-  /* =====================================
-       SECOND SECTION
-    ===================================== */
-
   .ways-section {
     width: 100%;
     padding: 40px 20px;
@@ -1125,8 +1141,6 @@ img {
     letter-spacing: -1.5px;
     overflow-wrap: break-word;
   }
-
-  /* PRODUCT CARDS */
 
   .product-cards {
     width: 100%;
@@ -1165,8 +1179,6 @@ img {
     flex-wrap: wrap;
   }
 
-  /* CONTENT STRIP */
-
   .content-strip {
     width: 100%;
     padding: 15px;
@@ -1191,10 +1203,6 @@ img {
     flex-wrap: wrap;
     font-size: 16px;
   }
-
-  /* =====================================
-       STORY BOX SECTIONS 3–6
-    ===================================== */
 
   .sb-inner,
   .sb-beyond-inner {
@@ -1221,10 +1229,6 @@ img {
   .sb-intro {
     font-size: 18px;
   }
-
-  /* =====================================
-       SECTION 3
-    ===================================== */
 
   .sb-use-section {
     padding: 55px 0 50px;
@@ -1260,10 +1264,6 @@ img {
   .sb-talk-row p {
     font-size: 15px;
   }
-
-  /* =====================================
-       SECTION 4
-    ===================================== */
 
   .sb-own-section {
     padding: 45px 0 45px;
@@ -1325,10 +1325,6 @@ img {
     font-size: 18.25px;
   }
 
-  /* =====================================
-       SECTION 5
-    ===================================== */
-
   .sb-beyond-section {
     padding: 45px 0 50px;
     min-height: 0;
@@ -1361,46 +1357,9 @@ img {
     gap: 18px;
   }
 
-  /* =====================================
-       SECTION 6
-    ===================================== */
-
-  .sb-talk-section {
-    width: 100%;
-    min-height: 500px;
-    padding: 50px 20px;
-  }
-
-  .sb-talk-inner {
-    width: 100%;
-    max-width: 100%;
-    transform: none;
-  }
-
-  .sb-heading-6 {
-    max-width: 100%;
-    font-size: 48px;
-    line-height: 1.05;
-    margin: 40px 0 35px;
-    overflow-wrap: break-word;
-  }
-
-  .sb-green-line-center {
-    margin-bottom: 35px;
-  }
-
-  .sb-talk-description {
-    max-width: 100%;
-    font-size: 18px;
-    margin-bottom: 35px;
-  }
-
-  .sb-talk-button {
-    width: min(100%, 330px);
-    min-height: 78px;
-    border-radius: 14px;
-    font-size: 24px;
-    gap: 18px;
+  .contact-section .container {
+    padding-left: var(--mobile-gutter);
+    padding-right: var(--mobile-gutter);
   }
 }
 
