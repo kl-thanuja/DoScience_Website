@@ -243,18 +243,15 @@ img {
   letter-spacing: -0.5px;
   margin-bottom: 12px;
 }
-
 .product-subtitle {
-  display: flex;
-  gap: 10px;
   font-size: 15px;
-  line-height: 1.15;
+  line-height: 1.25;
   margin-bottom: 15px;
 }
-
 .product-subtitle strong {
-  font-weight: 500;
-  background: white;
+  font-weight: 600; /* Ensures 'A' and all text are bold */
+  display: inline-block;
+  text-align: left;
 }
 
 .product-content p {
