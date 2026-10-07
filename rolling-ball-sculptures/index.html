@@ -4,201 +4,140 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DoScience</title>
-
-    <!-- Google Fonts for typography -->
+    <title>Rolling Ball Sculptures - DoScience</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html,
-        body,
-        button,
-        input,
-        textarea,
-        select {
-            font-family: "Inter", sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            background-color: #fafafa;
-            color: #1a1a1a;
-            line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        body::-webkit-scrollbar {
-            width: 0px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* ==========================================
-   MAIN HERO SECTION (Matches Installations Page Padding)
-   ========================================== */
-        .hero-section {
-            position: relative;
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 108px 5% 80px 5%;
-            /* Matches padding from original section */
-            gap: 1.5rem;
-            flex: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            width: 48%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        /* Fixed 52px header matching original installations page typography */
-        .hero-content h1 {
-            font-size: 52px;
-            font-weight: 500;
-            line-height: 1.12;
-            color: #000000;
-            text-align: left;
-            letter-spacing: -0.025em;
-            max-width: 1080px;
-        }
-
-        /* Accent Line (Green accent bar matching inspiration image) */
-        .accent-line {
-            width: 65px;
-            height: 4px;
-            background-color: black;
-            margin: 14px 0;
-        }
-
-        /* Subtitle & Descriptive Paragraphs */
-        .hero-content p {
-            font-size: 15px;
-            line-height: 1.45;
-            color: black;
-            text-align: left;
-            margin: 0;
-            max-width: 620px;
-            display: block;
-        }
-
-        .hero-content p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Hero Image Container */
-        .hero-image-container {
-            position: relative;
-            width: 48%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image-container img {
-            width: 100%;
-            height: 350px;
-            max-height: 320px;
-            object-fit: contain;
-            
-        }
-        @media screen and (max-width: 1024px) {
-            .hero-content h1 {
-                font-size: 38px;
-            }
-
-            .hero-content p {
-                font-size: 15px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .hero-section {
-                flex-direction: column;
-                padding: 100px 5% 40px 5%;
-                gap: 1.25rem;
-                align-items: stretch;
-            }
-
-            .hero-content {
-                width: 100%;
-                order: 1;
-                margin-bottom: 0;
-            }
-
-            .hero-image-container {
-                width: 100%;
-                order: 2;
-            }
-
-            .hero-content h1 {
-                font-size: 34px;
-            }
-
-            .hero-content p {
-                font-size: 14px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 28px;
-            }
-
-            .hero-content p {
-                font-size: 13.5px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../components/navbar.css">
 </head>
 
 <body>
     <div id="navbar-container"></div>
+    <main>
+        <!-- SECTION 1: HERO & INTRO -->
+        <section id="section-1" class="hero-section">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <h1 class="hero-title">Kinetic machines that turn motion, cause and effect into something you can follow.</h1>
 
-    <!-- HERO SECTION -->
-    <main class="hero-section">
-        <div class="hero-content">
-            <h1>Rolling Ball Sculptures<br>Coming Soon</h1>
-            <div class="accent-line"></div>
-            <p>We’re working on this section and will be adding more information shortly.</p>
-            <p>In the meantime, you can explore our other offerings or get in touch if you have any questions.</p>
-        </div>
+                    <div class="accent-line"></div>
 
-        <div class="hero-image-container">
-            <img src="../images/Photos/home-rolling-ball-sculpture.png" alt="Rolling Ball Sculpture Illustration" />
-        </div>
+                    <p class="body-lead">
+                        A ball starts moving. One action sets off another, and another &ndash; creating a chain of movement that is fascinating to watch and easy to follow.
+                    </p>
+
+                    <div class="body-text-group">
+                        <p>
+                            Hidden within this movement is a range of ideas from classical mechanics &ndash; motion, force, energy, momentum and gravity.
+                        </p>
+                        <p>
+                            Our rolling ball sculptures invite people to stop, watch and discover the science at work in every movement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-bg-full">
+                <div class="video-container-wrap">
+                    <video class="cat-img" autoplay loop muted playsinline poster="assets/images/rbs-hero-poster.jpg">
+                        <source src="assets/videos/rolling-ball-hero.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- Video Play Overlay Icon -->
+                    <div class="video-play-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                            <polygon points="8,5 19,12 8,19"></polygon>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SCULPTURES & CUSTOM NEWTON MACHINES -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="split-block">
+                    <div class="split-content">
+                        <h2 class="hero-title">Rolling ball sculptures, made one at a time.</h2>
+                        <div class="accent-line"></div>
+                        <p class="body-lead">
+                            Each rolling ball sculpture is hand &ndash; crafted, and we are continually building new models. The range of sculptures available therefore changes over time.
+                        </p>
+                        <p class="body-text">
+                            <strong>Write to us to find out what we currently have in stock.</strong>
+                        </p>
+
+                        <div class="section-divider-spacing"></div>
+
+                        <h2 class="category-title-large">Custom Newton Machines</h2>
+                        <p class="body-text">
+                            We also build custom Newton Machines around a theme of your choice. These can be built around themes such as middle &ndash; school simple machines, the Big Bang or the evolution of life.
+                        </p>
+                        <p class="body-text">
+                            Share the theme and approximate dimensions you have in mind, and we can give you an estimated cost and delivery time based on the size and complexity of the machine.
+                        </p>
+                    </div>
+                    <div class="split-image-wrap curved-corners">
+                        <img src="assets/images/custom-newton-machine.jpg" alt="Custom Newton Machine Detail" class="split-img" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: COMPLEX IN MOVEMENT, ROBUST IN CONSTRUCTION -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="split-block">
+                    <div class="split-content">
+                        <h2 class="hero-title">Complex in movement.<br>Robust in construction.</h2>
+                        <div class="accent-line"></div>
+                        <p class="body-lead">
+                            There is a lot happening inside a rolling ball sculpture. We build our machines to be complex and fascinating to watch, while remaining stable, reliable and robust in everyday use.
+                        </p>
+                        <p class="body-text">
+                            The forms are designed to be visually engaging as well as mechanically sound. Our sculptures are made using <strong>mild steel, electroplated and finished with paint</strong>. They are non&ndash;electrical, require little maintenance, and can be used both indoors and outdoors.
+                        </p>
+                    </div>
+                    <div class="split-image-wrap curved-corners">
+                        <img src="assets/images/robust-construction.jpg" alt="Rolling Ball Sculpture Mechanism Detail" class="split-img" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CONTACT & INQUIRY BLOCK -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-block">
+                    <h3>Interested in a Rolling Ball Sculpture?</h3>
+                    <p class="body-lead">
+                        Whether you are looking for a sculpture from our current range or would like to discuss a custom Newton Machine, we’d be happy to talk to you.
+                    </p>
+
+                    <!-- Contact Details -->
+                    <div class="contact-details">
+                        <div class="contact-group">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-info">
+                                <a href="mailto:contact@doscience.co.in">contact@doscience.co.in</a>
+                            </div>
+                        </div>
+                        <div class="contact-group">
+                            <div class="contact-label">Phone / WhatsApp</div>
+                            <div class="contact-info">
+                                <a href="tel:+918897204422">+91 88972 04422</a><br>
+                                <a href="tel:+919154265672">+91 91542 65672</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <!-- Scripts -->
-    <script src="../components/navbar.js"></script>
     <script src="../js/navigation.js"></script>
-    <script src="script.js"></script>
+    <script src="../components/navbar.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
   --tablet-gutter: 32px;
   --mobile-gutter: 20px;
   --column-gap: 48px;
+  --border-color: #E5E5E5;
 }
 
 * {
@@ -26,16 +27,16 @@ body {
 
 body {
   font-family: "Inter", sans-serif;
-  color: black;
+  color: #000000;
   line-height: 1.6;
-  background-color: #fafafa;
+  background-color: var(--bg-color);
 }
 
 body::-webkit-scrollbar {
   width: 0px;
 }
 
-img {
+img, video {
   max-width: 100%;
   height: auto;
   display: block;
@@ -45,7 +46,7 @@ section {
   width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: #fafafa;
+  background-color: var(--bg-color);
 }
 
 .container {
@@ -54,6 +55,16 @@ section {
   padding-left: var(--desktop-gutter);
   padding-right: var(--desktop-gutter);
   width: 100%;
+}
+
+header {
+  width: 100%;
+  padding: 20px 0;
+  background-color: var(--bg-color);
+}
+
+.text-center {
+  text-align: left;
 }
 
 /* ==========================================
@@ -76,7 +87,6 @@ h2,
   text-align: left;
   letter-spacing: -0.025em;
   max-width: 1080px;
-  margin-bottom: 0.75rem;
   font-size: 28px;
   font-weight: 500;
   color: #000000;
@@ -120,22 +130,24 @@ p {
   text-transform: uppercase;
   color: #000000;
   display: inline-block;
-  margin-bottom: 12px;
 }
 
-/* ACCENT LINE - STRICTLY BLACK */
+.section-label {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 16px;
+  max-width: 100%;
+}
+
+/* ACCENT LINES - STRICTLY BLACK */
 .accent-line {
   width: 65px;
   height: 3px;
   background-color: #000000;
   margin: 14px 0;
-}
-
-.accent-line-small {
-  width: 45px;
-  height: 3px;
-  background-color: #000000;
-  margin: 10px 0 16px 0;
 }
 
 /* ==========================================
@@ -180,6 +192,10 @@ p {
   z-index: 1;
 }
 
+.body-text-group p {
+  margin-bottom: 20px;
+}
+
 .target-locations {
   margin-top: 30px;
   font-size: 15px;
@@ -188,7 +204,7 @@ p {
 }
 
 /* ==========================================
-   SECTION 2: CATEGORIES RANGE & SIGNAGES
+   CATEGORY & GRID ROWS
    ========================================== */
 .categories-section {
   padding: 60px 0;
@@ -209,8 +225,9 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--column-gap);
-  align-items: start;
+  align-items: center;
   padding: 32px 0;
+  border-bottom: 1px solid #EFEFEF;
 }
 
 .category-row-reverse {
@@ -225,7 +242,8 @@ p {
   background-color: #EFEFEF;
 }
 
-.cat-img {
+.cat-img,
+.category-image-wrap video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -268,13 +286,13 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--column-gap);
-  align-items: start;
+  align-items: center;
   padding-top: 60px;
   margin-top: 20px;
 }
 
 /* ==========================================
-   SECTION 3 & 4: SPLIT FEATURE SECTIONS
+   SPLIT FEATURE SECTIONS & CORNER DYNAMICS
    ========================================== */
 .feature-section {
   padding: 60px 0;
@@ -285,7 +303,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--column-gap);
-  align-items: start;
+  align-items: center;
 }
 
 .split-content {
@@ -301,6 +319,11 @@ p {
   background-color: #EFEFEF;
 }
 
+.curved-corners {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
 .curved-top-right {
   border-top-right-radius: 120px;
   border-top-left-radius: 16px;
@@ -314,15 +337,140 @@ p {
   object-fit: cover;
 }
 
+.section-divider-spacing {
+  margin-top: 32px;
+}
+
 /* ==========================================
-   SECTION 5: CONTACT & CATALOGUE BLOCK
+   VIDEO CONTAINER & PLAY BUTTON OVERLAY
    ========================================== */
-.contact-section {
+.video-container-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.video-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  background-color: #ffffff;
+}
+
+/* ==========================================
+   BANNER & CLIENTS
+   ========================================== */
+.banner-box {
+  margin: 48px auto 0 auto;
+  padding: 40px 20px;
+  background-color: transparent;
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-box h1 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 16px;
+  max-width: 100%;
+}
+
+.banner-box p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #000000;
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.clients-section {
   padding: 60px 0;
   background-color: var(--bg-color);
-  border-top: 1px solid #E5E5E5;
-  padding-bottom: 3rem;
-  margin-bottom: 2.5rem;
+}
+
+.clients-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  width: 100%;
+  margin-top: 16px;
+  align-items: start;
+  justify-items: center;
+}
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.client-logo-box {
+  width: 100%;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.client-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.client-name {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #000000;
+  line-height: 1.35;
+  text-align: center;
+}
+
+/* ==========================================
+   CONTACT & CATALOGUE BLOCK
+   ========================================== */
+.contact-section {
+  padding: 60px 0 80px 0;
+  background-color: var(--bg-color);
 }
 
 .contact-block {
@@ -386,20 +534,51 @@ p {
   text-decoration: underline;
 }
 
-.catalogue-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 0.5rem;
+.catalogue-block,
+.contact-details-block {
+  width: 100%;
+  max-width: 680px;
 }
 
+.divider-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 40px 0;
+}
+
+.action-link,
 .download-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-size: 15px;
   font-weight: 600;
-  text-decoration: underline;
   color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.action-link:hover,
+.download-link:hover {
+  opacity: 0.7;
+}
+
+.phone-email-info {
+  margin-top: 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.phone-email-info a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.phone-email-info a:hover {
+  text-decoration: underline;
 }
 
 /* ==========================================
@@ -445,6 +624,13 @@ p {
     order: 2;
   }
 
+  .categories-section,
+  .clients-section,
+  .contact-section,
+  .feature-section {
+    padding: 48px 0;
+  }
+
   .category-row,
   .category-row-reverse,
   .feature-row,
@@ -472,11 +658,23 @@ p {
   h2, .section-title, .category-title-large {
     font-size: 26px;
   }
+}
 
-  .categories-section,
-  .feature-section,
-  .contact-section {
-    padding: 48px 0;
+@media (max-width: 768px) {
+  .body-lead,
+  p,
+  .category-desc,
+  .banner-box p {
+    font-size: 14px;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
+  }
+
+  .client-logo-box {
+    height: 52px;
   }
 }
 
@@ -497,5 +695,10 @@ p {
 
   .split-image-wrap {
     height: 280px;
+  }
+
+  .banner-box {
+    padding: 20px 24px;
+    margin-top: 36px;
   }
 }
