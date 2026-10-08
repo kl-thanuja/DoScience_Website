@@ -2,13 +2,12 @@
   --bg-color: #fafafa;
   --font-family: 'Inter', sans-serif;
   --max-width: 1440px;
-  --desktop-gutter: 64px;
-  --tablet-gutter: 32px;
+  --desktop-gutter: 70px;
+  --tablet-gutter: 35px;
   --mobile-gutter: 20px;
   --column-gap: 48px;
   --border-color: #E5E5E5;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -154,42 +153,54 @@ p {
    SECTION 1: HERO
    ========================================== */
 .hero-section {
-  background-color: var(--bg-color);
-  padding: 0;
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
+  background-color: #fafafa;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
-
+.hero-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--desktop-gutter);
+  padding-right: var(--desktop-gutter);
+}
 .hero-wrapper {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 108px 5% 60px 5%;
-  box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 108px 0 60px 0px;
+    box-sizing: border-box;
 }
-
 .hero-content {
-  position: relative;
-  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
-  max-width: 580px;
-  width: 50%;
+  width: 100%;
+  padding-bottom: 20px;
 }
 
-.hero-bg-full {
-  position: absolute;
-  top: 108px;
-  right: 5%;
-  width: 42%;
-  height: 520px;
-  z-index: 1;
+.video-container-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: #EFEFEF;
+}
+
+.video-container-wrap iframe.hero-video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 24px;
+  object-fit: cover;
 }
 
 .body-text-group p {
@@ -344,14 +355,6 @@ p {
 /* ==========================================
    VIDEO CONTAINER & PLAY BUTTON OVERLAY
    ========================================== */
-.video-container-wrap {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 24px;
-  overflow: hidden;
-}
-
 .video-play-btn {
   position: absolute;
   top: 50%;
@@ -471,6 +474,7 @@ p {
 .contact-section {
   padding: 60px 0 80px 0;
   background-color: var(--bg-color);
+  border-top: 1px solid #E5E5E5;
 }
 
 .contact-block {
@@ -597,31 +601,9 @@ p {
     padding-right: var(--tablet-gutter);
   }
 
-  .hero-section {
-    display: flex;
-    flex-direction: column;
-  }
-
   .hero-wrapper {
-    flex-direction: column;
-    padding: 40px var(--tablet-gutter) 0 var(--tablet-gutter);
-    order: 1;
-  }
-
-  .hero-content {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .hero-bg-full {
-    position: relative;
-    top: 0;
-    right: auto;
-    width: 100%;
-    height: 380px;
-    padding: 0 var(--tablet-gutter) 40px var(--tablet-gutter);
-    box-sizing: border-box;
-    order: 2;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .categories-section,
@@ -682,15 +664,6 @@ p {
   .container {
     padding-left: var(--mobile-gutter);
     padding-right: var(--mobile-gutter);
-  }
-
-  .hero-wrapper {
-    padding: 24px var(--mobile-gutter) 0 var(--mobile-gutter);
-  }
-
-  .hero-bg-full {
-    height: 280px;
-    padding: 0 var(--mobile-gutter) 24px var(--mobile-gutter);
   }
 
   .split-image-wrap {
