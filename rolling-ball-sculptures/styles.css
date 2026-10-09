@@ -8,6 +8,7 @@
   --column-gap: 48px;
   --border-color: #E5E5E5;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +36,8 @@ body::-webkit-scrollbar {
   width: 0px;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
   display: block;
@@ -154,30 +156,33 @@ p {
    ========================================== */
 .hero-section {
   background-color: #fafafa;
-    padding: 0;
-    min-height: 100vh;
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
+
 .hero-container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding-left: var(--desktop-gutter);
   padding-right: var(--desktop-gutter);
 }
+
 .hero-wrapper {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding: 108px 0 60px 0px;
-    box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 108px 0 60px 0px;
+  box-sizing: border-box;
 }
+
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -586,69 +591,152 @@ p {
 }
 
 /* ==========================================
-   RESPONSIVE BREAKPOINTS
+   UNIFIED RESPONSIVE BREAKPOINTS 
+   (Matched to Science Center Layout & Typography)
    ========================================== */
 
+/* Large Laptops & Desktops Gap Adjustments */
 @media (max-width: 1200px) {
   :root {
     --column-gap: 32px;
   }
 }
 
-@media (max-width: 992px) {
-  .container {
-    padding-left: var(--tablet-gutter);
-    padding-right: var(--tablet-gutter);
+/* Laptops & Tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+
+  /* Level 1 Headings */
+  h1,
+  .hero-title,
+  .heading-primary,
+  .heading-secondary {
+    font-size: 42px;
+    line-height: 1.12;
+  }
+
+  /* Level 2 Headings */
+  h2,
+  .section-title,
+  .category-title-large {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  /* Level 3 Headings */
+  h3,
+  .category-title {
+    font-size: 26px;
+  }
+
+  /* Body & Lead Text */
+  p,
+  .body-lead,
+  .body-text,
+  .category-desc,
+  .banner-box p,
+  .contact-info {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  /* Labels, Sub-labels & Action Links */
+  .contact-label,
+  .action-link,
+  .download-link {
+    font-size: 16px;
   }
 
   .hero-wrapper {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .categories-section,
-  .clients-section,
-  .contact-section,
-  .feature-section {
-    padding: 48px 0;
-  }
-
-  .category-row,
-  .category-row-reverse,
-  .feature-row,
-  .split-block {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .category-row-reverse .category-info {
-    order: 2;
-  }
-
-  .category-row-reverse .category-image-wrap {
-    order: 1;
-  }
-
-  h1, .hero-title {
-    font-size: 38px;
-  }
-
-  h2, .section-title, .category-title-large {
-    font-size: 26px;
+    padding: 90px 0 40px 0;
   }
 }
 
-@media (max-width: 768px) {
-  .body-lead,
+/* Mobile & Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+
+  section,
+  .hero-section,
+  .feature-section,
+  .categories-section,
+  .clients-section,
+  .contact-section {
+    padding: 40px 5% 20px !important;
+    min-height: auto;
+  }
+
+  .container,
+  .hero-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100%;
+  }
+
+  /* Hero Wrapper Alignment */
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    padding: 80px 0 20px 0;
+    gap: 24px;
+  }
+
+  .hero-content {
+    order: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  .video-container-wrap {
+    order: 2;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Headings Hierarchy */
+  h1,
+  .hero-title,
+  .heading-primary,
+  .heading-secondary {
+    font-size: 36px;
+    line-height: 1.15;
+  }
+
+  h2,
+  .section-title,
+  .category-title-large {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  h3,
+  .category-title {
+    font-size: 24px;
+  }
+
+  /* Body Text */
   p,
+  .body-lead,
+  .body-text,
   .category-desc,
-  .banner-box p {
+  .banner-box p,
+  .contact-info {
     font-size: 14px;
+    line-height: 1.45;
+  }
+
+  /* Layout Grids */
+  .split-block,
+  .category-row,
+  .category-row-reverse,
+  .feature-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .clients-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px 20px;
+    gap: 24px 16px;
   }
 
   .client-logo-box {
@@ -656,14 +744,62 @@ p {
   }
 }
 
+/* Small Mobile Devices (max-width: 640px) */
 @media (max-width: 640px) {
-  .container {
-    padding-left: var(--mobile-gutter);
-    padding-right: var(--mobile-gutter);
-  }
-
   .banner-box {
     padding: 20px 24px;
     margin-top: 36px;
+  }
+}
+
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+
+  .hero-wrapper {
+    padding: 70px 0 20px 0;
+  }
+
+  /* Headings Hierarchy */
+  h1,
+  .hero-title,
+  .heading-primary {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  h2,
+  .section-title,
+  .heading-secondary {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  h3,
+  .category-title {
+    font-size: 20px;
+  }
+
+  /* Body Text */
+  p,
+  .body-lead,
+  .body-text,
+  .category-desc,
+  .banner-box p,
+  .contact-info {
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  /* Labels, Sub-labels & Action Links */
+  .contact-label,
+  .action-link,
+  .download-link {
+    font-size: 17px;
+  }
+
+  .accent-line {
+    width: 55px;
+    height: 3px;
+    margin: 12px 0;
   }
 }
