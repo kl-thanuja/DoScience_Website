@@ -107,7 +107,7 @@ p {
 }
 
 .body-lead {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.45;
   color: #000000;
   text-align: left;
@@ -504,7 +504,7 @@ p {
   .category-desc,
   .banner-box p,
   .contact-info {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.45;
   }
 
@@ -581,7 +581,7 @@ p {
   .category-desc,
   .banner-box p,
   .contact-info {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.45;
   }
 
