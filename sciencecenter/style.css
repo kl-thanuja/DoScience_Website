@@ -132,7 +132,7 @@ section {
     text-underline-offset: 4px;
     transition: opacity 0.2s ease;
     margin: 0 0 8px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
@@ -395,7 +395,7 @@ section {
 
 /* Fixed from clamp(25px, 3.8vw, 30px) */
 .experience-text-box h3 {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
@@ -407,7 +407,7 @@ section {
 
 /* Level 2 Font Size */
 .experience-text-box p {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -895,11 +895,11 @@ section {
     .planning-section p,
     .contact-info,
     .footer-tagline {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .experience-text-box h3 {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .link-arrow,
@@ -952,7 +952,7 @@ section {
     }
 
     .experience-text-box h3 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .hero-subtitle,
@@ -965,7 +965,7 @@ section {
     .planning-section p,
     .contact-info,
     .footer-tagline {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     body::-webkit-scrollbar {
@@ -1198,7 +1198,7 @@ section {
     .planning-section p,
     .contact-info,
     .footer-tagline {
-        font-size: 13.5px;
+        font-size: 13px;
     }
 
     .link-arrow,
@@ -1208,7 +1208,7 @@ section {
     .fees-table-title,
     .planning-section h3,
     .contact-label {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     body::-webkit-scrollbar {
