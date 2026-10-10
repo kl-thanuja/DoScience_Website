@@ -132,7 +132,7 @@ section {
     text-underline-offset: 4px;
     transition: opacity 0.2s ease;
     margin: 0 0 8px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
@@ -909,7 +909,7 @@ section {
     .fees-table-title,
     .planning-section h3,
     .contact-label { 
-        font-size: 16px;
+        font-size: 14px;
     }
 
     body::-webkit-scrollbar {
@@ -1208,7 +1208,7 @@ section {
     .fees-table-title,
     .planning-section h3,
     .contact-label {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     body::-webkit-scrollbar {
