@@ -74,7 +74,7 @@ header {
 
 h1,
 .hero-title {
-  font-size: 52px;
+  font-size: 42px;
   font-weight: 500;
   line-height: 1.12;
   color: #000000;
@@ -107,7 +107,7 @@ p {
 }
 
 .body-lead {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.45;
   color: #000000;
   text-align: left;
@@ -504,7 +504,7 @@ p {
   .category-desc,
   .banner-box p,
   .contact-info {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.45;
   }
 
@@ -559,7 +559,7 @@ p {
   .hero-title,
   .heading-primary,
   .heading-secondary {
-    font-size: 36px;
+    font-size: 42px;
     line-height: 1.15;
   }
 
@@ -581,7 +581,7 @@ p {
   .category-desc,
   .banner-box p,
   .contact-info {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.45;
   }
 
@@ -638,7 +638,7 @@ p {
   .category-desc,
   .banner-box p,
   .contact-info {
-    font-size: 13.5px;
+    font-size: 14px;
     line-height: 1.45;
   }
 
