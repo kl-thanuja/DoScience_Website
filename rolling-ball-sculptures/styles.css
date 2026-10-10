@@ -51,11 +51,11 @@ section {
 }
 
 .container {
-  max-width: var(--max-width);
-  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
   padding-left: var(--desktop-gutter);
   padding-right: var(--desktop-gutter);
-  width: 100%;
 }
 
 header {
@@ -165,8 +165,9 @@ p {
 }
 
 .hero-container {
-  max-width: var(--max-width);
-  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
   padding-left: var(--desktop-gutter);
   padding-right: var(--desktop-gutter);
 }
@@ -592,20 +593,15 @@ p {
 
 /* ==========================================
    UNIFIED RESPONSIVE BREAKPOINTS 
-   (Matched to Science Center Layout & Typography)
    ========================================== */
 
-/* Large Laptops & Desktops Gap Adjustments */
 @media (max-width: 1200px) {
   :root {
     --column-gap: 32px;
   }
 }
 
-/* Laptops & Tablets (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
-
-  /* Level 1 Headings */
   h1,
   .hero-title,
   .heading-primary,
@@ -614,7 +610,6 @@ p {
     line-height: 1.12;
   }
 
-  /* Level 2 Headings */
   h2,
   .section-title,
   .category-title-large {
@@ -622,13 +617,11 @@ p {
     line-height: 1.25;
   }
 
-  /* Level 3 Headings */
   h3,
   .category-title {
     font-size: 26px;
   }
 
-  /* Body & Lead Text */
   p,
   .body-lead,
   .body-text,
@@ -639,7 +632,6 @@ p {
     line-height: 1.45;
   }
 
-  /* Labels, Sub-labels & Action Links */
   .contact-label,
   .action-link,
   .download-link {
@@ -651,9 +643,7 @@ p {
   }
 }
 
-/* Mobile & Tablets (max-width: 768px) */
 @media screen and (max-width: 768px) {
-
   section,
   .hero-section,
   .feature-section,
@@ -671,7 +661,6 @@ p {
     width: 100%;
   }
 
-  /* Hero Wrapper Alignment */
   .hero-wrapper {
     display: flex;
     flex-direction: column;
@@ -693,7 +682,6 @@ p {
     aspect-ratio: 16 / 9;
   }
 
-  /* Headings Hierarchy */
   h1,
   .hero-title,
   .heading-primary,
@@ -714,7 +702,6 @@ p {
     font-size: 24px;
   }
 
-  /* Body Text */
   p,
   .body-lead,
   .body-text,
@@ -725,7 +712,6 @@ p {
     line-height: 1.45;
   }
 
-  /* Layout Grids */
   .split-block,
   .category-row,
   .category-row-reverse,
@@ -744,7 +730,6 @@ p {
   }
 }
 
-/* Small Mobile Devices (max-width: 640px) */
 @media (max-width: 640px) {
   .banner-box {
     padding: 20px 24px;
@@ -752,14 +737,11 @@ p {
   }
 }
 
-/* Extra Small Mobile Devices (max-width: 480px) */
 @media screen and (max-width: 480px) {
-
   .hero-wrapper {
     padding: 70px 0 20px 0;
   }
 
-  /* Headings Hierarchy */
   h1,
   .hero-title,
   .heading-primary {
@@ -779,7 +761,6 @@ p {
     font-size: 20px;
   }
 
-  /* Body Text */
   p,
   .body-lead,
   .body-text,
@@ -790,7 +771,6 @@ p {
     line-height: 1.45;
   }
 
-  /* Labels, Sub-labels & Action Links */
   .contact-label,
   .action-link,
   .download-link {
