@@ -218,7 +218,7 @@ p {
 
 .section-header-block {
   margin-bottom: 48px;
-  max-width: 700px;
+  max-width: 100%;
 }
 
 .category-list {
@@ -304,15 +304,17 @@ p {
 
 .split-block {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: var(--column-gap);
   align-items: start;
+  width: 100%;
 }
 
 .split-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 
 .split-image-wrap {
