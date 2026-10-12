@@ -97,7 +97,7 @@ section {
 
 /* Level 1 Font Size */
 .heading-primary {
-    font-size: 52px;
+    font-size: 42px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
@@ -194,7 +194,7 @@ section {
 
 /* Level 2 Font Size */
 .hero-subtitle {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -291,7 +291,7 @@ section {
 
 /* Level 2 Font Size */
 .section2-text p {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -544,7 +544,7 @@ section {
 
 /* Level 2 Font Size */
 .section4-middle-text p {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -589,7 +589,7 @@ section {
 
 /* Level 1 Font Size */
 .visit-header {
-    font-size: 52px;
+    font-size: 42px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
@@ -624,7 +624,7 @@ section {
 /* Level 3 Font Size */
 .info-card-header h4 {
     margin: 0;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     color: black;
     line-height: 1.25;
@@ -638,7 +638,7 @@ section {
 
 /* Level 2 Font Size */
 .info-card p {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.45;
     color: black;
     text-align: start;
@@ -648,7 +648,7 @@ section {
 }
 
 .info-card a {
-    font-size: 0.95rem;
+    font-size: 13px;
     text-decoration: underline;
     color: black;
 }
@@ -706,7 +706,7 @@ section {
     position: relative;
     padding-left: 1.25rem;
     margin-bottom: 0.6rem;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.45;
     color: black;
     max-width: 620px;
@@ -737,7 +737,7 @@ section {
 
 /* Level 3 Font Size */
 .fees-table-title {
-    margin-bottom: 0.75rem;
+    margin-bottom: 18px;
     padding-bottom: 0.35rem;
     border-bottom: 2px solid black;
     display: inline-block;
@@ -809,8 +809,8 @@ section {
 
 /* Level 2 Font Size */
 .planning-section p {
-    margin-bottom: 1.5rem;
-    font-size: 15px;
+    margin-bottom: 13px;
+    font-size: 13px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -840,7 +840,7 @@ section {
 }
 
 .contact-info {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.5;
     color: black;
 }
@@ -862,7 +862,7 @@ section {
 
 /* Level 2 Font Size */
 .footer-tagline {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.45;
     color: black;
     text-align: left;

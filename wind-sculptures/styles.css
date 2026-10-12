@@ -261,7 +261,7 @@ p {
 }
 
 .category-title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.25;
   color: #000000;
@@ -270,7 +270,7 @@ p {
 }
 
 .category-desc {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.45;
   color: #000000;
   max-width: 480px;
@@ -398,7 +398,7 @@ p {
 }
 
 .contact-block p {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.45;
   color: #000000;
   text-align: left;
@@ -428,7 +428,7 @@ p {
 }
 
 .contact-info {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
   color: #000000;
 }

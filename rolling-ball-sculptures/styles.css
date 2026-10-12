@@ -74,7 +74,7 @@ header {
 
 h1,
 .hero-title {
-  font-size: 52px;
+  font-size: 42px;
   font-weight: 500;
   line-height: 1.12;
   color: #000000;
@@ -107,7 +107,7 @@ p {
 }
 
 .body-lead {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.45;
   color: #000000;
   text-align: left;
@@ -117,7 +117,7 @@ p {
 }
 
 .body-text {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.45;
   color: #000000;
   margin-bottom: 16px;
@@ -500,7 +500,7 @@ p {
 }
 
 .contact-block p {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.45;
   color: #000000;
   text-align: left;
@@ -530,7 +530,7 @@ p {
 }
 
 .contact-info {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
   color: #000000;
 }

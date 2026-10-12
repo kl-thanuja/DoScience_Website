@@ -35,7 +35,7 @@ body {
     margin-bottom: 80px;
 }
 .contact-intro h2 {
-    font-size: 52px;
+    font-size: 42px;
     font-weight: 500;
     line-height: 1.12;
     color: #000000 !important;
@@ -54,7 +54,7 @@ body {
 
 /* Fixed from clamp(14px, 1.15vw, 17px) */
 .contact-intro p {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.45;
     color: black;
     text-align: left;
@@ -188,7 +188,7 @@ body {
     font-weight: 400;
     margin-bottom: 0;
     color: black;
-    font-size: 17px;
+    font-size: 13px;
 }
 
 .submit-btn {
@@ -466,7 +466,7 @@ body {
     }
 
     .contact-intro h2 {
-        font-size: 52px;
+        font-size: 42px;
     }
 }
 
@@ -477,7 +477,7 @@ body {
 
     /* Fixed from clamp(34px, 4vw, 48px) */
     .contact-intro h2 {
-        font-size: 52px;
+        font-size: 42px;
     }
 }
 
@@ -487,14 +487,14 @@ body {
     }
 
     .contact-intro h2 {
-        font-size: 38px;
+        font-size: 42px;
     }
 
     .contact-intro p,
     .form-group label,
     .checkbox-group label,
     .checkbox-item label {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     /* Set grid to vertical flex container for easy ordering */
@@ -552,7 +552,7 @@ body {
     .form-group label,
     .checkbox-group label,
     .checkbox-item label {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .form-row {
@@ -586,7 +586,7 @@ body {
     .form-group label,
     .checkbox-group label,
     .checkbox-item label {
-        font-size: 13.5px;
+        font-size: 13px;
     }
 
     .find-us-header h3 {
