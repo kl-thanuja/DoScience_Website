@@ -314,3 +314,38 @@ document.addEventListener(
 
     }
 );
+/*
+=========================================================
+INSTANT LINK PREFETCHING FOR MPAs
+=========================================================
+*/
+function initPrefetch() {
+    const links = document.querySelectorAll(".ds-navbar-list a");
+    
+    links.forEach(link => {
+        link.addEventListener("mouseenter", () => {
+            const pageId = link.getAttribute("data-page");
+            const page = NAVIGATION_CONFIG[pageId];
+            if (!page || !page.path) return;
+
+            const root = getProjectRoot();
+            const targetUrl = root + page.path;
+
+            // Check if already prefetched to avoid duplicate requests
+            if (!document.querySelector(`link[href="${targetUrl}"]`)) {
+                const prefetchLink = document.createElement("link");
+                prefetchLink.rel = "prefetch";
+                prefetchLink.href = targetUrl;
+                document.head.appendChild(prefetchLink);
+            }
+        }, { once: true });
+    });
+}
+
+// Hook prefetch into the existing DOMContentLoaded listener
+document.addEventListener("DOMContentLoaded", function () {
+    setActiveNavigation();
+    setNavigationLogo();
+    initPrefetch(); // Enables background pre-loading on hover
+});
+
