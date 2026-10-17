@@ -86,7 +86,7 @@ img {
 .hero-section {
   min-height: calc(100vh - 110px);
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns: 1.25fr 1fr;
   gap: 50px;
   padding-top: 45px;
   padding-bottom: 40px;
@@ -224,11 +224,10 @@ img {
   padding: 36px 32px 30px 32px;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  height: 100%;
 }
-
 .card-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 24px;
@@ -241,19 +240,28 @@ img {
   grid-template-columns: 180px 1fr;
   gap: 24px;
   align-items: start;
+  min-height: 240px;
   margin-bottom: 28px;
 }
-
+.card-includes {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
 .product-image-container {
   width: 100%;
+  height: 200px; 
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .product-image {
-  width: 100%;
   max-width: 170px;
+  max-height: 100%;
+  width: auto;
   height: auto;
   object-fit: contain;
 }
@@ -264,7 +272,7 @@ img {
 }
 
 .card-subtitle {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.25;
   color: #000000;
@@ -285,14 +293,14 @@ img {
 }
 
 .stat-number {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 800;
   line-height: 1;
   color: #000000;
 }
 
 .stat-label {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   color: #000000;
 }
@@ -303,15 +311,9 @@ img {
   color: #000000;
 }
 
-.card-includes {
-  margin-top: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 
 .includes-title {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.05em;
   color: #000000;
@@ -330,6 +332,7 @@ img {
   line-height: 1.45;
   color: #000000;
   margin-top: 1px;
+  font-style: italic;
 }
 
 .card-bottom {
@@ -386,7 +389,7 @@ img {
 }
 
 .sb-use-card h3 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 6px;
@@ -469,7 +472,7 @@ img {
 }
 
 .sb-price {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #000000;
   margin-bottom: 10px;
@@ -512,7 +515,7 @@ img {
 }
 
 .sb-info-card h4 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 6px;
@@ -525,45 +528,25 @@ img {
   color: #000000;
 }
 
-.sb-network-strip {
-  margin-top: 24px;
-  padding: 24px 32px;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  background: #fafafa;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  color: #000000;
-}
-
-.sb-network-strip strong {
-  font-size: 18px;
-  line-height: 1.25;
-  color: #000000;
-  flex-shrink: 0;
-  text-align: left;
-}
-
-.sb-network-divider {
-  width: 1px;
-  height: 48px;
-  background: #e5e7eb;
-  flex-shrink: 0;
-}
-
-.sb-network-strip p {
-  font-size: 13px;
-  line-height: 1.45;
-  color: #000000;
+.full-width-banner {
+  width: 100%;
+  margin-top: 3rem;
   text-align: center;
-  flex-grow: 1;      
-  margin: 0;
 }
 
-/* =========================================
-   SECTION 4.5 (SELECT STORY BOX USERS)
-========================================= */
+.banner-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.banner-content .heading-secondary {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.12;
+  color: #000000;
+  letter-spacing: -0.025em;
+}
+
 .sb-users-section {
   padding-top: 50px;
   padding-bottom: 70px;
@@ -577,7 +560,7 @@ img {
 .sb-users-heading {
   align-self: flex-end;
   text-align: center;
-  font-size: 26px;
+  font-size: 14px;
   font-weight: 700;
   color: #000000;
   margin-bottom: 35px;
@@ -601,7 +584,7 @@ img {
 }
 
 .sb-user-stat-item .stat-number {
-  font-size: 36px;
+  font-size: 20px;
   font-weight: 800;
   line-height: 1.1;
   color: #000000;
@@ -609,7 +592,7 @@ img {
 }
 
 .sb-user-stat-label {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.35;
   color: #000000;
   margin-top: 6px;
@@ -641,7 +624,7 @@ img {
 }
 
 .sb-users-col p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.65;
   color: #000000;
   margin-bottom: 2px;
@@ -679,47 +662,6 @@ img {
   color: #000000;
   margin-bottom: 24px;
 }
-.sb-content-fit {
-  display: flex;
-  flex-direction: column;
-  background: #fafafa;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  padding: 22px 24px;
-  margin-bottom: 20px;
-}
-
-.sb-content-fit h3,
-.sb-talk-row h3 {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.25;
-  margin-bottom: 8px;
-  color: #000000;
-}
-
-.sb-fit-description {
-  font-size: 13px;
-  line-height: 1.45;
-  color: #000000;
-  margin-bottom: 12px;
-}
-.sb-fit-list {
-  margin: 0;
-  padding-left: 18px;
-  list-style-type: disc;
-}
-.sb-fit-list li {
-  font-size: 13px;
-  line-height: 1.45;
-  margin-bottom: 8px;
-  color: #000000;
-}
-
-.sb-fit-list li:last-child {
-  margin-bottom: 0;
-}
-
 .sb-talk-row {
   border-top: none;
   background: #fafafa;
@@ -749,28 +691,48 @@ img {
   object-fit: contain;
   border-radius: 12px;
 }
-/* ==========================================
-   SECTION 6: CONTACT
-========================================== */
+ul.sb-intro {
+  padding-left: 18px;
+  list-style-position: outside;
+  margin-bottom: 24px;
+}
+ul.sb-intro li {
+  margin-bottom: 8px;
+}
+ul.sb-intro li:last-child {
+  margin-bottom: 0;
+}
+
 .contact-section {
-  padding: 60px 0;
-  border-top: 1px solid #e5e5e5;
-  background: #fafafa;
+  padding: 60px 0 80px 0;
+  background-color: var(--bg-color);
+  border-top: 1px solid #E5E5E5;
+}
+
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
 }
 
 .contact-block h3 {
+  margin-bottom: 0.75rem;
   font-size: 18px;
   font-weight: 600;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
   color: #000000;
+  line-height: 1.25;
 }
 
 .contact-block p {
   font-size: 13px;
   line-height: 1.45;
-  margin-bottom: 1.5rem;
   color: #000000;
+  text-align: left;
+  margin: 0 0 1.5rem 0;
+  max-width: 620px;
+  display: block;
 }
 
 .contact-details {
@@ -780,11 +742,17 @@ img {
   margin-bottom: 1.5rem;
 }
 
+.contact-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .contact-label {
   font-size: 18px;
   font-weight: 600;
-  line-height: 1.25;
   color: #000000;
+  line-height: 1.25;
 }
 
 .contact-info {
@@ -802,14 +770,30 @@ img {
   text-decoration: underline;
 }
 
-.download-link {
-  display: inline-flex;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: underline;
-  color: #000000;
+.catalogue-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 680px;
 }
 
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.download-link:hover {
+  opacity: 0.7;
+}
 /* =========================================
    RESPONSIVE LAYOUT (TABLET & MOBILE)
 ========================================= */
@@ -873,12 +857,6 @@ img {
   }
 
 
-  .sb-network-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
   .sb-network-divider {
     display: none;
   }
@@ -900,7 +878,6 @@ img {
   .sb-use-card p,
   .sb-option-copy p,
   .sb-info-card p,
-  .sb-network-strip p,
   .sb-intro-5,
   .sb-fit-description,
   .sb-fit-list li,
@@ -917,7 +894,6 @@ img {
   .sb-use-card h3,
   .sb-option-copy h4,
   .sb-info-card h4,
-  .sb-network-strip strong,
   .sb-content-fit h3,
   .sb-talk-row h3,
   .contact-block h3,
