@@ -324,7 +324,7 @@ img {
 }
 
 .includes-item strong {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   color: #000000;
   display: block;
@@ -341,7 +341,7 @@ img {
 .card-bottom {
   margin-top: auto;
   padding-top: 32px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.25;
   color: #000000;
