@@ -226,6 +226,7 @@ img {
   flex-direction: column;
   height: 100%;
 }
+
 .card-title {
   font-size: 20px;
   font-weight: 600;
@@ -243,6 +244,7 @@ img {
   min-height: 240px;
   margin-bottom: 28px;
 }
+
 .card-includes {
   margin-top: 0;
   display: flex;
@@ -250,9 +252,10 @@ img {
   gap: 10px;
   flex-grow: 1;
 }
+
 .product-image-container {
   width: 100%;
-  height: 200px; 
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -560,12 +563,13 @@ img {
 .sb-users-heading {
   align-self: flex-end;
   text-align: center;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
   color: #000000;
   margin-bottom: 35px;
   letter-spacing: -0.01em;
-  width: 600px; 
+  width: 600px;
   max-width: 100%;
 }
 
@@ -647,7 +651,7 @@ img {
 .sb-beyond-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center; 
+  align-items: center;
   gap: 50px;
 }
 
@@ -662,6 +666,7 @@ img {
   color: #000000;
   margin-bottom: 24px;
 }
+
 .sb-talk-row {
   border-top: none;
   background: #fafafa;
@@ -680,25 +685,29 @@ img {
 .sb-beyond-image {
   width: 100%;
   display: flex;
-  justify-content: center; 
-  align-items: center;     
+  justify-content: center;
+  align-items: center;
 }
+
 .sb-beyond-image img {
   width: 100%;
-  max-width: 540px;      
+  max-width: 540px;
   height: auto;
-  max-height: 640px;     
+  max-height: 640px;
   object-fit: contain;
   border-radius: 12px;
 }
+
 ul.sb-intro {
   padding-left: 18px;
   list-style-position: outside;
   margin-bottom: 24px;
 }
+
 ul.sb-intro li {
   margin-bottom: 8px;
 }
+
 ul.sb-intro li:last-child {
   margin-bottom: 0;
 }
@@ -794,10 +803,12 @@ ul.sb-intro li:last-child {
 .download-link:hover {
   opacity: 0.7;
 }
+
 /* =========================================
    RESPONSIVE LAYOUT (TABLET & MOBILE)
 ========================================= */
 @media (max-height: 800px) and (min-width: 1101px) {
+
   /* Smaller screens / lower height viewports constraint */
   .sb-beyond-image img {
     max-height: 440px;
@@ -838,6 +849,7 @@ ul.sb-intro li:last-child {
   .sb-beyond-image img {
     max-width: 500px;
   }
+
   .hero-section,
   .ways-section,
   .sb-inner,
@@ -863,6 +875,7 @@ ul.sb-intro li:last-child {
 }
 
 @media screen and (max-width: 1024px) {
+
   .header-resize-font,
   .hero-content h1,
   .section-heading h2,
@@ -967,6 +980,7 @@ ul.sb-intro li:last-child {
 }
 
 @media screen and (max-width: 768px) {
+
   .header-resize-font,
   .hero-content h1,
   .section-heading h2,
@@ -986,6 +1000,7 @@ ul.sb-intro li:last-child {
 }
 
 @media (max-width: 600px) {
+
   .hero-section,
   .ways-section,
   .sb-inner,
@@ -1009,6 +1024,7 @@ ul.sb-intro li:last-child {
 }
 
 @media screen and (max-width: 480px) {
+
   .header-resize-font,
   .hero-content h1,
   .section-heading h2,
