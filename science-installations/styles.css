@@ -197,14 +197,13 @@ p {
   aspect-ratio: 16 / 9;
   border-radius: 24px;
   overflow: hidden;
-  background-color: #EFEFEF;
 }
 
 .hero-bg-full img,
 .hero-bg-full .cat-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -419,7 +418,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: #000000;
   text-decoration: underline;
@@ -473,7 +472,7 @@ p {
 
   .contact-label,
   .download-link {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .hero-wrapper {
@@ -559,7 +558,7 @@ p {
 
 @media screen and (max-width: 480px) {
   .hero-wrapper {
-    padding: 70px 0 20px 0;
+    padding: 60px 0 20px 0;
   }
 
   h1,
@@ -592,12 +591,12 @@ p {
 
   .contact-label,
   .download-link {
-    font-size: 17px;
+    font-size: 14px;
   }
 
   .accent-line {
-    width: 55px;
+    width: 65px;
     height: 3px;
-    margin: 12px 0;
+    margin: 14px 0;
   }
 }

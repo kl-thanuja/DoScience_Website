@@ -393,7 +393,6 @@ section {
     flex: 1;
 }
 
-/* Fixed from clamp(25px, 3.8vw, 30px) */
 .experience-text-box h3 {
     font-size: 20px;
     font-weight: 600;
@@ -517,7 +516,6 @@ section {
     border-radius: 0;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     object-position: center top;
 }
 
@@ -657,9 +655,9 @@ section {
     display: flex;
     gap: 2.5rem;
     align-items: stretch;
-    padding-bottom: 0;          /* Remove bottom padding */
-    border-bottom: none;        /* Remove bottom border if transferring gap */
-    margin-bottom: 20px;        /* 20px space under tables/columns */
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 20px;
 }
 
 .visit-col {
@@ -732,7 +730,7 @@ section {
     font-size: 11px;
     color: black;
     line-height: 1.45;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 /* Level 3 Font Size */
@@ -793,11 +791,12 @@ section {
 }
 
 .planning-section {
-    padding-top: 20px;          
-    border-top: 1px solid #E5E5E5; 
+    padding: 60px 0 80px 0;
+    border-top: 1px solid #E5E5E5;
     padding-bottom: 3rem;
     margin-bottom: 2.5rem;
 }
+
 /* Level 3 Font Size */
 .planning-section h3 {
     margin-bottom: 0.75rem;
@@ -858,6 +857,7 @@ section {
     font-weight: 600;
     text-decoration: underline;
     color: black;
+    font-size: 14px;
 }
 
 /* Level 2 Font Size */
@@ -867,13 +867,13 @@ section {
     color: black;
     text-align: left;
     margin-top: 0;
-    margin-bottom: 20px;        /* Exactly 20px space after paragraph */
+    margin-bottom: 60px;
     max-width: 620px;
     display: block;
 }
 
 /* ==========================================================================
-   RESPONSIVE MEDIA QUERIES (FIXED PIXELS REPLACING CLAMPS)
+   RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 
 /* Tablets and small laptops (max-width: 1024px) */
@@ -937,6 +937,10 @@ section {
         min-height: auto;
     }
 
+    #section-4 {
+        padding: 0;
+    }
+
     .specific-section {
         padding: 40px 5% 20px !important;
     }
@@ -989,7 +993,9 @@ section {
 
     .hero-bg-full {
         position: relative;
-        width: 100%;
+        width: calc(100% + 10vw);
+        margin-left: -5vw;
+        margin-right: -5vw;
         height: 250px;
         order: 1;
     }
@@ -1014,9 +1020,10 @@ section {
     }
 
     /* --- SECTION 2: WHY DISCOVERY MATTERS --- */
-    #section-2{
-        padding: 40px 5% 20px !important
+    #section-2 {
+        padding: 40px 5% 20px !important;
     }
+
     .section2-grid {
         display: flex;
         flex-direction: column;
@@ -1030,7 +1037,9 @@ section {
 
     .section2-image-wrapper {
         order: 2;
-        width: 100%;
+        width: calc(100% + 10vw);
+        margin-left: -5vw;
+        margin-right: -5vw;
         height: 280px;
         min-height: 280px;
         border-radius: 0;
@@ -1046,7 +1055,7 @@ section {
 
     /* --- SECTION 3: WHAT YOU'LL EXPERIENCE --- */
     #section-3 {
-        padding: 40px 5% 20px !important
+        padding: 40px 5% 20px !important;
     }
 
     .experience-header {
@@ -1065,11 +1074,11 @@ section {
     .experience-row:not(.reverse) .experience-img-box,
     .experience-row.reverse .experience-img-box {
         order: 1;
-        width: 100%;
+        width: calc(100% + 10vw);
         height: 250px;
         min-height: 250px;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: -5vw;
+        margin-right: -5vw;
         border-radius: 0;
         display: block;
     }
@@ -1116,12 +1125,14 @@ section {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        padding: 40px 5% 20px !important
+        padding: 40px 5% 20px !important;
     }
 
     .section4-card-img {
         order: 1;
-        width: 100%;
+        width: calc(100% + 10vw);
+        margin-left: -5vw;
+        margin-right: -5vw;
         height: 280px;
         min-height: 280px;
         border-radius: 0;
@@ -1135,7 +1146,7 @@ section {
         border-radius: 0;
     }
 
-    .section4-top>div:first-child {
+    .section4-top > div:first-child {
         order: 2;
         width: 100%;
     }
@@ -1180,8 +1191,8 @@ section {
     }
 
     .heading-secondary {
-        font-size: 24px;
-        line-height: 1.25;
+        font-size: 27px;
+        line-height: 1.2;
     }
 
     .visit-header {

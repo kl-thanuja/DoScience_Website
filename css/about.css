@@ -134,22 +134,28 @@ body {
         font-size: 13px;
     }
 }
-
+@media (max-width: 1024px) {
+    .about-section h2,
+    .about-section-secondary h2 {
+        font-size: 42px;
+    }
+    
+}
 @media (max-width: 768px) {
     .desktop-break {
         display: inline;
     }
-    .about-container{
-        padding: 100px 5% 40px 5%;
+    .about-container {
+        padding: 100px 5% 20px 5% !important;
     }
     .about-section h2,
     .about-section-secondary h2 {
-        font-size: 34px;
+        font-size: 36px;
     }
 
     .about-section p,
     .about-item {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .about-content {
@@ -161,13 +167,18 @@ body {
     .desktop-break {
         display: inline;
     }
+
+    .about-container {
+        padding: 100px 5% 20px 5% !important;
+    }
+    
     .about-section h2,
     .about-section-secondary h2 {
-        font-size: 28px
+        font-size: 27px;
     }
 
     .about-section p,
     .about-item {
-        font-size: 13.5px;
+        font-size: 13px;
     }
 }

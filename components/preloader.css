@@ -1,0 +1,48 @@
+/* =========================================================
+   PRELOADER STYLES
+========================================================= */
+
+#ds-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(250, 250, 250, 0.85);
+    backdrop-filter: blur(8px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    box-sizing: border-box;
+}
+
+#ds-preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Slow blinking logo animation */
+.ds-preloader-logo {
+    width: auto;
+    height: 60px;
+    animation: slowBlink 1.8s ease-in-out infinite;
+}
+
+@keyframes slowBlink {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .ds-preloader-logo {
+        width: auto;
+    }
+}

@@ -34,7 +34,7 @@ body::-webkit-scrollbar {
     max-width: 100%;
     padding: 28px 5% 22px;
     box-sizing: border-box;
-     background: #fafafa;
+    background: #fafafa;
 }
 
 .home-hero-content {
@@ -67,7 +67,7 @@ body::-webkit-scrollbar {
     color: black;
     text-align: left;
     margin: 0;
-    max-width:auto;
+    max-width: auto;
     display: block;
 }
 
@@ -80,7 +80,7 @@ body::-webkit-scrollbar {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding-top:25px;
+    padding-top: 25px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background: #fafafa;
@@ -219,7 +219,7 @@ footer {
 }
 .footer-links a {
     text-decoration: none;
-    color: #ffffff; /* Base color for dark footer; change to black if background is light */
+    color: #ffffff;
     font-size: 0.8rem;
     font-weight: 525;
     letter-spacing: -0.01em;
@@ -247,6 +247,7 @@ footer {
 .footer-links a.active-link::after {
     width: 100%;
 }
+
 /* =========================================================
    LARGE DESKTOP (1400px and above)
 ========================================================= */
@@ -434,9 +435,9 @@ footer {
     }
 
     .home-divider {
-        width: 55px;
+        width: 65px;
         height: 3px;
-        margin: 12px 0;
+        margin: 14px 0;
     }
 
     /* Level 2 */
@@ -506,7 +507,7 @@ footer {
     }
 
     .home-hero {
-        padding: 20px 20px 16px;
+        padding: 30px 20px 16px;
     }
 
     /* Level 1 */
@@ -518,8 +519,9 @@ footer {
     }
 
     .home-divider {
-        width: 50px;
-        margin: 10px 0;
+        width: 65px;
+        height: 3px;
+        margin: 14px 0;
     }
 
     /* Level 2 */
