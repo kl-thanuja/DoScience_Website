@@ -86,7 +86,7 @@ img {
 .hero-section {
   min-height: calc(100vh - 110px);
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 50px;
   padding-top: 45px;
   padding-bottom: 40px;
@@ -214,138 +214,212 @@ img {
 .product-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  column-gap: 32px;
+  row-gap: 0;
+  /* title | image + info | includes | bottom line */
+  grid-template-rows: auto auto 1fr auto;
 }
 
+/* ---------- PRODUCT CARDS (flyer layout) ----------
+   Everything inside the card is sized in "flyer units" (--u), where the
+   card's content width = 790 flyer px, so the layout scales exactly
+   like the flyer at any card width. */
 .product-card {
+  --u: max(calc(100cqw / 790), 0.42px);
+  container-type: inline-size;
   background-color: #fafafa;
   border: 1px solid #d1d5db;
   border-radius: 12px;
-  padding: 36px 32px 30px 32px;
-  display: flex;
-  flex-direction: column;
+  padding: 32px 40px 36px 40px;
+  display: grid;
+  grid-template-columns: 365fr 425fr;
+  grid-template-rows: auto auto 1fr auto;
+  align-items: start;
   height: 100%;
 }
 
-.card-title {
+/* Title */
+.product-card .card-title {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  text-align: center;
   font-size: 20px;
-  font-weight: 600;
-  line-height: 1.25;
-  margin-bottom: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 calc(var(--u) * 25) 0;
   color: #000000;
-  letter-spacing: -0.025em;
 }
 
-.card-top-grid {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 24px;
-  align-items: start;
-  min-height: 240px;
-  margin-bottom: 28px;
-}
 
-.card-includes {
-  margin-top: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex-grow: 1;
-}
-
-.product-image-container {
+/* Image (left column) */
+.product-card .product-image-container {
+  grid-column: 1;
+  grid-row: 2;
   width: 100%;
-  height: 200px;
+  height: calc(var(--u) * 800);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.product-image {
-  max-width: 170px;
-  max-height: 100%;
-  width: auto;
+.product-card .product-image-container.kids-image {
   height: auto;
+}
+
+.product-card .product-image {
+  max-width: 100%;
+  width: auto;
+  height: 100%;
   object-fit: contain;
 }
 
-.card-top-info {
+/* Info (right column) */
+.product-card .card-top-info {
+  grid-column: 2;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
+  padding-left: calc(var(--u) * 30);
+  margin-top: calc(var(--u) * 180);
 }
 
-.card-subtitle {
-  font-size: 14px;
-  font-weight: 600;
+.product-card .card-subtitle {
+  font-size:14px;
+  font-weight: 700;
   line-height: 1.25;
   color: #000000;
-  margin-bottom: 10px;
+  margin: 0 0 calc(var(--u) * 19) 0;
 }
 
-.card-lead {
+.product-card .bold-subtitle {
+  font-weight: 600;
+}
+
+.product-card .card-lead {
   font-size: 13px;
-  line-height: 1.45;
-  color: #000000;
-  margin-bottom: 20px;
+  line-height: 1.3;
+  color:black;
+  margin: 0 0 calc(var(--u) * 72) 0;
 }
 
-.card-stat {
+
+.product-card .card-stat {
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
+  margin-bottom: calc(var(--u) * 35);
 }
 
-.stat-number {
-  font-size: 28px;
-  font-weight: 800;
+.product-card .stat-number {
+  font-size: 20px;
+  font-weight: 700;
   line-height: 1;
-  color: #000000;
+  letter-spacing: -0.01em;
 }
 
-.stat-label {
-  font-size: 14px;
-  font-weight: 700;
-  color: #000000;
-}
-
-.card-languages {
-  font-size: 13px;
-  font-weight: 700;
-  color: #000000;
-}
-
-
-.includes-title {
+.product-card .stat-label {
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  color: #000000;
-  margin-bottom: 4px;
+  line-height: 1;
+  margin-top: calc(var(--u) * 7);
 }
 
-.includes-item strong {
+.product-card .card-languages {
   font-size: 13px;
   font-weight: 700;
+  line-height: 1.3;
   color: #000000;
-  display: block;
 }
 
-.includes-item p {
-  font-size: 13px;
-  line-height: 1.45;
-  color: #000000;
-  margin-top: 1px;
-  font-style: italic;
+/* Includes */
+.product-card .card-includes {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  margin-top: calc(var(--u) * 40);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--u) * 16);
+  align-self: start;
 }
 
-.card-bottom {
-  margin-top: auto;
-  padding-top: 32px;
+.product-card .includes-title {
   font-size: 14px;
+  font-weight: 600;
+  line-height: calc(var(--u) * 31);
+  letter-spacing: 0;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.product-card .includes-item strong {
+  display: block;
+  font-size:13px;
+  font-weight: 600;
+  line-height: calc(var(--u) * 31);
+  color: #2a2a2a;
+}
+
+.product-card .includes-item p {
+  font-size:13px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: calc(var(--u) * 31);
+  color: #444444;
+  margin: 0;
+}
+
+/* Bottom line */
+.product-card .card-bottom {
+  grid-column: 1 / -1;
+  grid-row: 4;
+  align-self: end;
+  margin-top: 0;
+  padding-top: calc(var(--u) * 34);
+  font-size: 13px;
   font-weight: 600;
   line-height: 1.25;
-  color: #000000;
+  color: #1f1f1f;
   text-align: left;
+}
+
+/* Both cards share the same 4 rows, so "INCLUDES" and the bottom
+   line sit on the same horizontal line in both cards */
+@supports (grid-template-rows: subgrid) {
+  .product-card {
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    height: auto;
+  }
+}
+
+/* ---------- STORY BOX KIDS: image on top, text below (as in flyer) ---------- */
+.product-card:nth-child(2) .product-image-container.kids-image {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  height: calc(var(--u) * 275);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.product-card:nth-child(2) .card-top-info {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  padding-left: 0;
+  margin-top: calc(var(--u) * 295);
+}
+
+.product-card:nth-child(2) .card-subtitle {
+  margin-bottom: calc(var(--u) * 17);
+}
+
+.product-card:nth-child(2) .card-lead {
+  max-width: calc(var(--u) * 650);
+  margin-bottom: calc(var(--u) * 114);
+}
+
+.product-card:nth-child(2) .card-stat,
+.product-card:nth-child(2) .card-languages {
+  padding-left: calc(var(--u) * 22);
 }
 
 /* =========================================
@@ -885,8 +959,6 @@ ul.sb-intro li:last-child {
 
   .hero-description,
   .hero-message p,
-  .card-lead,
-  .includes-item p,
   .sb-intro,
   .sb-use-card p,
   .sb-option-copy p,
@@ -902,8 +974,6 @@ ul.sb-intro li:last-child {
     font-size: 13px;
   }
 
-  .card-title,
-  .card-subtitle,
   .sb-use-card h3,
   .sb-option-copy h4,
   .sb-info-card h4,
@@ -965,7 +1035,13 @@ ul.sb-intro li:last-child {
 
   .product-cards {
     grid-template-columns: 1fr;
+    grid-template-rows: none;
     gap: 28px;
+  }
+
+  .product-card {
+    grid-row: auto;
+    grid-template-rows: auto auto 1fr auto;
   }
 
   .sb-use-grid {
@@ -1050,11 +1126,6 @@ ul.sb-intro li:last-child {
   .card-top-grid {
     grid-template-columns: 1fr;
     gap: 16px;
-  }
-
-  .product-image-container {
-    max-width: 180px;
-    margin: 0 auto;
   }
 
   .accent-line {
