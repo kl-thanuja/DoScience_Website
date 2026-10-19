@@ -624,6 +624,9 @@ img {
   letter-spacing: -0.025em;
 }
 
+/* =========================================
+   SECTION 4.5: SELECT STORY BOX USERS
+========================================= */
 .sb-users-section {
   padding-top: 50px;
   padding-bottom: 70px;
@@ -634,8 +637,23 @@ img {
   flex-direction: column;
 }
 
+.sb-users-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+/* Right column wrapper holding both heading and list centered together */
+.sb-users-right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 .sb-users-heading {
-  align-self: flex-end;
   text-align: center;
   font-size: 28px;
   font-weight: 500;
@@ -643,15 +661,14 @@ img {
   color: #000000;
   margin-bottom: 35px;
   letter-spacing: -0.01em;
-  width: 600px;
-  max-width: 100%;
 }
 
-.sb-users-container {
+/* Tightly grouped stat boxes on the left */
+.sb-users-left-group {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  gap: 20px;
+  flex-shrink: 0;
 }
 
 .sb-user-stat-item {
@@ -691,13 +708,14 @@ img {
   width: 1.5px;
   height: 120px;
   background: #111827;
-  margin: 0 20px;
+  margin: 0;
 }
 
 .sb-users-list-grid {
   display: flex;
   gap: 50px;
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
@@ -901,11 +919,7 @@ ul.sb-intro li:last-child {
 
   .sb-users-list-grid {
     gap: 30px;
-  }
-
-  .sb-users-heading {
     width: auto;
-    align-self: center;
   }
 }
 
@@ -994,11 +1008,6 @@ ul.sb-intro li:last-child {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-  }
-
-  .sb-users-heading {
-    align-self: center;
-    text-align: center;
   }
 
   .sb-user-stat-item {
