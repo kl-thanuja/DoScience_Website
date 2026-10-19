@@ -216,14 +216,9 @@ img {
   grid-template-columns: 1fr 1fr;
   column-gap: 32px;
   row-gap: 0;
-  /* title | image + info | includes | bottom line */
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto 1fr auto auto;
 }
 
-/* ---------- PRODUCT CARDS (flyer layout) ----------
-   Everything inside the card is sized in "flyer units" (--u), where the
-   card's content width = 790 flyer px, so the layout scales exactly
-   like the flyer at any card width. */
 .product-card {
   --u: max(calc(100cqw / 790), 0.42px);
   container-type: inline-size;
@@ -233,12 +228,11 @@ img {
   padding: 32px 40px 36px 40px;
   display: grid;
   grid-template-columns: 365fr 425fr;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto 1fr auto auto;
   align-items: start;
   height: 100%;
 }
 
-/* Title */
 .product-card .card-title {
   grid-column: 1 / -1;
   grid-row: 1;
@@ -251,8 +245,6 @@ img {
   color: #000000;
 }
 
-
-/* Image (left column) */
 .product-card .product-image-container {
   grid-column: 1;
   grid-row: 2;
@@ -274,7 +266,6 @@ img {
   object-fit: contain;
 }
 
-/* Info (right column) */
 .product-card .card-top-info {
   grid-column: 2;
   grid-row: 2;
@@ -285,7 +276,7 @@ img {
 }
 
 .product-card .card-subtitle {
-  font-size:14px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.25;
   color: #000000;
@@ -299,10 +290,9 @@ img {
 .product-card .card-lead {
   font-size: 13px;
   line-height: 1.3;
-  color:black;
+  color: black;
   margin: 0 0 calc(var(--u) * 72) 0;
 }
-
 
 .product-card .card-stat {
   display: flex;
@@ -331,7 +321,6 @@ img {
   color: #000000;
 }
 
-/* Includes */
 .product-card .card-includes {
   grid-column: 1 / -1;
   grid-row: 3;
@@ -353,14 +342,14 @@ img {
 
 .product-card .includes-item strong {
   display: block;
-  font-size:13px;
+  font-size: 13px;
   font-weight: 600;
   line-height: calc(var(--u) * 31);
   color: #2a2a2a;
 }
 
 .product-card .includes-item p {
-  font-size:13px;
+  font-size: 13px;
   font-weight: 400;
   font-style: italic;
   line-height: calc(var(--u) * 31);
@@ -368,7 +357,6 @@ img {
   margin: 0;
 }
 
-/* Bottom line */
 .product-card .card-bottom {
   grid-column: 1 / -1;
   grid-row: 4;
@@ -382,8 +370,6 @@ img {
   text-align: left;
 }
 
-/* Both cards share the same 4 rows, so "INCLUDES" and the bottom
-   line sit on the same horizontal line in both cards */
 @supports (grid-template-rows: subgrid) {
   .product-card {
     grid-row: span 4;
@@ -392,7 +378,6 @@ img {
   }
 }
 
-/* ---------- STORY BOX KIDS: image on top, text below (as in flyer) ---------- */
 .product-card:nth-child(2) .product-image-container.kids-image {
   grid-column: 1 / -1;
   grid-row: 2;
@@ -414,12 +399,16 @@ img {
 
 .product-card:nth-child(2) .card-lead {
   max-width: calc(var(--u) * 650);
-  margin-bottom: calc(var(--u) * 114);
+  margin-bottom: calc(var(--u) * 72);
 }
 
 .product-card:nth-child(2) .card-stat,
 .product-card:nth-child(2) .card-languages {
-  padding-left: calc(var(--u) * 22);
+  padding-left: 0;
+}
+
+.product-card:nth-child(2) .card-includes {
+  margin-top: calc(var(--u) * 195);
 }
 
 /* =========================================
@@ -645,12 +634,11 @@ img {
   width: 100%;
 }
 
-/* Right column wrapper holding both heading and list centered together */
-.sb-users-right-column {
+.sb-users-right-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-shrink: 0;
+  justify-content: center;
 }
 
 .sb-users-heading {
@@ -659,11 +647,10 @@ img {
   font-weight: 500;
   line-height: 1.2;
   color: #000000;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
   letter-spacing: -0.01em;
 }
 
-/* Tightly grouped stat boxes on the left */
 .sb-users-left-group {
   display: flex;
   align-items: center;
@@ -714,7 +701,7 @@ img {
 .sb-users-list-grid {
   display: flex;
   gap: 50px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-shrink: 0;
 }
@@ -900,8 +887,6 @@ ul.sb-intro li:last-child {
    RESPONSIVE LAYOUT (TABLET & MOBILE)
 ========================================= */
 @media (max-height: 800px) and (min-width: 1101px) {
-
-  /* Smaller screens / lower height viewports constraint */
   .sb-beyond-image img {
     max-height: 440px;
   }
@@ -956,14 +941,12 @@ ul.sb-intro li:last-child {
     gap: 16px;
   }
 
-
   .sb-network-divider {
     display: none;
   }
 }
 
 @media screen and (max-width: 1024px) {
-
   .header-resize-font,
   .hero-content h1,
   .section-heading h2,
@@ -1007,7 +990,29 @@ ul.sb-intro li:last-child {
   .sb-users-container {
     flex-direction: column;
     align-items: center;
+    gap: 24px;
+  }
+
+  .sb-users-right-panel {
+    display: contents;
+  }
+
+  .sb-users-left-group {
+    order: 1;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
+  }
+
+  .sb-users-heading {
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  .sb-users-list-grid {
+    order: 3;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .sb-user-stat-item {
@@ -1015,20 +1020,9 @@ ul.sb-intro li:last-child {
     text-align: center;
   }
 
-  .sb-users-divider.mini-divider {
-    width: 60px;
-    height: 1px;
-  }
-
+  .sb-users-divider.mini-divider,
   .sb-users-divider.main-divider {
-    width: 100px;
-    height: 1.5px;
-    margin: 10px 0;
-  }
-
-  .sb-users-list-grid {
-    flex-direction: column;
-    gap: 12px;
+    display: none;
   }
 
   .sb-users-col p {
@@ -1044,7 +1038,7 @@ ul.sb-intro li:last-child {
 
   .product-cards {
     grid-template-columns: 1fr;
-    grid-template-rows: none;
+    grid-template-rows: auto;
     gap: 28px;
   }
 
@@ -1065,7 +1059,6 @@ ul.sb-intro li:last-child {
 }
 
 @media screen and (max-width: 768px) {
-
   .header-resize-font,
   .hero-content h1,
   .section-heading h2,
@@ -1085,7 +1078,6 @@ ul.sb-intro li:last-child {
 }
 
 @media (max-width: 600px) {
-
   .hero-section,
   .ways-section,
   .sb-inner,
@@ -1109,7 +1101,6 @@ ul.sb-intro li:last-child {
 }
 
 @media screen and (max-width: 480px) {
-
   .header-resize-font,
   .hero-content h1,
   .section-heading h2,
@@ -1141,5 +1132,16 @@ ul.sb-intro li:last-child {
     width: 65px;
     height: 3px;
     margin: 14px 0;
+  }
+}
+
+/* TASK 2 FIX: Disable break statements for mobile screens */
+@media (max-width: 850px) {
+  .section-heading h2 br,
+  .sb-heading br,
+  .sb-intro br,
+  .banner-content br,
+  .hero-content h1 br {
+    display: none;
   }
 }
