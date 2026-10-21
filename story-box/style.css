@@ -872,7 +872,7 @@ ul.sb-intro li:last-child {
   gap: 8px;
   font-size: 14px;
   font-weight: 600;
-  color: #000000;
+  color: #0000FF;
   text-decoration: underline;
   text-underline-offset: 4px;
   transition: opacity 0.2s ease;

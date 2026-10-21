@@ -877,7 +877,8 @@ section {
     gap: 8px;
     font-weight: 600;
     text-decoration: underline;
-    color: black;
+    /* color: black; */
+    color: #0000FF;
     font-size: 14px;
 }
 
@@ -961,7 +962,77 @@ section {
         gap: 2rem;
     }
 }
+@media screen and (max-width: 768.98px) {
+    :root {
+        --section-gap: 60px;
+    }
 
+    section {
+        min-height: auto;
+    }
+    .hero-bg-full {
+        position: relative;
+        width: calc(100% + 10vw);
+        margin-left: -5vw;
+        margin-right: -5vw;
+        aspect-ratio: 4 / 3; /* Matches the clean proportion of your other images */
+        height: auto !important;
+        order: 1;
+    }
+    .hero-bg-image {
+        width: 100% !important;
+        height: 100% !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        border-radius: 0;
+    }
+    /* --- SECTION 2 IMAGE FIX --- */
+    .section2-image-wrapper {
+        order: 2;
+        width: calc(100% + 10vw);
+        margin-left: -5vw;
+        margin-right: -5vw;
+        aspect-ratio: 4 / 3;
+        height: auto !important;
+        display: block;
+        position: relative;
+    }
+
+    .image-container {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        inset: 0;
+        border-radius: 0;
+    }
+
+    .image-container .img-placeholder {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block;
+    }
+
+    /* --- EXPERIENCE CARDS & SECTION 4 IMAGE FIX --- */
+    .experience-img-box,
+    .section4-card-img,
+    .banner-img-container {
+        width: calc(100% + 10vw) !important;
+        margin-left: -5vw !important;
+        margin-right: -5vw !important;
+        aspect-ratio: 4 / 3 !important;
+        height: auto !important;
+        min-height: unset !important;
+    }
+
+    .experience-img-box .img-placeholder,
+    .section4-card-img .img-placeholder,
+    .banner-img-container .img-placeholder {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+}
 /* Mobile & Tablets (max-width: 768px) */
 @media screen and (max-width: 768px) {
     :root {
@@ -1075,19 +1146,26 @@ section {
         width: calc(100% + 10vw);
         margin-left: -5vw;
         margin-right: -5vw;
-        height: auto;
         aspect-ratio: 4 / 3;
-        border-radius: 0;
+        height: auto; /* Let aspect-ratio dictate height */
+        display: block;
+        position: relative;
     }
 
     .image-container,
-    .image-container .img-placeholder,
     .section2-image-overlay {
         width: 100%;
         height: 100%;
+        position: absolute; /* Lock it to fill the aspect-ratio wrapper */
+        inset: 0;
         border-radius: 0;
     }
-
+    .image-container .img-placeholder {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
     /* --- SECTION 3: WHAT YOU'LL EXPERIENCE --- */
     .experience-header {
         margin-bottom: 1.2rem;
