@@ -27,7 +27,7 @@ const NAVIGATION_CONFIG = {
 
     "story-box": {
         path: "story-box/index.html",
-        logo: "images/Logo-transparent.png"
+        logo: "images/Story_box-transparent-background.png"
     },
 
     "installations": {
@@ -217,6 +217,7 @@ function setActiveNavigation() {
         }
     });
 }
+
 /*
 =========================================================
 SET CORRECT LOGO
@@ -225,6 +226,8 @@ SET CORRECT LOGO
 
 function setNavigationLogo() {
     const logo = document.getElementById("header-logo");
+    const tagline = document.getElementById("header-tagline");
+    const logoWrapper = document.getElementById("ds-logo-wrapper");
     if (!logo) return;
 
     const currentPath = window.location.pathname.replace(/\\/g, "/").toLowerCase();
@@ -250,6 +253,17 @@ function setNavigationLogo() {
 
     const root = getProjectRoot();
     logo.src = root + page.logo;
+
+    // Apply Story Box specific layout and tagline exclusively
+    if (tagline && logoWrapper) {
+        if (currentPage === "story-box") {
+            logoWrapper.classList.add("is-story-box");
+            tagline.textContent = "An initiative of Library Solutions";
+        } else {
+            logoWrapper.classList.remove("is-story-box");
+            tagline.textContent = "";
+        }
+    }
 }
 
 /*
@@ -267,7 +281,7 @@ document.addEventListener(
 
         const hamburger =
             document.querySelector(
-                ".hamburger"
+                ".ds-navbar-hamburger"
             );
 
         const navList =
@@ -306,11 +320,101 @@ INITIALIZE NAVIGATION
 
 document.addEventListener(
     "DOMContentLoaded",
-    function () {
+    () => {
+        const navbarContainer = document.getElementById("navbar-container");
+
+        if (!navbarContainer) return;
+
+        navbarContainer.innerHTML = `
+            <header class="ds-navbar">
+
+                <div class="ds-navbar-logo" onclick="navigateTo('home')">
+                    <div id="ds-logo-wrapper" class="ds-logo-wrapper">
+                        <img id="header-logo" src="" alt="DO-SCI Science Centre">
+                        <span id="header-tagline" class="ds-tagline"></span>
+                    </div>
+                </div>
+
+                <nav class="ds-navbar-menu">
+                    <ul class="ds-navbar-list" id="nav-list">
+
+                        <li>
+                            <a href="javascript:void(0)"
+                               data-page="home"
+                               onclick="navigateTo('home')">
+                               Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)"
+                               data-page="science-center"
+                               onclick="navigateTo('science-center')">
+                               Science Centre
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)"
+                               data-page="story-box"
+                               onclick="navigateTo('story-box')">
+                               Story Box
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)"
+                               data-page="installations"
+                               onclick="navigateTo('installations')">
+                               Science Installations
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)"
+                               data-page="rolling-ball"
+                               onclick="navigateTo('rolling-ball')">
+                               Rolling Ball Sculptures
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)"
+                               data-page="wind-sculptures"
+                               onclick="navigateTo('wind-sculptures')">
+                               Wind Sculptures
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)"
+                               data-page="about"
+                               onclick="navigateTo('about')">
+                               About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)"
+                               data-page="contact"
+                               onclick="navigateTo('contact')">
+                               Contact
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="ds-navbar-hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </header>
+        `;
 
         setActiveNavigation();
-
         setNavigationLogo();
-
     }
 );

@@ -84,13 +84,12 @@ img {
    HERO (SECTION 1)
 ========================================= */
 .hero-section {
-  min-height: calc(100vh - 110px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  padding-top: 45px;
-  padding-bottom: 40px;
-  align-items: center;
+  padding-top: 108px;
+  padding-bottom: 60px;
+  align-items: start;
 }
 
 .accent-line {
@@ -947,6 +946,7 @@ ul.sb-intro li:last-child {
 }
 
 @media screen and (max-width: 1024px) {
+
   .header-resize-font,
   .hero-content h1,
   .section-heading h2,
@@ -1034,6 +1034,7 @@ ul.sb-intro li:last-child {
   .hero-section {
     grid-template-columns: 1fr;
     gap: 30px;
+    padding-top: 90px;
   }
 
   .product-cards {
@@ -1059,6 +1060,7 @@ ul.sb-intro li:last-child {
 }
 
 @media screen and (max-width: 768px) {
+
   .header-resize-font,
   .hero-content h1,
   .section-heading h2,
@@ -1078,6 +1080,10 @@ ul.sb-intro li:last-child {
 }
 
 @media (max-width: 600px) {
+  .hero-section {
+    padding-top: 80px;
+  }
+
   .hero-section,
   .ways-section,
   .sb-inner,
@@ -1101,8 +1107,17 @@ ul.sb-intro li:last-child {
 }
 
 @media screen and (max-width: 480px) {
+  .hero-section {
+    padding-top: 108px;
+  }
+
+  .hero-content h1 {
+    font-size: 27px;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+  }
+
   .header-resize-font,
-  .hero-content h1,
   .section-heading h2,
   .sb-heading {
     font-size: 27px;
@@ -1135,8 +1150,8 @@ ul.sb-intro li:last-child {
   }
 }
 
-/* TASK 2 FIX: Disable break statements for mobile screens */
 @media (max-width: 850px) {
+
   .section-heading h2 br,
   .sb-heading br,
   .sb-intro br,

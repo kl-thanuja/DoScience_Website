@@ -38,8 +38,41 @@
 }
 
 .ds-navbar-logo img{
-    height:60px;
+    height: 60px;
     width: auto;
+}
+
+.ds-logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.ds-tagline {
+    display: none;
+}
+
+
+/* =========================================================
+   STORY BOX PAGE ONLY OVERRIDES
+========================================================= */
+
+.ds-logo-wrapper.is-story-box img {
+    height: 34px; /* Optimized height to match proportions nicely */
+    width: auto;
+    object-fit: contain;
+}
+
+.ds-logo-wrapper.is-story-box .ds-tagline {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333333;
+    letter-spacing: -0.01em;
+    margin-top: 3px;
+    white-space: nowrap;
 }
 
 
@@ -227,6 +260,14 @@
 
     .ds-navbar-logo img {
         height: 50px;
+    }
+
+    .ds-logo-wrapper.is-story-box img {
+        height: 28px;
+    }
+
+    .ds-logo-wrapper.is-story-box .ds-tagline {
+        font-size: 12px;
     }
 
     .ds-navbar-hamburger span {
