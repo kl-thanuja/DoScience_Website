@@ -903,7 +903,9 @@ section {
     :root {
         --section-gap: 80px;
     }
-
+    .hero-tagline{
+        margin-bottom: 14px;
+    }
     .heading-primary,
     .heading-secondary,
     .visit-header {
@@ -968,6 +970,9 @@ section {
 
     section {
         min-height: auto;
+    }
+    .hero-tagline{
+        margin-bottom: 14px;
     }
 
     /* Section 4 gets its gap from .section4-top on mobile (image bleeds edge to edge) */
@@ -1085,7 +1090,7 @@ section {
 
     /* --- SECTION 3: WHAT YOU'LL EXPERIENCE --- */
     .experience-header {
-        margin-bottom: 2rem;
+        margin-bottom: 1.2rem;
     }
 
     .experience-row,
@@ -1210,7 +1215,9 @@ section {
         font-size: 27px;
         line-height: 1.2;
     }
-
+    .hero-tagline{
+        margin-bottom: 14px;
+    }
     .heading-secondary {
         font-size: 27px;
         line-height: 1.2;
