@@ -521,7 +521,7 @@ section {
     flex: 1;
     width: calc(100% + 5.5vw);
     max-width: 520px;
-    margin-left: -5.5vw;
+    margin-left: -1.0vw;
     margin-right: 0;
     aspect-ratio: 4 / 3;
     height: auto;
@@ -946,6 +946,8 @@ section {
     section {
         min-height: auto;
     }
+
+    /* Section 1 Image */
     .hero-bg-full {
         position: relative;
         width: calc(100% + 10vw);
@@ -955,6 +957,7 @@ section {
         height: auto !important;
         order: 1;
     }
+
     .hero-bg-image {
         width: 100% !important;
         height: 100% !important;
@@ -963,23 +966,30 @@ section {
         border-radius: 0;
     }
 
+    /* Section 2 Image Placement & Aspect-Ratio Fix */
+    .section2-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
     .section2-image-wrapper {
-        order: 2;
+        order: -1;
         width: calc(100% + 10vw);
         margin-left: -5vw;
         margin-right: -5vw;
-        aspect-ratio: 4 / 3;
+        max-width: none !important;
+        aspect-ratio: 4 / 3 !important;
         height: auto !important;
-        display: block;
         position: relative;
+        display: block;
     }
 
     .image-container {
         width: 100% !important;
         height: 100% !important;
-        position: absolute;
-        inset: 0;
+        position: relative !important; /* Fixed: prevents absolute height collapsing */
         border-radius: 0;
+        overflow: hidden;
     }
 
     .image-container .img-placeholder {
@@ -989,8 +999,26 @@ section {
         display: block;
     }
 
+    /* Section 4 Image Placement & Aspect-Ratio Fix */
+    .section4-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section4-card-img {
+        order: -1;
+        width: calc(100% + 10vw) !important;
+        margin-left: -5vw !important;
+        margin-right: -5vw !important;
+        max-width: none !important;
+        aspect-ratio: 4 / 3 !important;
+        height: auto !important;
+        min-height: unset !important;
+        position: relative;
+    }
+
+    /* Section 3 & Banner Images */
     .experience-img-box,
-    .section4-card-img,
     .banner-img-container {
         width: calc(100% + 10vw) !important;
         margin-left: -5vw !important;
@@ -1008,7 +1036,6 @@ section {
         object-fit: cover !important;
     }
 }
-
 @media screen and (max-width: 768px) {
     :root {
         --section-gap: 60px;
