@@ -270,7 +270,7 @@ section {
 
 .section2-grid {
     display: grid;
-    grid-template-columns: 1fr 1.35fr;
+    grid-template-columns: 1.2fr 1fr; /* Adjusted column ratio to give more balanced width for scaled image */
     align-items: flex-start;
     gap: 3rem;
     width: 100%;
@@ -303,10 +303,12 @@ section {
     overflow: hidden;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start; /* Aligns the scaled image neatly inside its grid space */
     width: 100%;
-    aspect-ratio: 4 / 3;
+    max-width: 520px; /* Constrains the maximum width to match Section 4's reduced size */
+    aspect-ratio: 4 / 3; /* Maintains the photo's original ratio */
 }
+
 
 .image-container {
     height: 100%;
@@ -516,8 +518,9 @@ section {
 }
 
 .section4-card-img {
-    flex: 1.2;
+    flex: 1;
     width: calc(100% + 5.5vw);
+    max-width: 520px;
     margin-left: -5.5vw;
     margin-right: 0;
     aspect-ratio: 4 / 3;
