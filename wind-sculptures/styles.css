@@ -157,22 +157,23 @@ p {
 .hero-section {
   background-color: #fafafa;
   padding: 0;
-  min-height: 100vh;
+  min-height: auto;
   position: relative;
   width: 100%;
-  display: flex;
-  align-items: center;
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 32px;
 }
 
 .hero-wrapper {
   position: relative;
   z-index: 10;
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  padding: 108px 0 60px 0px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -181,7 +182,7 @@ p {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 0;
 }
 
 .body-text-group p {
@@ -230,7 +231,9 @@ p {
    SECTION 2: CATEGORIES RANGE
    ========================================== */
 .categories-section {
-  padding: 60px 0;
+  padding-top: 32px;
+  /* Reduced bottom padding to 32px so the space below the banner matches the 32px standard */
+  padding-bottom: 32px;
   background-color: var(--bg-color);
 }
 
@@ -292,7 +295,7 @@ p {
 }
 
 .banner-box {
-  margin: 48px auto 0 auto;
+  margin: 32px auto 0 auto;
   padding: 40px 20px;
   background-color: transparent;
   max-width: 800px;
@@ -325,7 +328,9 @@ p {
    SECTION 3: CLIENTS LOGO GRID
    ========================================== */
 .clients-section {
-  padding: 60px 0;
+  /* Set top padding to 32px to match the uniform 32px spacing */
+  padding-top: 32px;
+  padding-bottom: 48px;
   background-color: var(--bg-color);
 }
 
