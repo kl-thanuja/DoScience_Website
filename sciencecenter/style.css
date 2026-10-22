@@ -71,8 +71,6 @@ img {
 /* ==========================================================================
    SECTION LAYOUTS & REUSABLE UTILITIES
    ========================================================================== */
-/* Every section: no forced height, gap above only, nothing below.
-   The gap between two sections is therefore always exactly --section-gap. */
 section {
     position: relative;
     min-height: auto;
@@ -101,7 +99,6 @@ section {
     color: black;
 }
 
-/* Level 1 Font Size */
 .heading-primary {
     font-size: 42px;
     font-weight: 500;
@@ -112,7 +109,6 @@ section {
     max-width: 1080px;
 }
 
-/* Level 1 Font Size */
 .heading-secondary {
     font-size: 42px;
     font-weight: 500;
@@ -130,7 +126,6 @@ section {
     margin: 14px 0;
 }
 
-/* Level 3 Font Size */
 .link-arrow {
     display: inline-flex;
     align-items: center;
@@ -188,7 +183,6 @@ section {
     box-sizing: border-box;
 }
 
-/* LEFT SIDE - TEXT */
 .hero-content {
     position: relative;
     padding: 0;
@@ -198,7 +192,6 @@ section {
     align-items: flex-start;
 }
 
-/* Level 2 Font Size */
 .hero-subtitle {
     font-size: 13px;
     line-height: 1.45;
@@ -209,7 +202,6 @@ section {
     display: block;
 }
 
-/* Level 3 Font Size */
 .hero-tagline {
     font-size: 18px;
     font-weight: 600;
@@ -217,7 +209,6 @@ section {
     line-height: 1.25;
 }
 
-/* RIGHT SIDE - IMAGE */
 .hero-bg-container {
     position: relative;
     width: 100%;
@@ -266,7 +257,6 @@ section {
     width: 100%;
     display: flex;
     overflow: hidden;
-    /* Right padding is 0 so the image bleeds to the edge (unchanged layout) */
     padding: var(--section-gap) 0 0 5%;
     align-items: flex-start;
     min-height: auto;
@@ -299,7 +289,6 @@ section {
     margin-top: 10px;
 }
 
-/* Level 2 Font Size */
 .section2-text p {
     font-size: 13px;
     line-height: 1.45;
@@ -359,9 +348,6 @@ section {
     margin-bottom: 4rem;
 }
 
-/* Optical alignment: a 42px heading's line box has ~0.2em of empty space above
-   the capitals. Pulling it up makes the VISIBLE gap above this section equal
-   to --section-gap, like the sections that open with an image. */
 .experience-header .heading-secondary {
     margin-top: -0.2em;
 }
@@ -418,7 +404,6 @@ section {
     max-width: 1080px;
 }
 
-/* Level 2 Font Size */
 .experience-text-box p {
     font-size: 13px;
     line-height: 1.45;
@@ -514,20 +499,27 @@ section {
    ========================================================================== */
 #section-4 {
     flex-direction: column;
-    padding-right: 0;
+    padding-left: 0;
+    padding-right: 5%;
 }
 
 .section4-top {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    display: flex;
+    flex-direction: row-reverse;
     gap: 3rem;
     align-items: flex-start;
     width: 100%;
 }
 
+.section4-top > div:first-child {
+    flex: 1;
+}
+
 .section4-card-img {
+    flex: 1.2;
     width: calc(100% + 5.5vw);
-    margin-right: -5.5vw;
+    margin-left: -5.5vw;
+    margin-right: 0;
     aspect-ratio: 4 / 3;
     height: auto;
     border-radius: 0;
@@ -548,7 +540,7 @@ section {
     inset: 0;
     z-index: 2;
     pointer-events: none;
-    background: linear-gradient(to right,
+    background: linear-gradient(to left,
             #fafafa 0%,
             rgba(250, 250, 250, 0.4) 20%,
             rgba(250, 250, 250, 0) 50%);
@@ -559,7 +551,6 @@ section {
     margin: 0;
 }
 
-/* Level 2 Font Size */
 .section4-middle-text p {
     font-size: 13px;
     line-height: 1.45;
@@ -587,7 +578,6 @@ section {
     overflow: hidden;
 }
 
-/* Level 3 Font Size */
 .location-banner-footer {
     display: flex;
     align-items: center;
@@ -605,18 +595,16 @@ section {
    ========================================================================== */
 #section-5 {
     flex-direction: column;
-    /* top gap comes from the base section rule; bottom gap closes the page */
     padding-bottom: var(--section-gap);
 }
 
-/* Level 1 Font Size */
 .visit-header {
     font-size: 42px;
     font-weight: 500;
     line-height: 1.12;
     color: black;
     text-align: left;
-    margin: -0.2em 0 14px; /* -0.2em: same optical alignment as .experience-header h2 */
+    margin: -0.2em 0 14px;
     letter-spacing: -0.025em;
     max-width: 1080px;
 }
@@ -643,7 +631,6 @@ section {
     margin-bottom: 0.5rem;
 }
 
-/* Level 3 Font Size */
 .info-card-header h4 {
     margin: 0;
     font-size: 15px;
@@ -658,7 +645,6 @@ section {
     stroke: black;
 }
 
-/* Level 2 Font Size */
 .info-card p {
     font-size: 13px;
     line-height: 1.45;
@@ -696,7 +682,6 @@ section {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
-/* Level 3 Font Size */
 .visit-col h3 {
     margin-bottom: 0.75rem;
     font-size: 18px;
@@ -705,7 +690,6 @@ section {
     line-height: 1.25;
 }
 
-/* Level 2 Font Size */
 .visit-col p {
     font-size: 13px;
     line-height: 1.45;
@@ -722,7 +706,6 @@ section {
     padding-left: 0;
 }
 
-/* Level 2 Font Size */
 .visit-list li {
     position: relative;
     padding-left: 1.25rem;
@@ -756,7 +739,6 @@ section {
     margin-top: 20px;
 }
 
-/* Level 3 Font Size */
 .fees-table-title {
     margin-bottom: 18px;
     padding-bottom: 0.35rem;
@@ -819,7 +801,6 @@ section {
     margin-bottom: 0;
 }
 
-/* Level 3 Font Size */
 .planning-section h3 {
     margin-bottom: 0.75rem;
     font-size: 18px;
@@ -828,7 +809,6 @@ section {
     line-height: 1.25;
 }
 
-/* Level 2 Font Size */
 .planning-section p {
     font-size: 13px;
     line-height: 1.45;
@@ -877,12 +857,10 @@ section {
     gap: 8px;
     font-weight: 600;
     text-decoration: underline;
-    /* color: black; */
     color: #0000FF;
     font-size: 14px;
 }
 
-/* Level 2 Font Size */
 .footer-tagline {
     font-size: 13px;
     line-height: 1.45;
@@ -898,13 +876,11 @@ section {
    RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 
-/* Tablets and small laptops (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
-
     :root {
         --section-gap: 80px;
     }
-    .hero-tagline{
+    .hero-tagline {
         margin-bottom: 14px;
     }
     .heading-primary,
@@ -940,10 +916,6 @@ section {
         font-size: 14px;
     }
 
-    body::-webkit-scrollbar {
-        width: 0px;
-    }
-
     .info-grid-top {
         grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem;
@@ -962,6 +934,7 @@ section {
         gap: 2rem;
     }
 }
+
 @media screen and (max-width: 768.98px) {
     :root {
         --section-gap: 60px;
@@ -975,7 +948,7 @@ section {
         width: calc(100% + 10vw);
         margin-left: -5vw;
         margin-right: -5vw;
-        aspect-ratio: 4 / 3; /* Matches the clean proportion of your other images */
+        aspect-ratio: 4 / 3;
         height: auto !important;
         order: 1;
     }
@@ -986,7 +959,7 @@ section {
         background-position: center center !important;
         border-radius: 0;
     }
-    /* --- SECTION 2 IMAGE FIX --- */
+
     .section2-image-wrapper {
         order: 2;
         width: calc(100% + 10vw);
@@ -1013,7 +986,6 @@ section {
         display: block;
     }
 
-    /* --- EXPERIENCE CARDS & SECTION 4 IMAGE FIX --- */
     .experience-img-box,
     .section4-card-img,
     .banner-img-container {
@@ -1033,7 +1005,7 @@ section {
         object-fit: cover !important;
     }
 }
-/* Mobile & Tablets (max-width: 768px) */
+
 @media screen and (max-width: 768px) {
     :root {
         --section-gap: 60px;
@@ -1042,11 +1014,10 @@ section {
     section {
         min-height: auto;
     }
-    .hero-tagline{
+    .hero-tagline {
         margin-bottom: 14px;
     }
 
-    /* Section 4 gets its gap from .section4-top on mobile (image bleeds edge to edge) */
     #section-4 {
         padding: 0;
     }
@@ -1069,24 +1040,6 @@ section {
         font-size: 20px;
     }
 
-    .hero-subtitle,
-    .section2-text p,
-    .experience-text-box p,
-    .section4-middle-text p,
-    .info-card p,
-    .visit-col p,
-    .visit-list li,
-    .planning-section p,
-    .contact-info,
-    .footer-tagline {
-        font-size: 13px;
-    }
-
-    body::-webkit-scrollbar {
-        width: 0px;
-    }
-
-    /* --- SECTION 1: HERO (Image First) --- */
     #section-1 {
         min-height: auto;
         flex-direction: column;
@@ -1129,7 +1082,6 @@ section {
         width: 100%;
     }
 
-    /* --- SECTION 2: WHY DISCOVERY MATTERS --- */
     .section2-grid {
         display: flex;
         flex-direction: column;
@@ -1147,7 +1099,7 @@ section {
         margin-left: -5vw;
         margin-right: -5vw;
         aspect-ratio: 4 / 3;
-        height: auto; /* Let aspect-ratio dictate height */
+        height: auto;
         display: block;
         position: relative;
     }
@@ -1156,7 +1108,7 @@ section {
     .section2-image-overlay {
         width: 100%;
         height: 100%;
-        position: absolute; /* Lock it to fill the aspect-ratio wrapper */
+        position: absolute;
         inset: 0;
         border-radius: 0;
     }
@@ -1166,7 +1118,7 @@ section {
         object-fit: cover;
         display: block;
     }
-    /* --- SECTION 3: WHAT YOU'LL EXPERIENCE --- */
+
     .experience-header {
         margin-bottom: 1.2rem;
     }
@@ -1229,7 +1181,6 @@ section {
         min-height: 240px;
     }
 
-    /* --- SECTION 4: THOUGHTFULLY SIMPLE --- */
     .section4-top {
         display: flex;
         flex-direction: column;
@@ -1240,8 +1191,8 @@ section {
     .section4-card-img {
         order: 1;
         width: calc(100% + 10vw);
-        margin-left: -5vw;
-        margin-right: -5vw;
+        margin-left: -5.5vw;
+        margin-right: -5.5vw;
         height: auto;
         aspect-ratio: 4 / 3;
         border-radius: 0;
@@ -1259,7 +1210,6 @@ section {
         width: 100%;
     }
 
-    /* --- SECTION 5: VISIT & TABLES --- */
     .visit-columns {
         flex-direction: column;
         gap: 2rem;
@@ -1287,13 +1237,12 @@ section {
     }
 }
 
-/* Extra Small Mobile Devices (max-width: 480px) */
 @media screen and (max-width: 480px) {
     .heading-primary {
         font-size: 27px;
         line-height: 1.2;
     }
-    .hero-tagline{
+    .hero-tagline {
         margin-bottom: 14px;
     }
     .heading-secondary {
@@ -1303,33 +1252,6 @@ section {
 
     .visit-header {
         font-size: 27px;
-    }
-
-    .hero-subtitle,
-    .section2-text p,
-    .experience-text-box p,
-    .section4-middle-text p,
-    .info-card p,
-    .visit-col p,
-    .visit-list li,
-    .planning-section p,
-    .contact-info,
-    .footer-tagline {
-        font-size: 13px;
-    }
-
-    .link-arrow,
-    .hero-tagline,
-    .info-card-header h4,
-    .visit-col h3,
-    .fees-table-title,
-    .planning-section h3,
-    .contact-label {
-        font-size: 14px;
-    }
-
-    body::-webkit-scrollbar {
-        width: 0px;
     }
 
     .info-grid-top {
