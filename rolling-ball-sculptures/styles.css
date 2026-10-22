@@ -1,12 +1,8 @@
 :root {
   --bg-color: #fafafa;
   --font-family: 'Inter', sans-serif;
-  --max-width: 1440px;
   --desktop-gutter: 70px;
-  --tablet-gutter: 35px;
-  --mobile-gutter: 20px;
   --column-gap: 48px;
-  --border-color: #E5E5E5;
 }
 
 * {
@@ -22,14 +18,7 @@ body {
   color: #000000;
   font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  color: #000000;
   line-height: 1.6;
-  background-color: var(--bg-color);
 }
 
 body::-webkit-scrollbar {
@@ -58,16 +47,6 @@ section {
   padding-right: var(--desktop-gutter);
 }
 
-header {
-  width: 100%;
-  padding: 20px 0;
-  background-color: var(--bg-color);
-}
-
-.text-center {
-  text-align: left;
-}
-
 /* ==========================================
    TYPOGRAPHY HIERARCHY
    ========================================== */
@@ -83,8 +62,7 @@ h1,
   max-width: 1080px;
 }
 
-h2,
-.section-title {
+h2 {
   text-align: left;
   letter-spacing: -0.025em;
   max-width: 1080px;
@@ -116,33 +94,6 @@ p {
   display: block;
 }
 
-.body-text {
-  font-size: 13px;
-  line-height: 1.45;
-  color: #000000;
-  margin-bottom: 16px;
-  max-width: 580px;
-}
-
-.sub-label {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #000000;
-  display: inline-block;
-}
-
-.section-label {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 16px;
-  max-width: 100%;
-}
-
 /* ACCENT LINES - STRICTLY BLACK */
 .accent-line {
   width: 65px;
@@ -156,21 +107,11 @@ p {
    ========================================== */
 .hero-section {
   background-color: #fafafa;
-  padding: 0;
+  padding: 100px 0 48px;
   min-height: auto;
   position: relative;
   width: 100%;
   display: block;
-  padding-top: 100px;
-  padding-bottom: 32px;
-}
-
-.hero-container {
-  max-width: 100%;
-  width: 100%;
-  margin: 0;
-  padding-left: var(--desktop-gutter);
-  padding-right: var(--desktop-gutter);
 }
 
 .hero-wrapper {
@@ -204,121 +145,19 @@ p {
   transform: translateZ(0);
 }
 
-.video-container-wrap iframe.hero-video {
-  position: absolute;
-  inset: 0;
+.hero-video {
   width: 100%;
   height: 100%;
-  border: none;
   object-fit: cover;
   display: block;
   border-radius: inherit;
-}
-
-.body-text-group p {
-  margin-bottom: 20px;
-}
-
-.target-locations {
-  margin-top: 30px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #000000;
-}
-
-/* ==========================================
-   CATEGORY & GRID ROWS
-   ========================================== */
-.categories-section {
-  padding: 60px 0;
-  background-color: var(--bg-color);
-}
-
-.section-header-block {
-  margin-bottom: 48px;
-  max-width: 700px;
-}
-
-.category-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.category-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--column-gap);
-  align-items: center;
-  padding: 32px 0;
-  border-bottom: 1px solid #EFEFEF;
-}
-
-.category-row-reverse {
-  grid-template-columns: 1fr 1fr;
-}
-
-.category-image-wrap {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #EFEFEF;
-}
-
-.cat-img,
-.category-image-wrap video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px;
-}
-
-.category-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.category-title {
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1.25;
-  color: #000000;
-  text-align: left;
-  margin: 0 0 14px;
-}
-
-.category-title-large {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #000000;
-  margin-bottom: 8px;
-}
-
-.category-desc {
-  font-size: 15px;
-  line-height: 1.45;
-  color: #000000;
-  max-width: 480px;
-}
-
-.feature-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--column-gap);
-  align-items: center;
-  padding-top: 60px;
-  margin-top: 20px;
 }
 
 /* ==========================================
    SPLIT FEATURE SECTIONS & CORNER DYNAMICS
    ========================================== */
 .feature-section {
-  padding-top: 32px;
+  padding-top: 48px;
   padding-bottom: 48px;
   background-color: var(--bg-color);
 }
@@ -347,135 +186,14 @@ p {
   overflow: hidden;
 }
 
-
 .split-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.section-divider-spacing {
-  margin-top: 32px;
-}
-
 /* ==========================================
-   VIDEO CONTAINER & PLAY BUTTON OVERLAY
-   ========================================== */
-.video-play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 72px;
-  height: 72px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-  z-index: 5;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.video-play-btn:hover {
-  transform: translate(-50%, -50%) scale(1.05);
-  background-color: #ffffff;
-}
-
-/* ==========================================
-   BANNER & CLIENTS
-   ========================================== */
-.banner-box {
-  margin: 48px auto 0 auto;
-  padding: 40px 20px;
-  background-color: transparent;
-  max-width: 800px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.banner-box h1 {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 16px;
-  max-width: 100%;
-}
-
-.banner-box p {
-  font-size: 15px;
-  line-height: 1.5;
-  color: #000000;
-  text-align: center;
-  max-width: 620px;
-  margin: 0 auto;
-}
-
-.clients-section {
-  padding: 60px 0;
-  background-color: var(--bg-color);
-}
-
-.clients-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-}
-
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  width: 100%;
-  margin-top: 16px;
-  align-items: start;
-  justify-items: center;
-}
-
-.client-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  width: 100%;
-}
-
-.client-logo-box {
-  width: 100%;
-  height: 96px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-}
-
-.client-logo-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  opacity: 0.9;
-}
-
-.client-name {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  color: #000000;
-  line-height: 1.35;
-  text-align: center;
-}
-
-/* ==========================================
-   CONTACT & CATALOGUE BLOCK
+   CONTACT BLOCK
    ========================================== */
 .contact-section {
   padding: 60px 0 80px 0;
@@ -544,53 +262,6 @@ p {
   text-decoration: underline;
 }
 
-.catalogue-block,
-.contact-details-block {
-  width: 100%;
-  max-width: 680px;
-}
-
-.divider-line {
-  width: 100%;
-  height: 1px;
-  background-color: var(--border-color);
-  margin: 40px 0;
-}
-
-.action-link,
-.download-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #0000FF;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  transition: opacity 0.2s ease;
-}
-
-.action-link:hover,
-.download-link:hover {
-  opacity: 0.7;
-}
-
-.phone-email-info {
-  margin-top: 24px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #000000;
-}
-
-.phone-email-info a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.phone-email-info a:hover {
-  text-decoration: underline;
-}
-
 /* ==========================================
    UNIFIED RESPONSIVE BREAKPOINTS 
    ========================================== */
@@ -602,40 +273,29 @@ p {
 }
 
 @media screen and (max-width: 1024px) {
-
   h1,
-  .hero-title,
-  .heading-primary,
-  .heading-secondary {
+  .hero-title {
     font-size: 42px;
     line-height: 1.12;
   }
 
-  h2,
-  .section-title,
-  .category-title-large {
+  h2 {
     font-size: 28px;
     line-height: 1.25;
   }
 
-  h3,
-  .category-title {
+  h3 {
     font-size: 26px;
   }
 
   p,
   .body-lead,
-  .body-text,
-  .category-desc,
-  .banner-box p,
   .contact-info {
     font-size: 15px;
     line-height: 1.45;
   }
 
-  .contact-label,
-  .action-link,
-  .download-link {
+  .contact-label {
     font-size: 14px;
   }
 
@@ -645,19 +305,15 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-
   section,
   .hero-section,
   .feature-section,
-  .categories-section,
-  .clients-section,
   .contact-section {
     padding: 40px 5% 20px !important;
     min-height: auto;
   }
 
-  .container,
-  .hero-container {
+  .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
     width: 100%;
@@ -685,57 +341,30 @@ p {
   }
 
   h1,
-  .hero-title,
-  .heading-primary,
-  .heading-secondary {
+  .hero-title {
     font-size: 36px;
     line-height: 1.15;
   }
 
-  h2,
-  .section-title,
-  .category-title-large {
+  h2 {
     font-size: 26px;
     line-height: 1.2;
   }
 
-  h3,
-  .category-title {
+  h3 {
     font-size: 24px;
   }
 
   p,
   .body-lead,
-  .body-text,
-  .category-desc,
-  .banner-box p,
   .contact-info {
     font-size: 14px;
     line-height: 1.45;
   }
 
-  .split-block,
-  .category-row,
-  .category-row-reverse,
-  .feature-row {
+  .split-block {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-
-  .clients-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px 16px;
-  }
-
-  .client-logo-box {
-    height: 52px;
-  }
-}
-
-@media (max-width: 640px) {
-  .banner-box {
-    padding: 20px 24px;
-    margin-top: 36px;
   }
 }
 
@@ -745,37 +374,28 @@ p {
   }
 
   h1,
-  .hero-title,
-  .heading-primary {
+  .hero-title {
     font-size: 27px;
     line-height: 1.2;
   }
 
-  h2,
-  .section-title,
-  .heading-secondary {
+  h2 {
     font-size: 24px;
     line-height: 1.25;
   }
 
-  h3,
-  .category-title {
+  h3 {
     font-size: 20px;
   }
 
   p,
   .body-lead,
-  .body-text,
-  .category-desc,
-  .banner-box p,
   .contact-info {
     font-size: 13.5px;
     line-height: 1.45;
   }
 
-  .contact-label,
-  .action-link,
-  .download-link {
+  .contact-label {
     font-size: 14px;
   }
 
