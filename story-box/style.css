@@ -593,6 +593,7 @@ img {
   justify-content: center;
   align-items: flex-start;
   text-align: left;
+  width: 256px; /* Explicit width constraint for desktop/laptop levels to force consistent 4-line wrapping */
 }
 
 .sb-info-card h4 {
