@@ -54,8 +54,18 @@ img {
 }
 
 /* =========================================
-   COMMON CONTAINER ALIGNMENT
+   COMMON CONTAINER ALIGNMENT & SECTION SPACING
 ========================================= */
+.hero-section,
+.ways-section,
+.sb-section,
+.contact-section {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--bg-color);
+}
+
 .hero-section,
 .ways-section,
 .sb-inner,
@@ -112,7 +122,7 @@ img {
   font-size: 13px;
   line-height: 1.45;
   color: #000000;
-  margin-bottom: 32px;
+  margin-bottom: 70px;
   max-width: 620px;
 }
 
@@ -121,8 +131,6 @@ img {
 ========================================= */
 
 .story-types {
-  margin-top: 30px;
-  margin-bottom: 20px;
   font-size: 14px;
   font-weight: 500;
   color: #000000;
@@ -199,7 +207,7 @@ img {
 }
 
 /* =========================================
-   SECOND SECTION (WAYS SECTION) - UPDATED
+   SECOND SECTION (WAYS SECTION)
 ========================================= */
 .ways-section {
   padding-top: 60px;
@@ -325,7 +333,6 @@ img {
   color: #000000;
 }
 
-/* FIXED INCLUDES SPACING */
 .product-card .card-includes {
   grid-column: 1 / -1;
   grid-row: 3;
@@ -390,7 +397,7 @@ img {
 }
 
 /* =========================================
-   CARD 2 OVERRIDES (HORIZONTAL STAT ALIGNMENT)
+   CARD 2 OVERRIDES
 ========================================= */
 .product-card:nth-child(2) .product-image-container.kids-image {
   grid-column: 1 / -1;
@@ -428,12 +435,6 @@ img {
 /* =========================================
    SECTIONS GENERAL (3, 4, 5)
 ========================================= */
-.sb-section {
-  width: 100%;
-  padding: 60px 0;
-  background: var(--bg-color);
-}
-
 .sb-heading {
   font-size: 42px;
   line-height: 1.12;
@@ -484,7 +485,7 @@ img {
 }
 
 /* =========================================
-   SECTION 4 (RESTRUCTURED LAYOUT)
+   SECTION 4
 ========================================= */
 .sb-own-grid {
   display: grid;
@@ -610,7 +611,7 @@ img {
 
 .full-width-banner {
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 60px;
   text-align: center;
 }
 
@@ -630,11 +631,6 @@ img {
 /* =========================================
    SECTION 4.5: SELECT STORY BOX USERS
 ========================================= */
-.sb-users-section {
-  padding-top: 50px;
-  padding-bottom: 70px;
-}
-
 .sb-users-section .sb-inner {
   display: flex;
   flex-direction: column;
@@ -734,13 +730,8 @@ img {
 }
 
 /* =========================================
-   SECTION 5 (SPACES SECTION - COMPACT HEIGHT)
+   SECTION 5 (SPACES SECTION)
 ========================================= */
-.sb-beyond-section {
-  padding-top: 60px;
-  padding-bottom: 70px;
-}
-
 .sb-beyond-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -780,7 +771,6 @@ img {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  
 }
 
 .sb-beyond-image img {
@@ -799,15 +789,19 @@ ul.sb-intro {
 }
 
 ul.sb-intro li {
-  margin-bottom: 8px;
+  margin-bottom: 3px;
 }
 
 ul.sb-intro li:last-child {
   margin-bottom: 0;
 }
 
+/* =========================================
+   CONTACT SECTION
+========================================= */
 .contact-section {
-  padding: 60px 0 80px 0;
+  padding-top: 60px;
+  padding-bottom: 80px;
   background-color: var(--bg-color);
   border-top: 1px solid #E5E5E5;
 }
@@ -899,7 +893,7 @@ ul.sb-intro li:last-child {
 }
 
 /* =========================================
-   RESPONSIVE LAYOUT (TABLET & MOBILE)
+   RESPONSIVE LAYOUT & BREAKPOINTS
 ========================================= */
 @media (max-height: 800px) and (min-width: 1101px) {
   .sb-beyond-image img {
@@ -924,6 +918,18 @@ ul.sb-intro li:last-child {
 }
 
 @media (max-width: 1100px) {
+  .hero-section,
+  .ways-section,
+  .sb-section,
+  .contact-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .hero-section {
+    padding-top: 90px;
+  }
+
   .sb-beyond-inner {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -962,7 +968,6 @@ ul.sb-intro li:last-child {
 }
 
 @media screen and (max-width: 1024px) {
-
   .header-resize-font,
   .hero-content h1,
   .section-heading h2,
@@ -1050,7 +1055,6 @@ ul.sb-intro li:last-child {
   .hero-section {
     grid-template-columns: 1fr;
     gap: 30px;
-    padding-top: 90px;
   }
 
   .product-cards {
@@ -1073,9 +1077,28 @@ ul.sb-intro li:last-child {
     height: 3px;
     margin: 14px 0;
   }
+
+  .section-heading h2 br,
+  .sb-heading br,
+  .sb-intro br,
+  .banner-content br,
+  .hero-content h1 br {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .hero-section,
+  .ways-section,
+  .sb-section,
+  .contact-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hero-section {
+    padding-top: 80px;
+  }
 
   .header-resize-font,
   .hero-content h1,
@@ -1096,10 +1119,6 @@ ul.sb-intro li:last-child {
 }
 
 @media (max-width: 600px) {
-  .hero-section {
-    padding-top: 80px;
-  }
-
   .hero-section,
   .ways-section,
   .sb-inner,
@@ -1123,6 +1142,14 @@ ul.sb-intro li:last-child {
 }
 
 @media screen and (max-width: 480px) {
+  .hero-section,
+  .ways-section,
+  .sb-section,
+  .contact-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   .hero-section {
     padding-top: 108px;
   }
@@ -1166,25 +1193,9 @@ ul.sb-intro li:last-child {
   }
 }
 
-@media (max-width: 850px) {
-
-  .section-heading h2 br,
-  .sb-heading br,
-  .sb-intro br,
-  .banner-content br,
-  .hero-content h1 br {
-    display: none;
-  }
-}
-
 /* =========================================
    STORY BOX USERS — REFERENCE LAYOUT
 ========================================= */
-
-#story-box-users {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
 
 #story-box-users .sb-inner {
   display: block;
@@ -1296,7 +1307,6 @@ ul.sb-intro li:last-child {
   overflow-wrap: anywhere;
 }
 
-/* Tablet: keep the heading and two-column user list, stack the stats above. */
 @media (max-width: 1200px) {
   #story-box-users .sb-users-container {
     grid-template-columns: minmax(0, 0.9fr) 1px minmax(0, 1.35fr);
@@ -1316,7 +1326,6 @@ ul.sb-intro li:last-child {
   }
 }
 
-/* Mobile responsive fixes */
 @media (max-width: 900px) {
   #story-box-users .sb-users-container {
     display: flex;
@@ -1405,7 +1414,6 @@ ul.sb-intro li:last-child {
   }
 }
 
-/* Small phones */
 @media (max-width: 480px) {
   #story-box-users .sb-users-container {
     gap: 20px;
