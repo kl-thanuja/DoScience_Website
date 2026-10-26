@@ -1095,7 +1095,14 @@ ul.sb-intro li:last-child {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-
+  .hero-section,
+  .ways-section,
+  .sb-inner,
+  .sb-beyond-inner,
+  .contact-section .container {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
   .hero-section {
     padding-top: 80px;
   }
@@ -1325,7 +1332,18 @@ ul.sb-intro li:last-child {
     white-space: normal;
   }
 }
+@media screen and (max-width: 768.98px){
+  .hero-section,
+  .ways-section,
+  .sb-inner,
+  .sb-beyond-inner,
+  .contact-section .container {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    padding-top: 100px;
+  }
 
+}
 @media (max-width: 900px) {
   #story-box-users .sb-users-container {
     display: flex;
