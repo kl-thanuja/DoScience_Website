@@ -272,7 +272,7 @@ section {
     display: grid;
     grid-template-columns: 1.2fr 1fr; /* Adjusted column ratio to give more balanced width for scaled image */
     align-items: flex-start;
-    gap: 3rem;
+    gap: 4rem;
     width: 100%;
 }
 
@@ -283,13 +283,20 @@ section {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 100%;
+    max-width: 620px;
 }
-
+.section2-body {
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;      
+    hyphens: auto; 
+}
 .section2-text p+p {
     margin-top: 10px;
 }
 
-.section2-text p {
+.section2-body p {
     font-size: 13px;
     line-height: 1.45;
     color: black;
@@ -303,10 +310,10 @@ section {
     overflow: hidden;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start; /* Aligns the scaled image neatly inside its grid space */
+    justify-content: flex-start; 
     width: 100%;
-    max-width: 520px; /* Constrains the maximum width to match Section 4's reduced size */
-    aspect-ratio: 4 / 3; /* Maintains the photo's original ratio */
+    max-width: 520px; 
+    aspect-ratio: 4 / 3; 
 }
 
 
@@ -1111,7 +1118,10 @@ section {
         padding-top: 20px;
         width: 100%;
     }
-
+    .section2-text br,
+    .section2-body br {
+        display: none;
+    }
     .section2-grid {
         display: flex;
         flex-direction: column;
