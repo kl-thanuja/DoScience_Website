@@ -420,7 +420,7 @@ img {
 
 .product-card:nth-child(2) .card-lead {
   max-width: calc(var(--u) * 650);
-  margin-bottom: calc(var(--u) * 32); 
+  margin-bottom: calc(var(--u) * 32);
 }
 
 .product-card:nth-child(2) .card-stat,
@@ -429,7 +429,11 @@ img {
 }
 
 .product-card:nth-child(2) .card-includes {
-  margin-top: 24px;
+  align-self: end;
+  margin-top: 80px;
+}
+.product-card:nth-child(2) .card-bottom {
+  padding-top: 14px; /* reduced from 28px */
 }
 
 /* =========================================
