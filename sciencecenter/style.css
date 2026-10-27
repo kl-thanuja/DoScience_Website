@@ -272,7 +272,7 @@ section {
     display: grid;
     grid-template-columns: 1.2fr 1fr; /* Adjusted column ratio to give more balanced width for scaled image */
     align-items: flex-start;
-    gap: 4rem;
+    gap: 4.4rem;
     width: 100%;
 }
 
