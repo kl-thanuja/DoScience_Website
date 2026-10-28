@@ -60,20 +60,11 @@
 ========================================================= */
 
 .ds-logo-wrapper.is-story-box img {
-    height: 42px; 
+    height: 60px; 
     width: auto;
     object-fit: contain;
 }
 
-.ds-logo-wrapper.is-story-box .ds-tagline {
-    display: block;
-    font-size: 12px;
-    font-weight: 400;
-    color: #333333;
-    letter-spacing: -0.01em;
-    margin-top: 3px;
-    white-space: nowrap;
-}
 
 
 /* =========================================================

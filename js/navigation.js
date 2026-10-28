@@ -258,7 +258,6 @@ function setNavigationLogo() {
     if (tagline && logoWrapper) {
         if (currentPage === "story-box") {
             logoWrapper.classList.add("is-story-box");
-            tagline.textContent = "An initiative of Library Solutions";
         } else {
             logoWrapper.classList.remove("is-story-box");
             tagline.textContent = "";
