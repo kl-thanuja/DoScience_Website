@@ -649,7 +649,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px; /* Reduced overall gap for a more compact center-aligned layout */
+  gap: 30px;
   width: 100%;
 }
 
@@ -714,12 +714,12 @@ img {
   width: 1.5px;
   height: 120px;
   background: #000000;
-  margin: 0 15px; /* Added horizontal margin to control spacing near the main divider */
+  margin: 0 15px;
 }
 
 .sb-users-list-grid {
   display: flex;
-  gap: 30px; /* Reduced gap between the two user list columns */
+  gap: 30px;
   align-items: flex-start;
   justify-content: center;
   flex-shrink: 0;
@@ -1226,9 +1226,9 @@ ul.sb-intro li:last-child {
 
 #story-box-users .sb-users-container {
   display: flex;
-  align-items: center;
+  align-items:flex-start;
   justify-content: center;
-  gap: 30px; /* Reduced gap between the left group and right panel for a tighter layout */
+  gap: 30px;
   width: 100%;
 }
 
@@ -1246,7 +1246,8 @@ ul.sb-intro li:last-child {
 #story-box-users .sb-users-left-group > .sb-users-heading {
   grid-column: 1 / -1;
   text-align: left;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
   white-space: nowrap;
 }
 
@@ -1279,18 +1280,20 @@ ul.sb-intro li:last-child {
   margin-top: 4px;
 }
 
+/* Single-line constraint for tagline */
 #story-box-users .sb-users-left-group > div:last-child p {
   line-height: 1.45;
   margin: 0;
   color: black;
   font-size: 14px;
+  white-space: nowrap; 
 }
 
 #story-box-users .sb-users-divider.main-divider {
   display: block;
   width: 1.5px;
   height: 190px;
-  margin: 0 15px; /* Reduced distance from the left group container */
+  margin: 0 15px;
   background: #232b37;
   align-self: start;
 }
@@ -1305,12 +1308,14 @@ ul.sb-intro li:last-child {
 
 #story-box-users .sb-users-right-panel > .sb-users-heading {
   text-align: center;
-  margin-bottom: 18px;
+  margin-top: 0;
+  margin-bottom: 24px;
 }
+
 
 #story-box-users .sb-users-list-grid {
   display: flex;
-  gap: 30px; /* Reduced spacing between the user list columns for a compact look */
+  gap: 30px;
   align-items: flex-start;
   justify-content: center;
   width: 100%;
