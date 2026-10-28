@@ -598,7 +598,7 @@ img {
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-  width: 256px; /* Explicit width constraint for desktop/laptop levels to force consistent 4-line wrapping */
+  width: 256px;
 }
 
 .sb-info-card h4 {
@@ -615,15 +615,18 @@ img {
   color: #000000;
 }
 
+/* Compact & Center-aligned Advertisement Strip */
 .full-width-banner {
   width: 100%;
   margin-top: 60px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .banner-content {
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .banner-content .heading-secondary {
@@ -646,7 +649,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 30px; /* Reduced overall gap for a more compact center-aligned layout */
   width: 100%;
 }
 
@@ -711,12 +714,12 @@ img {
   width: 1.5px;
   height: 120px;
   background: #000000;
-  margin: 0;
+  margin: 0 15px; /* Added horizontal margin to control spacing near the main divider */
 }
 
 .sb-users-list-grid {
   display: flex;
-  gap: 50px;
+  gap: 30px; /* Reduced gap between the two user list columns */
   align-items: flex-start;
   justify-content: center;
   flex-shrink: 0;
@@ -830,7 +833,7 @@ ul.sb-intro li:last-child {
   line-height: 1.25;
 }
 .sb-option .sb-option-image.sb-kids-crop img {
-  max-height: 75%; /* Adjust this percentage lower to shrink it more if needed */
+  max-height: 75%;
   width: auto;
   object-fit: contain;
 }
@@ -1183,6 +1186,7 @@ ul.sb-intro li:last-child {
   .section-heading h2,
   .sb-heading {
     font-size: 27px;
+    letter-spacing: -0.025em;
     line-height: 1.2;
   }
 
@@ -1221,11 +1225,10 @@ ul.sb-intro li:last-child {
 }
 
 #story-box-users .sb-users-container {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) 1px minmax(0, 1.65fr);
+  display: flex;
   align-items: center;
-  justify-content: stretch;
-  gap: 30px;
+  justify-content: center;
+  gap: 30px; /* Reduced gap between the left group and right panel for a tighter layout */
   width: 100%;
 }
 
@@ -1286,16 +1289,17 @@ ul.sb-intro li:last-child {
 #story-box-users .sb-users-divider.main-divider {
   display: block;
   width: 1.5px;
-  height: 120px;
-  margin: 0;
+  height: 190px;
+  margin: 0 15px; /* Reduced distance from the left group container */
   background: #232b37;
+  align-self: start;
 }
 
 #story-box-users .sb-users-right-panel {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: center;
+  justify-content: flex-start;
   min-width: 0;
 }
 
@@ -1305,11 +1309,10 @@ ul.sb-intro li:last-child {
 }
 
 #story-box-users .sb-users-list-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: start;
-  justify-content: stretch;
-  gap: 22px;
+  display: flex;
+  gap: 30px; /* Reduced spacing between the user list columns for a compact look */
+  align-items: flex-start;
+  justify-content: center;
   width: 100%;
   min-width: 0;
 }
@@ -1354,8 +1357,8 @@ ul.sb-intro li:last-child {
     padding-right: 5% !important;
     padding-top: 100px;
   }
-
 }
+
 @media (max-width: 900px) {
   #story-box-users .sb-users-container {
     display: flex;
