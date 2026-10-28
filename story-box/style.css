@@ -827,7 +827,11 @@ ul.sb-intro li:last-child {
   color: #000000;
   line-height: 1.25;
 }
-
+.sb-option .sb-option-image.sb-kids-crop img {
+  max-height: 85%; /* Adjust this percentage lower to shrink it more if needed */
+  width: auto;
+  object-fit: contain;
+}
 .contact-block p {
   font-size: 13px;
   line-height: 1.45;
