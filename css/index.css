@@ -71,7 +71,7 @@
 }
 
 body {
-    background-color: var(--bg-white);
+    background-color: #fafafa;
     color: var(--text-dark);
     overflow-x: hidden;
     display: flex;
