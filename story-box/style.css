@@ -942,7 +942,7 @@ ul.sb-intro li:last-child {
   }
 
   .hero-section {
-    padding-top: 108px; /* Preserves exact initial heading position */
+    padding-top: 108px;
   }
 
   .sb-beyond-inner {
@@ -983,7 +983,20 @@ ul.sb-intro li:last-child {
   }
 
   .hero-section {
-    padding-top: 108px; /* Preserves exact initial heading position */
+    padding-top: 108px;
+  }
+
+  /* Keep "Small learning encounters." on a single line */
+  .hero-content h1 {
+    font-size: min(6.8vw, 36px);
+  }
+
+  .hero-content h1 div {
+    display: inline;
+  }
+
+  .hero-content h1 div::before {
+    content: " ";
   }
 
   /* Disable <br/> statements for screens other than laptop/desktop */
@@ -992,7 +1005,6 @@ ul.sb-intro li:last-child {
   }
 
   .header-resize-font,
-  .hero-content h1,
   .section-heading h2,
   .sb-heading {
     font-size: 42px;
@@ -1060,7 +1072,7 @@ ul.sb-intro li:last-child {
   .hero-section {
     grid-template-columns: 1fr;
     gap: 24px;
-    padding-top: 108px; /* Preserves exact initial heading position */
+    padding-top: 108px;
   }
 
   .product-cards {
@@ -1099,14 +1111,13 @@ ul.sb-intro li:last-child {
   }
 
   .hero-section {
-    padding-top: 108px; /* Preserves exact initial heading position */
+    padding-top: 108px;
   }
 
   .header-resize-font,
-  .hero-content h1,
   .section-heading h2,
   .sb-heading {
-    font-size: 36px;
+    font-size: 30px;
   }
 
   .sb-info-panel {
@@ -1143,11 +1154,11 @@ ul.sb-intro li:last-child {
   }
 
   .hero-section {
-    padding-top: 108px; /* Preserves exact initial heading position */
+    padding-top: 108px;
   }
 
   .hero-content h1 {
-    font-size: 27px;
+    font-size: 24px;
   }
 
   .header-resize-font,
