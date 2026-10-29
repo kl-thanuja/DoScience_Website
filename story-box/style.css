@@ -61,8 +61,8 @@ img {
 .sb-section,
 .contact-section {
   width: 100%;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: var(--bg-color);
 }
 
@@ -98,7 +98,7 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   padding-top: 108px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   align-items: start;
 }
 
@@ -208,8 +208,8 @@ img {
    SECOND SECTION (WAYS SECTION)
 ========================================= */
 .ways-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .section-heading h2 {
@@ -618,7 +618,7 @@ img {
 /* Compact & Center-aligned Advertisement Strip */
 .full-width-banner {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
 }
@@ -811,8 +811,8 @@ ul.sb-intro li:last-child {
    CONTACT SECTION
 ========================================= */
 .contact-section {
-  padding-top: 60px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 60px;
   background-color: var(--bg-color);
   border-top: 1px solid #E5E5E5;
 }
@@ -937,12 +937,12 @@ ul.sb-intro li:last-child {
   .ways-section,
   .sb-section,
   .contact-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .hero-section {
-    padding-top: 90px;
+    padding-top: 108px; /* Preserves exact initial heading position */
   }
 
   .sb-beyond-inner {
@@ -971,18 +971,26 @@ ul.sb-intro li:last-child {
   .product-card {
     padding: 28px 24px;
   }
-
-  .card-top-grid {
-    grid-template-columns: 150px 1fr;
-    gap: 16px;
-  }
-
-  .sb-network-divider {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1024px) {
+  .hero-section,
+  .ways-section,
+  .sb-section,
+  .contact-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .hero-section {
+    padding-top: 108px; /* Preserves exact initial heading position */
+  }
+
+  /* Disable <br/> statements for screens other than laptop/desktop */
+  br {
+    display: none;
+  }
+
   .header-resize-font,
   .hero-content h1,
   .section-heading h2,
@@ -1006,27 +1014,13 @@ ul.sb-intro li:last-child {
   .sb-users-col p {
     font-size: 13px;
   }
-
-  .sb-use-card h3,
-  .sb-option-copy h4,
-  .sb-info-card h4,
-  .sb-content-fit h3,
-  .sb-talk-row h3,
-  .contact-block h3,
-  .contact-label {
-    font-size: 14px;
-  }
-
-  .sb-users-heading {
-    font-size: 22px;
-  }
 }
 
 @media (max-width: 900px) {
   .sb-users-container {
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
   }
 
   .sb-users-right-panel {
@@ -1037,7 +1031,7 @@ ul.sb-intro li:last-child {
     order: 1;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
   }
 
   .sb-users-heading {
@@ -1048,7 +1042,7 @@ ul.sb-intro li:last-child {
   .sb-users-list-grid {
     order: 3;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 
   .sb-user-stat-item {
@@ -1060,22 +1054,19 @@ ul.sb-intro li:last-child {
   .sb-users-divider.main-divider {
     display: none;
   }
-
-  .sb-users-col p {
-    white-space: normal;
-  }
 }
 
 @media (max-width: 850px) {
   .hero-section {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 24px;
+    padding-top: 108px; /* Preserves exact initial heading position */
   }
 
   .product-cards {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 28px;
+    gap: 20px;
   }
 
   .product-card {
@@ -1085,20 +1076,7 @@ ul.sb-intro li:last-child {
 
   .sb-use-grid {
     grid-template-columns: 1fr;
-  }
-
-  .accent-line {
-    width: 65px;
-    height: 3px;
-    margin: 14px 0;
-  }
-
-  .section-heading h2 br,
-  .sb-heading br,
-  .sb-intro br,
-  .banner-content br,
-  .hero-content h1 br {
-    display: none;
+    gap: 12px;
   }
 }
 
@@ -1107,9 +1085,10 @@ ul.sb-intro li:last-child {
   .ways-section,
   .sb-section,
   .contact-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
+
   .hero-section,
   .ways-section,
   .sb-inner,
@@ -1118,8 +1097,9 @@ ul.sb-intro li:last-child {
     padding-left: 5% !important;
     padding-right: 5% !important;
   }
+
   .hero-section {
-    padding-top: 80px;
+    padding-top: 108px; /* Preserves exact initial heading position */
   }
 
   .header-resize-font,
@@ -1131,12 +1111,14 @@ ul.sb-intro li:last-child {
 
   .sb-info-panel {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
 
 @media (max-width: 650px) {
   .sb-four-cards-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
 
@@ -1149,18 +1131,6 @@ ul.sb-intro li:last-child {
     padding-left: var(--gutter-mobile);
     padding-right: var(--gutter-mobile);
   }
-
-  .sb-use-card,
-  .sb-content-fit,
-  .sb-talk-row {
-    grid-template-columns: 1fr;
-  }
-
-  .accent-line {
-    width: 65px;
-    height: 3px;
-    margin: 14px 0;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1168,51 +1138,22 @@ ul.sb-intro li:last-child {
   .ways-section,
   .sb-section,
   .contact-section {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .hero-section {
-    padding-top: 108px;
+    padding-top: 108px; /* Preserves exact initial heading position */
   }
 
   .hero-content h1 {
     font-size: 27px;
-    letter-spacing: -0.04em;
-    line-height: 1.2;
   }
 
   .header-resize-font,
   .section-heading h2,
   .sb-heading {
     font-size: 27px;
-    letter-spacing: -0.025em;
-    line-height: 1.2;
-  }
-
-  .stat-number {
-    font-size: 28px;
-  }
-
-  .stat-label {
-    font-size: 16px;
-  }
-
-  .sb-users-heading {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 500px) {
-  .card-top-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .accent-line {
-    width: 65px;
-    height: 3px;
-    margin: 14px 0;
   }
 }
 
@@ -1280,7 +1221,6 @@ ul.sb-intro li:last-child {
   margin-top: 4px;
 }
 
-/* Single-line constraint for tagline */
 #story-box-users .sb-users-left-group > div:last-child p {
   line-height: 1.45;
   margin: 0;
@@ -1311,7 +1251,6 @@ ul.sb-intro li:last-child {
   margin-top: 0;
   margin-bottom: 24px;
 }
-
 
 #story-box-users .sb-users-list-grid {
   display: flex;
@@ -1352,24 +1291,13 @@ ul.sb-intro li:last-child {
     white-space: normal;
   }
 }
-@media screen and (max-width: 768.98px){
-  .hero-section,
-  .ways-section,
-  .sb-inner,
-  .sb-beyond-inner,
-  .contact-section .container {
-    padding-left: 5% !important;
-    padding-right: 5% !important;
-    padding-top: 100px;
-  }
-}
 
 @media (max-width: 900px) {
   #story-box-users .sb-users-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
   }
 
   #story-box-users .sb-users-left-group {
@@ -1381,7 +1309,7 @@ ul.sb-intro li:last-child {
     align-items: start;
     justify-items: center;
     column-gap: 16px;
-    row-gap: 14px;
+    row-gap: 10px;
   }
 
   #story-box-users .sb-users-left-group > .sb-users-heading {
@@ -1403,7 +1331,7 @@ ul.sb-intro li:last-child {
     grid-column: 2;
     grid-row: 2;
     width: 1px;
-    height: 60px;
+    height: 50px;
     margin: 0 auto;
     background: #000000;
   }
@@ -1421,7 +1349,7 @@ ul.sb-intro li:last-child {
     height: 1px;
     min-height: 1px;
     background: #e5e7eb;
-    margin: 8px 0;
+    margin: 6px 0;
   }
 
   #story-box-users .sb-users-right-panel {
@@ -1435,14 +1363,14 @@ ul.sb-intro li:last-child {
   #story-box-users .sb-users-right-panel > .sb-users-heading {
     order: 0;
     text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
 
   #story-box-users .sb-users-list-grid {
     order: 1;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 18px;
+    gap: 14px;
     width: 100%;
   }
 
@@ -1454,20 +1382,20 @@ ul.sb-intro li:last-child {
 
 @media (max-width: 480px) {
   #story-box-users .sb-users-container {
-    gap: 20px;
+    gap: 15px;
   }
 
   #story-box-users .sb-users-left-group {
-    column-gap: 10px;
+    column-gap: 8px;
   }
 
   #story-box-users .sb-users-list-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px;
   }
 
   #story-box-users .sb-users-right-panel > .sb-users-heading {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 }
 
