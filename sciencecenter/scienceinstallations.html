@@ -379,12 +379,139 @@
       .category-image img {
         position: relative;
         width: 100%;
-        height: 130%;
+        height: 180%;
         order: 2;
       }
 
       .installations-section {
         padding: 3rem 5% 1rem 5%;
+      }
+    }
+
+    @media screen and (max-width: 768.98px) {
+
+      /* Hero Section Layout */
+      .hero-section {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+        padding: 80px 5% 20px 5%;
+        margin-top: 20px;
+      }
+
+      .hero-content {
+        order: 1;
+        width: 100%;
+        padding: 0;
+      }
+
+      .hero-image-container {
+        order: 2;
+        width: calc(100% + 10vw) !important;
+        margin-left: -5vw !important;
+        margin-right: -5vw !important;
+        aspect-ratio: 4 / 3 !important;
+        height: auto !important;
+        min-height: unset !important;
+        position: relative;
+        border-radius: 0;
+        margin-top: 20px;
+        overflow: hidden;
+      }
+
+      .hero-image-container img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 0;
+        display: block;
+      }
+
+      /* Category Rows & Image Containers */
+      .category-row {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .category-image {
+        order: -1;
+        width: calc(100% + 10vw) !important;
+        margin-left: -5vw !important;
+        margin-right: -5vw !important;
+        max-width: none !important;
+        aspect-ratio: 4 / 3 !important;
+        height: auto !important;
+        min-height: unset !important;
+        position: relative;
+        border-radius: 0;
+        overflow: hidden;
+      }
+
+      .category-image img {
+        position: relative;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block;
+        border-radius: 0;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 34px;
+      }
+
+      .section-title,
+      .category-info h3 {
+        font-size: 18px;
+      }
+
+      .hero-content p,
+      .section-subtitle,
+      .category-info .description {
+        font-size: 13px;
+      }
+
+      .installations-section {
+        padding: 3rem 5% 1rem 5%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 28px;
+      }
+
+      .section-title {
+        font-size: 22px;
+      }
+
+      .category-info h3 {
+        font-size: 20px;
+      }
+
+      .hero-content p,
+      .section-subtitle,
+      .category-info .description,
+      .feature-content p {
+        font-size: 13px;
+      }
+
+      .items-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .feature-card {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .feature-text {
+        font-size: 14px;
       }
     }
 
